@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.yazgel.aphrodit.treeview
+Bundle-SymbolicName: org.yazgel.aphrodit.treeview;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: org.yazgel.aphrodit.treeview.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.sirius,
+ org.eclipse.sirius.common.acceleo.mtl,
+ org.eclipse.core.resources;bundle-version="3.9.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7,
+ JavaSE-1.8

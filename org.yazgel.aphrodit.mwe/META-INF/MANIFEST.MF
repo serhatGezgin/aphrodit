@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mwe
+Bundle-SymbolicName: org.yazgel.aphrodit.mwe
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.yazgel.aphrodit.mwe.Activator
+Bundle-Vendor: YAZGEL
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.mwe2.runtime,
+ org.eclipse.emf.ecore,
+ org.yazgel.aphrodit.util;bundle-version="1.0.0",
+ org.eclipse.core.resources;bundle-version="3.9.0",
+ com.google.guava,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtext.xbase.lib,
+ org.yazgel.aphrodit.codegenerator;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: org.yazgel.aphrodit.mwe
+

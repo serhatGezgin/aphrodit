@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="com.sansaretti.theme.project.category.bootstrap"
+            class="org.yazgel.aphrodit.project.wizard.BootstrapProject"
+            icon="images/bootstrap_project_create.png"
+            id="com.sansaretti.theme.project.wizard.bootstrap"
+            name="Bootstrap Project"
+            project="true">
+      </wizard>
+      <category
+            id="com.sansaretti.theme.project.category.bootstrap"
+            name="Bootstrap">
+      </category>
+      <wizard
+            category="com.sansaretti.theme.project.category.bootstrap"
+            class="org.yazgel.aphrodit.project.wizard.BootstrapProjectWorkflow"
+            icon="images/workflowfile.gif"
+            id="com.sansaretti.theme.project.wizard.mwe2"
+            name="Bootstrap Workflow File">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="images/bootstrap_project.png"
+            id="com.sansaretti.theme.project.image"
+            natureId="com.sansaretti.theme.project.nature">
+      </image>
+   </extension>
+
+</plugin>

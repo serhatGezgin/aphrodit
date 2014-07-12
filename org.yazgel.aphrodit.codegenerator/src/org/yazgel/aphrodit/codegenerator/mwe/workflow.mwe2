@@ -1,0 +1,28 @@
+module org.yazgel.aphrodit.codegenerator.mwe.workflow
+
+var targetDir = "src-gen"
+var modelPath = "model"
+
+Workflow {
+	bean = org.eclipse.emf.mwe.utils.StandaloneSetup {
+		registerGeneratedEPackage = "org.yazgel.aphrodit.AphroditPackage"
+	}
+	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {
+		directory = targetDir
+	}
+	component = org.yazgel.aphrodit.codegenerator.mwe.ThemeGeneratorSupport {}
+	component = org.eclipse.xtext.mwe.Reader {
+		path = modelPath
+		register = org.yazgel.aphrodit.codegenerator.mwe.ThemeGeneratorSetup {}
+		loadResource = {
+			slot = "model"
+		}
+	}
+	component = org.eclipse.xtext.generator.GeneratorComponent {
+		register = org.yazgel.aphrodit.codegenerator.mwe.ThemeGeneratorSetup {}
+		slot = 'model'
+		outlet = {
+			path = targetDir
+		}
+	}
+}

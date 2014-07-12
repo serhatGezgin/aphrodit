@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="aphrodit" nsURI="http://yazgel.org/aphrodit" nsPrefix="aphrodit">
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="colSpan" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="12"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundImage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementGroup" abstract="true" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="page" eType="#//Page" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Page">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
+        eType="#//Section" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="menu" eType="#//Menu" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="introSection" eType="#//Section"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//ElementGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//SectionElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Row" eSuperTypes="#//SectionElement #//RowElement #//DivisionElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//RowElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="HeaderType">
+    <eLiterals name="H1"/>
+    <eLiterals name="H2" value="1"/>
+    <eLiterals name="H3" value="2"/>
+    <eLiterals name="H4" value="3"/>
+    <eLiterals name="H5" value="4"/>
+    <eLiterals name="H6" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Header" eSuperTypes="#//SectionElement #//CarouselPageElement #//MenuElement #//CardPageElement #//RowElement #//DivisionElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//HeaderType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraf" eSuperTypes="#//SectionElement #//CarouselPageElement #//CardPageElement #//RowElement #//DivisionElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Carousel" eSuperTypes="#//SectionElement #//RowElement #//DivisionElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="carouselPages" upperBound="-1"
+        eType="#//CarouselElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//SectionElement #//CarouselPageElement #//MenuElement #//CardPageElement #//RowElement #//DivisionElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="src" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderRadius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CarouselPage" eSuperTypes="#//CarouselElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//CarouselPageElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SectionElement" abstract="true" eSuperTypes="#//ElementGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CarouselPageElement" abstract="true"
+      eSuperTypes="#//ElementGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Card" eSuperTypes="#//SectionElement #//RowElement #//DivisionElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pages" upperBound="-1"
+        eType="#//CardElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Menu" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//MenuElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MenuItem" eSuperTypes="#//MenuElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="section" eType="#//Section"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MenuElement" abstract="true" eSuperTypes="#//ElementGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CardPageElement" abstract="true" eSuperTypes="#//ElementGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CardPage" eSuperTypes="#//CardElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//CardPageElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Anchor" eSuperTypes="#//CardPageElement #//CarouselPageElement #//SectionElement #//RowElement #//DivisionElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AnchorType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CardElement" abstract="true" eSuperTypes="#//ElementGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CarouselElement" abstract="true" eSuperTypes="#//ElementGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RowElement" abstract="true" eSuperTypes="#//ElementGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//CardPageElement #//CarouselPageElement #//DivisionElement #//RowElement #//SectionElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//DivisionElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DivisionElement" abstract="true" eSuperTypes="#//ElementGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Map" eSuperTypes="#//SectionElement #//RowElement #//DivisionElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AnchorType">
+    <eLiterals name="default" literal="default"/>
+    <eLiterals name="btn_default" value="1" literal="btn-default"/>
+    <eLiterals name="btn_primary" value="2" literal="btn-primary"/>
+    <eLiterals name="btn_success" value="3" literal="btn-success"/>
+    <eLiterals name="btn_info" value="4" literal="btn-info"/>
+    <eLiterals name="btn_warning" value="5" literal="btn-warning"/>
+    <eLiterals name="btn_danger" value="6" literal="btn-danger"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.yazgel.aphrodit/src" modelPluginID="org.yazgel.aphrodit"
+    modelName="Aphrodit" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>aphrodit.ecore</foreignModel>
+  <genPackages prefix="Aphrodit" basePackage="org.yazgel" disposableProviderFactory="true"
+      ecorePackage="aphrodit.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="aphrodit.ecore#//HeaderType">
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//HeaderType/H1"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//HeaderType/H2"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//HeaderType/H3"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//HeaderType/H4"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//HeaderType/H5"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//HeaderType/H6"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="aphrodit.ecore#//AnchorType">
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//AnchorType/default"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//AnchorType/btn_default"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//AnchorType/btn_primary"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//AnchorType/btn_success"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//AnchorType/btn_info"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//AnchorType/btn_warning"/>
+      <genEnumLiterals ecoreEnumLiteral="aphrodit.ecore#//AnchorType/btn_danger"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Element/colSpan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Element/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Element/backgroundColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Element/backgroundImage"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//ElementGroup"/>
+    <genClasses ecoreClass="aphrodit.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Model/page"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Page/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Page/sections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Page/menu"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Page/introSection"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Section">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Section/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Row">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Row/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Header">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Header/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Header/content"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Paragraf">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Paragraf/content"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Carousel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Carousel/carouselPages"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Image/src"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Image/borderRadius"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//CarouselPage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//CarouselPage/elements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//SectionElement"/>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//CarouselPageElement"/>
+    <genClasses ecoreClass="aphrodit.ecore#//Card">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Card/pages"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Menu">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Menu/items"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//MenuItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//MenuItem/title"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aphrodit.ecore#//MenuItem/section"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//MenuElement"/>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//CardPageElement"/>
+    <genClasses ecoreClass="aphrodit.ecore#//CardPage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//CardPage/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="aphrodit.ecore#//Anchor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Anchor/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Anchor/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Anchor/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//CardElement"/>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//CarouselElement"/>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//RowElement"/>
+    <genClasses ecoreClass="aphrodit.ecore#//Division">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aphrodit.ecore#//Division/elements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aphrodit.ecore#//DivisionElement"/>
+    <genClasses ecoreClass="aphrodit.ecore#//Map">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Map/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aphrodit.ecore#//Map/y"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

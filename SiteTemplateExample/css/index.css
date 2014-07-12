@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 24px;
+	color: #393e46;
+	background-color: #ffffff;
+}
+
+.root {
+	padding: 60px 15px;
+}

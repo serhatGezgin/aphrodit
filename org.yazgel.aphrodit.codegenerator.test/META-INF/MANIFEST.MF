@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: org.yazgel.aphrodit.codegenerator.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: YAZGEL
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.yazgel.aphrodit.util;bundle-version="1.0.0",
+ org.yazgel.aphrodit.codegenerator;bundle-version="1.0.0"

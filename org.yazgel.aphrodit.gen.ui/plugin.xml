@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension point="org.eclipse.ui.menus">
+    <menuContribution locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+      <menu
+            label="Bootstrap">
+         <command
+               commandId="com.sansaretti.theme.gen.ui.command.generate_bootstrap"
+               label="Generate Bootstrap"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <adapt
+                           type="org.eclipse.core.resources.IFile">
+                        <test
+                              property="org.eclipse.core.resources.name"
+                              value="*.theme">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menu>
+    </menuContribution>
+  </extension>
+  <extension point="org.eclipse.ui.commands">
+     <category
+           id="com.sansaretti.theme.gen.ui.category.bootstrap"
+           name="Bootstrap">
+     </category>
+    <command
+          categoryId="com.sansaretti.theme.gen.ui.category.bootstrap"
+          defaultHandler="org.yazgel.aphrodit.gen.ui.handler.GenerateBootstrap"
+          id="com.sansaretti.theme.gen.ui.command.generate_bootstrap"
+          name="Generate Bootstrap">
+    </command>
+  </extension>
+  <extension
+        point="org.eclipse.ui.handlers">
+     <handler
+           class="org.yazgel.aphrodit.gen.ui.handler.GenerateBootstrap"
+           commandId="com.sansaretti.theme.gen.ui.handler.generate_bootstrap">
+     </handler>
+  </extension>
+</plugin>

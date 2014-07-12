@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:theme="http://yazgel.org/aphrodit" title="UNIT" introSection="//@sections.0">
+  <sections name="Intro"/>
+  <sections name="About">
+    <elements xsi:type="theme:Row" name="header">
+      <elements xsi:type="theme:Header" name="header" type="H3" content="ABOUT US"/>
+    </elements>
+    <elements xsi:type="theme:Row" name="row2">
+      <elements xsi:type="theme:Division" name="div1" colSpan="6">
+        <elements xsi:type="theme:Header" name="header" content="Mission"/>
+        <elements xsi:type="theme:Paragraf" name="content" content="Our Mission; We take into account the requirements of business world and technological developments, when we aim to continuously improve our services in terms of quality and provide permanent solutions to our customers.â€‹â€‹â€‹"/>
+      </elements>
+      <elements xsi:type="theme:Division" name="div2" colSpan="6" color="">
+        <elements xsi:type="theme:Header" name="header" content="Vision"/>
+        <elements xsi:type="theme:Paragraf" name="content" content="Our Vision; With our professional, high quality and permanent solutions, we strive to be a well known, confidential and expert company not only in Turkey but also in the world.â€‹â€‹â€‹â€‹"/>
+      </elements>
+    </elements>
+    <elements xsi:type="theme:Row" name="row3">
+      <elements xsi:type="theme:Division">
+        <elements xsi:type="theme:Header" name="header" content="History"/>
+        <elements xsi:type="theme:Paragraf" name="content1" content="We as UNIT Information Technologies and R&amp;D Ltd. are using high software engineering methods and have an ongoing research and developments on model controlled tools."/>
+        <elements xsi:type="theme:Paragraf" name="content2" content="Between 2009 and 2012, with KoÃ§Sistem Information and Communication Technologies Incorporated Business, we developed some scenarios like Microsoft SharePoint Server, Microsoft Project Server, PerformancePoint Services platforms which are based on some business process driven composite content applications such as project management, work flow, resource managemenet, document management and technical document management at the well known companies like TÃœPRAÅ� and PETKÄ°M."/>
+      </elements>
+    </elements>
+  </sections>
+  <sections name="Solution">
+    <elements xsi:type="theme:Row" name="header">
+      <elements xsi:type="theme:Header" name="header" type="H3" content="Solutions"/>
+    </elements>
+    <elements xsi:type="theme:Row" name="cards">
+      <elements xsi:type="theme:Card" name="Solution Cards">
+        <pages xsi:type="theme:CardPage" name="Workflow Management" colSpan="4" color="">
+          <elements xsi:type="theme:Header" name="header" type="H3" content="Workflow Management"/>
+          <elements xsi:type="theme:Image" name="image" borderRadius="50"/>
+          <elements xsi:type="theme:Paragraf" name="content" content="We are serving services which provide continuing or planning otomation systems of processes, and works for systematize them."/>
+        </pages>
+        <pages xsi:type="theme:CardPage" name="Project Management System" colSpan="4">
+          <elements xsi:type="theme:Header" name="header" content="Project Management System"/>
+          <elements xsi:type="theme:Image" name="image" borderRadius="50"/>
+          <elements xsi:type="theme:Paragraf" name="content" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."/>
+        </pages>
+        <pages xsi:type="theme:CardPage" name="Document Management System" colSpan="4">
+          <elements xsi:type="theme:Header" name="header" content="Document Management System"/>
+          <elements xsi:type="theme:Image" name="image" borderRadius="50"/>
+          <elements xsi:type="theme:Paragraf" name="content" content="We are providing permanent and otomation based solutions for our customers to follow up and manage their documents."/>
+        </pages>
+      </elements>
+    </elements>
+  </sections>
+  <sections name="Product"/>
+  <sections name="R&amp;D">
+    <elements xsi:type="theme:Row">
+      <elements xsi:type="theme:Header" name="header" type="H4" content="RESEARCH &amp; DEVELOPMENT"/>
+    </elements>
+    <elements xsi:type="theme:Row">
+      <elements xsi:type="theme:Division" name="mdd4cca">
+        <elements xsi:type="theme:Header" name="header" content="MDD4CCA (Model Driven Development of Composite Content Applications)"/>
+        <elements xsi:type="theme:Paragraf" name="content" content="EndÃ¼stride oldukÃ§a yaygÄ±n olarak kullanÄ±lan ve bir Kurumsal Ä°Ã§erik YÃ¶netim platformu (&quot;Enterprise Content Management&quot;) (ECM) olan Microsoft SharePoint Foundation (MSF) Ã¼zerinde bir BÃ¼tÃ¼nleÅŸik Ä°Ã§erik UygulamasÄ± (&quot;Composite Content Applications&quot;) (CCA) ya da bir yazÄ±lÄ±m Ã¼rÃ¼n hattÄ± (&quot;Software Product Line&quot;) oluÅŸturabilecek CCA ÅŸablonu geliÅŸtirilmesi iÃ§in farklÄ± bakÄ±ÅŸ aÃ§Ä±larÄ± ile modellemenin saÄŸlanabileceÄŸi gÃ¶rsel bir araÃ§ setinin hazÄ±rlanmasÄ± faaliyetleri yÃ¼rÃ¼tÃ¼lmÃ¼ÅŸtÃ¼r. YazÄ±lÄ±m modellerinden kod elde etmek iÃ§in literatÃ¼rde yer alan yÃ¶ntemler ve teknikler uygulanarak Ã¶ncelikle MSF Ã¼stmodeline uyan gÃ¶rsel modellerin oluÅŸturulabileceÄŸi bir alan Ã¶zgÃ¼ modelleme dili (&quot;Domain Specific Modeling Language&quot;); devamÄ±nda da bu modellerden otomatik olarak yazÄ±lÄ±m kodlarÄ±nÄ±n Ã¼retilebileceÄŸi entegre bir yazÄ±lÄ±m geliÅŸtirme ortamÄ± hazÄ±rlanmÄ±ÅŸtÄ±r. GerÃ§ek bir durum Ã§alÄ±ÅŸmasÄ± ile geliÅŸtirilen araÃ§ setinin yetenekleri test edilmiÅŸ ve araÃ§ seti Ã¼zerinde iyileÅŸtirmelerde bulunulmuÅŸtur. SÃ¶z konusu Ã§alÄ±ÅŸmalar 1501-TÃœBÄ°TAK Sanayi Ar-Ge Projeleri Destekleme ProgramÄ± tarafÄ±ndan 3110712 no'lu proje kapsamÄ±nda desteklenmiÅŸtir."/>
+        <elements xsi:type="theme:Anchor" name="anchor" title="Learn More"/>
+      </elements>
+    </elements>
+    <elements xsi:type="theme:Row">
+      <elements xsi:type="theme:Division" name="mvv4pfd">
+        <elements xsi:type="theme:Header" name="header" content="MVV4PFD (Modeling, Validation and Verification of Process Flow Diagram for Petroleum Refineries)"/>
+        <elements xsi:type="theme:Paragraf" name="content1" content="Rafineri sÃ¼reÃ§lerinde uygulanan operasyonel koÅŸullar, iÅŸlenen ham petrol tÃ¼rÃ¼ne ve Ã¼rÃ¼n arz/talep dengesine gÃ¶re deÄŸiÅŸkenlik gÃ¶stermektedir. Bu deÄŸiÅŸikliklere hÄ±zlÄ± cevap verebilmek ve optimum iÅŸletme koÅŸullarÄ±nÄ± belirleyebilmek iÃ§in rafineri sÃ¼reÃ§ modellerinin bilgisayar ortamÄ±nda oluÅŸturulmasÄ±na ve farklÄ± modeller Ã¼zerinde Ã§eÅŸitli senaryo analizlilerinin yapÄ±lmasÄ±na ihtiyaÃ§ vardÄ±r."/>
+        <elements xsi:type="theme:Paragraf" name="content2" content="Bu proje petrol rafinerilerinde proses mÃ¼hendisleri tarafÄ±ndan yaygÄ±n olarak kullanÄ±lan SÃ¼reÃ§ AkÄ±ÅŸ DiagramlarÄ±nÄ±n (&quot;Process Flow Diagrams&quot;) (PFD) gÃ¶rsel ve metinsel bir modelleme aracÄ± yardÄ±mÄ±yla tasarlanmasÄ±nÄ±; aynÄ± zamanda bu modellerin Ã¼zerinde otomatik doÄŸrulama ve saÄŸlama (&quot;Verification &amp; Validation&quot;) yapÄ±labilmesini olanaklÄ± kÄ±lan bir Ã§atÄ±nÄ±n geliÅŸtirilmesi hedeflenmektedir."/>
+        <elements xsi:type="theme:Paragraf" name="content3" content="Projenin literatÃ¼r araÅŸtÄ±rmasÄ± ve fizibilite Ã§alÄ±ÅŸmasÄ± devam etmekte olup TÃ¼rkiye'nin Ã¶nde gelen bir sanayi kuruluÅŸu ile ortak bir Ar-Ge projesi olarak geÃ§ekleÅŸtirilmesi ve 1501-TÃœBÄ°TAK Sanayi Ar-Ge Projeleri Destekleme ProgramÄ±na baÅŸvurusu sÃ¶z konusudur."/>
+        <elements xsi:type="theme:Anchor" name="anchor" title="Learn More"/>
+      </elements>
+    </elements>
+    <elements xsi:type="theme:Row">
+      <elements xsi:type="theme:Division" name="SpecGEN">
+        <elements xsi:type="theme:Header" name="header" content="SpecGEN (Metamodel Specification Generator for Domain Specific Modeling Languages)"/>
+        <elements xsi:type="theme:Paragraf" name="content1" content="Model GÃ¼dÃ¼mlÃ¼ MÃ¼hendislik (&quot;Model Driven Engineering&quot;) amaÃ§larÄ±nÄ± gerÃ§ekleÅŸtirmek iÃ§in farklÄ± yaklaÅŸÄ±mlar kullanÄ±r. Bu yÃ¶ntemlerden birisi, Alana Ã–zgÃ¼ Dil (&quot;Domain Specific Language&quot;) (DSL) geliÅŸtirmedir. DSL'ler belirli bir uygulama alanÄ±na ait kavram ve terminolojileri (bazÄ± notasyonlar ÅŸeklinde) inceler ve Ã§alÄ±ÅŸma alanÄ±na dair gereksinimleri saÄŸlar. DSL son kullanÄ±cÄ±lar iÃ§in (alan uzmanlarÄ±) alana (&quot;domain&quot;) Ã¶zgÃ¼ bir sorun alanÄ± ile ilgili soyutlamalar sayesinde bir problemin Ã¶zÃ¼nÃ¼ tanÄ±mlamak iÃ§in imkan saÄŸlar. GÃ¼nÃ¼mÃ¼zde, bir alana Ã¶zgÃ¼ dil geliÅŸtirirken, beraberinde dilin Ã¼stmodeline dair dokÃ¼mantasyonu ya da spesifikasyonu proje boyunca gÃ¼ncel tutmak oldukÃ§a zordur."/>
+        <elements xsi:type="theme:Paragraf" name="content2" content="Bu Ã§alÄ±ÅŸma ile herhangi bir Ã¼st-modelin web tabanlÄ± dokÃ¼mantasyonunu otomatik olarak Ã¼retmek iÃ§in bir araÃ§ geliÅŸtirilmiÅŸtir. &quot;Ãœstmodel Spesifikasyonu Ãœretme&quot; aracÄ± Eclipse EMF tabanlÄ± model gÃ¼dÃ¼mlÃ¼ geliÅŸtirme yÃ¶ntemleri kullanÄ±lan tÃ¼m projelerde rahatlÄ±kla kullanÄ±labilecek dÃ¼zeydedir. EMF (&quot;Eclipse Modeling Framework&quot;) projesi, yapÄ±landÄ±rÄ±lmÄ±ÅŸ bir veri modeline dayalÄ± gerekli araÃ§larÄ± ve diÄŸer uygulamalarÄ± oluÅŸturmaya yarayan otomatik araÃ§ Ã¼retim servisi ve modelleme Ã§atÄ±sÄ±dÄ±r. AraÃ§, Ã¼stmodel dokÃ¼mantasyonunun proje boyunca gÃ¼ncel kalmasÄ±nÄ± saÄŸlamaktadÄ±r."/>
+        <elements xsi:type="theme:Paragraf" name="content3" content="AraÃ§ en geliÅŸkin kod Ã¼retme tekniklerinden biri olan Xpand dili kullanÄ±larak gerÃ§ekleÅŸtirilmiÅŸtir. Somut sÃ¶zdizimi olarak ise EMF (&quot;Eclipse Modeling Project&quot;) Ecore editÃ¶rÃ¼nÃ¼n &quot;Properties&quot; gÃ¶rÃ¼nÃ¼mÃ¼ndeki &quot;gen model documentation&quot; ismindeki &quot;extended attribute&quot; metin giriÅŸ alanÄ± kullanÄ±lmÄ±ÅŸtÄ±r."/>
+        <elements xsi:type="theme:Paragraf" name="content4" content="SÃ¶z konusu Ã§alÄ±ÅŸmalar 1501-TÃœBÄ°TAK Sanayi Ar-Ge Projeleri Desktekleme ProgramÄ± tarafÄ±ndan desteklenen 3110712 no'lu proje kapsamÄ±nda yan Ã¼rÃ¼n olarak geliÅŸtirilmiÅŸtir. Bu araÃ§ yardÄ±mÄ± ile herhangi bir geliÅŸtirme Ã§evrimi sonunda ve proje sonunda tÃ¼m spesifikasyonlar otomatik olarak gÃ¼ncel tutulmuÅŸtur."/>
+        <elements xsi:type="theme:Anchor" name="anchor" title="Learn More"/>
+      </elements>
+    </elements>
+    <elements xsi:type="theme:Row">
+      <elements xsi:type="theme:Division" name="FM&lt;>MM">
+        <elements xsi:type="theme:Header" name="header" content="FM&lt;>MM (Feature Model and Metamodel Sychronization Tool for Software Product Lines)"/>
+        <elements xsi:type="theme:Paragraf" name="content1" content="YazÄ±lÄ±m Ã¼rÃ¼n hattÄ± (&quot;Software Product Line&quot;) sÃ¼recinde, ilk Ã¶nce alan analizi gerÃ§ekleÅŸtirilmektedir. Bu analiz sonucunda alan iÃ§erisindeki ortaklÄ±klar ve deÄŸiÅŸkenlikler belirlenmekte ve genellikle bir yetenek modeli (&quot;Feature Model&quot;) ile ifade edilmektedir. Yetenek modelleme Ã§alÄ±ÅŸmasÄ±nÄ±n Ã§Ä±ktÄ±sÄ± ise genellikle yeteneklerin kavramsal gruplamasÄ±nÄ±, yetenekler arasÄ±ndaki iliÅŸkileri ve baÄŸÄ±mlÄ±lÄ±klarÄ± tanÄ±mlayan bir Ã§izelgedir. YazÄ±lÄ±m Ã¼rÃ¼n hattÄ± yetenekleri, tanÄ±mlandÄ±ktan ve gerÃ§ekleÅŸtirimi yapÄ±ldÄ±ktan sonra yetenek kÄ±sÄ±tlarÄ± ve baÄŸÄ±mlÄ±lÄ±klarÄ± dikkate alÄ±narak bu yeteneklerin ihtiyaca gÃ¶re bir alt kÃ¼mesi seÃ§ilir ve seÃ§ilen yeteneklere sahip yeni bir yazÄ±lÄ±m elde edilir."/>
+        <elements xsi:type="theme:Paragraf" name="content2" content="Ã–te yandan yazÄ±lÄ±m Ã¼rÃ¼n hatta mÃ¼hendisliÄŸi sÃ¼reÃ§lerinde yeniden kullanÄ±labilir bir platform ve Ã¼rÃ¼n hattÄ± mimarisinin geliÅŸtirildiÄŸi bir alan mÃ¼hendisliÄŸi ile alan mÃ¼hendisliÄŸi sÃ¼reci sonucunda elde edilen varlÄ±klardan Ã¼rÃ¼nlerin geliÅŸtirildiÄŸi bir uygulama mÃ¼hendisliÄŸi sÃ¼reci yer alÄ±r. Alan ve Uygulama MÃ¼hendisliÄŸinde, Model GÃ¼dÃ¼mlÃ¼ MÃ¼hendislik (&quot;Model Driven Engineering&quot;) teknikleri sÄ±klÄ±kla kullanÄ±lmakta ve Ã¶zellikle Alana Ã–zgÃ¼ Diller (&quot;Domain Specific Languages&quot;) geliÅŸtirilmektedir. EndÃ¼stride bu alanda yaygÄ±n olarak kullanÄ±lan ve aÃ§Ä±k kaynak kodlu geliÅŸkin Ã§atÄ±lardan biri Eclipse EMF (&quot;Eclipse Modeling Framework&quot;) teknolojisidir."/>
+        <elements xsi:type="theme:Paragraf" name="content3" content="EndÃ¼stride kullanÄ±lan aÃ§Ä±k kaynak kodlu Ã§oÄŸu Yetenek Modelleme araÃ§larÄ±na ait yetenekler kÄ±sÄ±tlÄ± iken ticari olanlarÄ±nÄ±nÄ±n ise lisans maliyetleri oldukÃ§a yÃ¼ksektir. AralarÄ±nda aÃ§Ä±k kaynak kodlu ve geliÅŸkin bir yetenek modelleme dili olan Clafer Ã¶ne Ã§Ä±kmaktadÄ±r. Ancak Clafer aracÄ±nÄ±n Eclipse EMF teknolojileri ile entegrasyonu yoktur ve Eclipse Modelleme alt yapÄ±sÄ± ile geliÅŸtirilmemiÅŸtir. Bu sebeple bu araÃ§ ile geliÅŸtirilen yeteneklerin alana Ã¶zgÃ¼ dil geliÅŸtirme Ã§alÄ±ÅŸmasÄ±ndan biri olan Ã¼stmodelleme aktivitesine geÃ§iÅŸte izlenebilirliÄŸi kaybolmaktadÄ±r."/>
+        <elements xsi:type="theme:Paragraf" name="content4" content="Bu ihtiyaÃ§tan yola Ã§Ä±karak, Yetenek Modelleri (&quot;Feature Models&quot;) ile Ãœstmodeller (&quot;Metamodels&quot;) arasÄ±nda senkronizasyon saÄŸlayan bir araÃ§ geliÅŸtirilmiÅŸtir. Clafer ile Ã¼retilen modeller ile Ecore Ã¼st-modelleri arasÄ±nda iki yÃ¶nlÃ¼ dÃ¶nÃ¼ÅŸÃ¼mÃ¼ otomatik olarak gerÃ§ekleÅŸtirebilmektedir. AraÃ§, Eclipse EMF tabanlÄ± model gÃ¼dÃ¼mlÃ¼ geliÅŸtirme yÃ¶ntemleri kullanÄ±lan tÃ¼m projelerde rahatlÄ±kla kullanÄ±labilecek dÃ¼zeydedir."/>
+        <elements xsi:type="theme:Paragraf" name="content5" content="SÃ¶z konusu Ã§alÄ±ÅŸmalar 1501-TÃœBÄ°TAK Sanayi Ar-Ge Projeleri Desktekleme ProgramÄ± tarafÄ±ndan desteklenen 3110712 no'lu proje kapsamÄ±nda yan Ã¼rÃ¼n olarak geliÅŸtirilmiÅŸtir."/>
+        <elements xsi:type="theme:Anchor" name="anchor" title="Learn More"/>
+      </elements>
+    </elements>
+  </sections>
+  <sections name="Partners">
+    <elements xsi:type="theme:Row" name="header">
+      <elements xsi:type="theme:Header" name="header" type="H4" content="PARTNERS"/>
+    </elements>
+    <elements xsi:type="theme:Row" name="partners1">
+      <elements xsi:type="theme:Division" name="microsoft">
+        <elements xsi:type="theme:Anchor" name="microsoft"/>
+      </elements>
+      <elements xsi:type="theme:Division" name="koc sistem">
+        <elements xsi:type="theme:Anchor" name="koÃ§ sistem"/>
+      </elements>
+      <elements xsi:type="theme:Division" name="eclipse">
+        <elements xsi:type="theme:Anchor" name="eclipse"/>
+      </elements>
+    </elements>
+    <elements xsi:type="theme:Row" name="partners2">
+      <elements xsi:type="theme:Division" name="omg">
+        <elements xsi:type="theme:Anchor" name="omg"/>
+      </elements>
+      <elements xsi:type="theme:Division" name="yasad">
+        <elements xsi:type="theme:Anchor" name="yasad"/>
+      </elements>
+    </elements>
+  </sections>
+  <sections name="Sponsors"/>
+  <sections name="Human Resource"/>
+  <sections name="Team"/>
+  <sections name="Contact">
+    <elements xsi:type="theme:Row" name="header">
+      <elements xsi:type="theme:Header" name="header" type="H3" content="CONTACT US"/>
+    </elements>
+    <elements xsi:type="theme:Row" name="map">
+      <elements xsi:type="theme:Map" name="unit_location"/>
+    </elements>
+    <elements xsi:type="theme:Row" name="contact">
+      <elements xsi:type="theme:Division" name="address">
+        <elements xsi:type="theme:Header" name="header" type="H2" content="Address"/>
+        <elements xsi:type="theme:Paragraf" name="content" content="Fatih Sultan Mehmet Caddesi 207 Sokak, No:29/3, A Blok, Kat:1, Daire:1â€‹â€‹â€‹"/>
+      </elements>
+      <elements xsi:type="theme:Division" name="email">
+        <elements xsi:type="theme:Header" name="header" type="H2" content="E-Mail"/>
+        <elements xsi:type="theme:Anchor"/>
+      </elements>
+    </elements>
+  </sections>
+  <menu name="UNIT MENU">
+    <items xsi:type="theme:MenuItem" name="About" colSpan="1" title="About" section="//@sections.1"/>
+    <items xsi:type="theme:MenuItem" name="Solution" colSpan="1" title="Solution" section="//@sections.2"/>
+    <items xsi:type="theme:MenuItem" name="Product" colSpan="1" title="Product" section="//@sections.3"/>
+    <items xsi:type="theme:MenuItem" name="R&amp;D" colSpan="1" title="R&amp;D" section="//@sections.4"/>
+    <items xsi:type="theme:MenuItem" name="Partners" colSpan="1" title="Partners" section="//@sections.5"/>
+    <items xsi:type="theme:MenuItem" name="Sponsors" colSpan="1" title="Sponsors" section="//@sections.6"/>
+    <items xsi:type="theme:MenuItem" name="Human Resource" colSpan="1" title="Human Resource" section="//@sections.7"/>
+    <items xsi:type="theme:MenuItem" name="Team" colSpan="1" title="Team" section="//@sections.8"/>
+    <items xsi:type="theme:MenuItem" name="Contact" colSpan="1" title="Contact" section="//@sections.9"/>
+  </menu>
+</theme:Page>
