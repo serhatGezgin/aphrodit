@@ -4,7 +4,7 @@ import org.yazgel.aphrodit.codegenerator.mwe.ThemeGenerator;
 
 @SuppressWarnings("all")
 public class Main {
-  private final static String MODEL_FOLDER = "C:/Users/akgun/git/bootstrap-mde/unit-site-models";
+  private final static String MODEL_FOLDER = "C:/Users/akgun/git/aphrodit/unit-site-models";
   
   public static void main(final String[] args) {
     int _length = args.length;
