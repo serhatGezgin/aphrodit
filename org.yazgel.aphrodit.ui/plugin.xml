@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="org.yazgel.aphrodit.ui.generate"
+            name="Generate Code">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.yazgel.aphrodit.ui.handlers.GeneratorHandler"
+            commandId="org.yazgel.aphrodit.ui.generate">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               label="yazgel">
+            <command
+                  commandId="org.yazgel.aphrodit.ui.generate"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="false">
+                  <with
+                        variable="selection">
+                     <iterate
+                           ifEmpty="false">
+                        <reference
+                              definitionId="org.yazgel.aphrodit.ui.definition.test">
+                        </reference>
+                     </iterate>
+                  </with>
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="org.yazgel.aphrodit.ui.definition.test">
+         <adapt
+               type="org.eclipse.core.resources.IResource">
+            <or>
+               <test
+                     property="org.eclipse.core.resources.extension"
+                     value="aphrodit">
+               </test>
+            </or>
+         </adapt>
+      </definition>
+   </extension>
+
+</plugin>

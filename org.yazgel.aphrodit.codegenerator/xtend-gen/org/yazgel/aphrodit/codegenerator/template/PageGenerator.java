@@ -102,8 +102,8 @@ public class PageGenerator extends BaseGenerator {
     _builder.newLine();
     {
       Menu _menu = page.getMenu();
-      EList<MenuElement> _ıtems = _menu.getItems();
-      for(final MenuElement i : _ıtems) {
+      EList<MenuElement> _items = _menu.getItems();
+      for(final MenuElement i : _items) {
         _builder.append("\t\t\t\t");
         final MenuItem menuItem = ((MenuItem) i);
         _builder.newLineIfNotEmpty();

@@ -5,7 +5,7 @@ import org.yazgel.aphrodit.codegenerator.mwe.ThemeGenerator
 class Main {
 	static val String MODEL_FOLDER = "C:/Users/akgun/git/aphrodit/unit-site-models"
 
-	def static void main(String[] args) {
+	def static void main(String[] args) { 
 		if (args.length == 2) {
 			new ThemeGenerator().generate(args.get(0), "src-gen")
 		} else {
