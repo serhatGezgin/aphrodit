@@ -3,6 +3,10 @@
 <plugin>
    <extension
          point="org.eclipse.ui.newWizards">
+      <category
+            id="com.sansaretti.theme.project.category.bootstrap"
+            name="Bootstrap">
+      </category>
       <wizard
             category="com.sansaretti.theme.project.category.bootstrap"
             class="org.yazgel.aphrodit.project.wizard.BootstrapProject"
@@ -11,10 +15,6 @@
             name="Bootstrap Project"
             project="true">
       </wizard>
-      <category
-            id="com.sansaretti.theme.project.category.bootstrap"
-            name="Bootstrap">
-      </category>
       <wizard
             category="com.sansaretti.theme.project.category.bootstrap"
             class="org.yazgel.aphrodit.project.wizard.BootstrapProjectWorkflow"

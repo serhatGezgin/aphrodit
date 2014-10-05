@@ -64,7 +64,7 @@ public class ExtendedProjectSupport {
 		requiredBundles.add("org.yazgel.aphrodit.util");
 		requiredBundles.add("org.yazgel.aphrodit.codegenerator");
 		requiredBundles.add("org.apache.commons.logging");
-		requiredBundles.add("org.yazgel.aphrodit.model");
+		requiredBundles.add("org.yazgel.aphrodit");
 
 		Assert.isNotNull(projectName);
 		Assert.isTrue(projectName.trim().length() > 0);

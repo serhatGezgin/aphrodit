@@ -9,13 +9,14 @@
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated aphrodit -->
       <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
+            id="com.sansaretti.theme.project.category.bootstrap.model"
+            name="model"
+            parentCategory="com.sansaretti.theme.project.category.bootstrap"/>
       <wizard
             id="org.yazgel.aphrodit.presentation.AphroditModelWizardID"
             name="%_UI_AphroditModelWizard_label"
             class="org.yazgel.aphrodit.presentation.AphroditModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            category="com.sansaretti.theme.project.category.bootstrap"
             icon="icons/full/obj16/AphroditModelFile.gif">
          <description>%_UI_AphroditModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
