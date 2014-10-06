@@ -22,7 +22,6 @@ import org.yazgel.aphrodit.Image;
 import org.yazgel.aphrodit.Map;
 import org.yazgel.aphrodit.Menu;
 import org.yazgel.aphrodit.MenuItem;
-import org.yazgel.aphrodit.Model;
 import org.yazgel.aphrodit.Page;
 import org.yazgel.aphrodit.Paragraf;
 import org.yazgel.aphrodit.Row;
@@ -134,12 +133,6 @@ public abstract class AbstractAphroditSemanticSequencer extends AbstractDelegati
 				if(context == grammarAccess.getMenuElementRule() ||
 				   context == grammarAccess.getMenuItemRule()) {
 					sequence_MenuItem(context, (MenuItem) semanticObject); 
-					return; 
-				}
-				else break;
-			case AphroditPackage.MODEL:
-				if(context == grammarAccess.getModelRule()) {
-					sequence_Model(context, (Model) semanticObject); 
 					return; 
 				}
 				else break;
@@ -357,15 +350,6 @@ public abstract class AbstractAphroditSemanticSequencer extends AbstractDelegati
 	 *     )
 	 */
 	protected void sequence_Menu(EObject context, Menu semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (page=Page?)
-	 */
-	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -18,48 +18,126 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class AphroditGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class ModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
+	public class PageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Page");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cModelAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cModelKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Action cPageAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cPageKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cPageKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cPageAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cPagePageParserRuleCall_3_1_0 = (RuleCall)cPageAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cTitleKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cTitleAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cTitleEStringParserRuleCall_3_1_0 = (RuleCall)cTitleAssignment_3_1.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cIntroSectionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cIntroSectionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final CrossReference cIntroSectionSectionCrossReference_4_1_0 = (CrossReference)cIntroSectionAssignment_4_1.eContents().get(0);
+		private final RuleCall cIntroSectionSectionEStringParserRuleCall_4_1_0_1 = (RuleCall)cIntroSectionSectionCrossReference_4_1_0.eContents().get(1);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cSectionsKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cSectionsAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cSectionsSectionParserRuleCall_5_2_0 = (RuleCall)cSectionsAssignment_5_2.eContents().get(0);
+		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
+		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
+		private final Assignment cSectionsAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
+		private final RuleCall cSectionsSectionParserRuleCall_5_3_1_0 = (RuleCall)cSectionsAssignment_5_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cMenuKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cMenuAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cMenuMenuParserRuleCall_6_1_0 = (RuleCall)cMenuAssignment_6_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Model:
-		//	{Model} "Model" "{" ("page" page=Page)? "}";
+		//Page:
+		//	{Page} "Page" "{" ("title" title=EString)? ("introSection" introSection=[Section|EString])? ("sections" "{"
+		//	sections+=Section ("," sections+=Section)* "}")? ("menu" menu=Menu)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Model} "Model" "{" ("page" page=Page)? "}"
+		//{Page} "Page" "{" ("title" title=EString)? ("introSection" introSection=[Section|EString])? ("sections" "{"
+		//sections+=Section ("," sections+=Section)* "}")? ("menu" menu=Menu)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//{Model}
-		public Action getModelAction_0() { return cModelAction_0; }
+		//{Page}
+		public Action getPageAction_0() { return cPageAction_0; }
 
-		//"Model"
-		public Keyword getModelKeyword_1() { return cModelKeyword_1; }
+		//"Page"
+		public Keyword getPageKeyword_1() { return cPageKeyword_1; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("page" page=Page)?
+		//("title" title=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"page"
-		public Keyword getPageKeyword_3_0() { return cPageKeyword_3_0; }
+		//"title"
+		public Keyword getTitleKeyword_3_0() { return cTitleKeyword_3_0; }
 
-		//page=Page
-		public Assignment getPageAssignment_3_1() { return cPageAssignment_3_1; }
+		//title=EString
+		public Assignment getTitleAssignment_3_1() { return cTitleAssignment_3_1; }
 
-		//Page
-		public RuleCall getPagePageParserRuleCall_3_1_0() { return cPagePageParserRuleCall_3_1_0; }
+		//EString
+		public RuleCall getTitleEStringParserRuleCall_3_1_0() { return cTitleEStringParserRuleCall_3_1_0; }
+
+		//("introSection" introSection=[Section|EString])?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"introSection"
+		public Keyword getIntroSectionKeyword_4_0() { return cIntroSectionKeyword_4_0; }
+
+		//introSection=[Section|EString]
+		public Assignment getIntroSectionAssignment_4_1() { return cIntroSectionAssignment_4_1; }
+
+		//[Section|EString]
+		public CrossReference getIntroSectionSectionCrossReference_4_1_0() { return cIntroSectionSectionCrossReference_4_1_0; }
+
+		//EString
+		public RuleCall getIntroSectionSectionEStringParserRuleCall_4_1_0_1() { return cIntroSectionSectionEStringParserRuleCall_4_1_0_1; }
+
+		//("sections" "{" sections+=Section ("," sections+=Section)* "}")?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"sections"
+		public Keyword getSectionsKeyword_5_0() { return cSectionsKeyword_5_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
+
+		//sections+=Section
+		public Assignment getSectionsAssignment_5_2() { return cSectionsAssignment_5_2; }
+
+		//Section
+		public RuleCall getSectionsSectionParserRuleCall_5_2_0() { return cSectionsSectionParserRuleCall_5_2_0; }
+
+		//("," sections+=Section)*
+		public Group getGroup_5_3() { return cGroup_5_3; }
+
+		//","
+		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
+
+		//sections+=Section
+		public Assignment getSectionsAssignment_5_3_1() { return cSectionsAssignment_5_3_1; }
+
+		//Section
+		public RuleCall getSectionsSectionParserRuleCall_5_3_1_0() { return cSectionsSectionParserRuleCall_5_3_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
+
+		//("menu" menu=Menu)?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"menu"
+		public Keyword getMenuKeyword_6_0() { return cMenuKeyword_6_0; }
+
+		//menu=Menu
+		public Assignment getMenuAssignment_6_1() { return cMenuAssignment_6_1; }
+
+		//Menu
+		public RuleCall getMenuMenuParserRuleCall_6_1_0() { return cMenuMenuParserRuleCall_6_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class SectionElementElements extends AbstractParserRuleElementFinder {
@@ -316,128 +394,6 @@ public class AphroditGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Division
 		public RuleCall getDivisionParserRuleCall_4() { return cDivisionParserRuleCall_4; }
-	}
-
-	public class PageElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Page");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cPageAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cPageKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cTitleKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cTitleAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cTitleEStringParserRuleCall_3_1_0 = (RuleCall)cTitleAssignment_3_1.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cIntroSectionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cIntroSectionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cIntroSectionSectionCrossReference_4_1_0 = (CrossReference)cIntroSectionAssignment_4_1.eContents().get(0);
-		private final RuleCall cIntroSectionSectionEStringParserRuleCall_4_1_0_1 = (RuleCall)cIntroSectionSectionCrossReference_4_1_0.eContents().get(1);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cSectionsKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
-		private final Assignment cSectionsAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
-		private final RuleCall cSectionsSectionParserRuleCall_5_2_0 = (RuleCall)cSectionsAssignment_5_2.eContents().get(0);
-		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
-		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
-		private final Assignment cSectionsAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
-		private final RuleCall cSectionsSectionParserRuleCall_5_3_1_0 = (RuleCall)cSectionsAssignment_5_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cMenuKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cMenuAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cMenuMenuParserRuleCall_6_1_0 = (RuleCall)cMenuAssignment_6_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		
-		//Page:
-		//	{Page} "Page" "{" ("title" title=EString)? ("introSection" introSection=[Section|EString])? ("sections" "{"
-		//	sections+=Section ("," sections+=Section)* "}")? ("menu" menu=Menu)? "}";
-		public ParserRule getRule() { return rule; }
-
-		//{Page} "Page" "{" ("title" title=EString)? ("introSection" introSection=[Section|EString])? ("sections" "{"
-		//sections+=Section ("," sections+=Section)* "}")? ("menu" menu=Menu)? "}"
-		public Group getGroup() { return cGroup; }
-
-		//{Page}
-		public Action getPageAction_0() { return cPageAction_0; }
-
-		//"Page"
-		public Keyword getPageKeyword_1() { return cPageKeyword_1; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-
-		//("title" title=EString)?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"title"
-		public Keyword getTitleKeyword_3_0() { return cTitleKeyword_3_0; }
-
-		//title=EString
-		public Assignment getTitleAssignment_3_1() { return cTitleAssignment_3_1; }
-
-		//EString
-		public RuleCall getTitleEStringParserRuleCall_3_1_0() { return cTitleEStringParserRuleCall_3_1_0; }
-
-		//("introSection" introSection=[Section|EString])?
-		public Group getGroup_4() { return cGroup_4; }
-
-		//"introSection"
-		public Keyword getIntroSectionKeyword_4_0() { return cIntroSectionKeyword_4_0; }
-
-		//introSection=[Section|EString]
-		public Assignment getIntroSectionAssignment_4_1() { return cIntroSectionAssignment_4_1; }
-
-		//[Section|EString]
-		public CrossReference getIntroSectionSectionCrossReference_4_1_0() { return cIntroSectionSectionCrossReference_4_1_0; }
-
-		//EString
-		public RuleCall getIntroSectionSectionEStringParserRuleCall_4_1_0_1() { return cIntroSectionSectionEStringParserRuleCall_4_1_0_1; }
-
-		//("sections" "{" sections+=Section ("," sections+=Section)* "}")?
-		public Group getGroup_5() { return cGroup_5; }
-
-		//"sections"
-		public Keyword getSectionsKeyword_5_0() { return cSectionsKeyword_5_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
-
-		//sections+=Section
-		public Assignment getSectionsAssignment_5_2() { return cSectionsAssignment_5_2; }
-
-		//Section
-		public RuleCall getSectionsSectionParserRuleCall_5_2_0() { return cSectionsSectionParserRuleCall_5_2_0; }
-
-		//("," sections+=Section)*
-		public Group getGroup_5_3() { return cGroup_5_3; }
-
-		//","
-		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
-
-		//sections+=Section
-		public Assignment getSectionsAssignment_5_3_1() { return cSectionsAssignment_5_3_1; }
-
-		//Section
-		public RuleCall getSectionsSectionParserRuleCall_5_3_1_0() { return cSectionsSectionParserRuleCall_5_3_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
-
-		//("menu" menu=Menu)?
-		public Group getGroup_6() { return cGroup_6; }
-
-		//"menu"
-		public Keyword getMenuKeyword_6_0() { return cMenuKeyword_6_0; }
-
-		//menu=Menu
-		public Assignment getMenuAssignment_6_1() { return cMenuAssignment_6_1; }
-
-		//Menu
-		public RuleCall getMenuMenuParserRuleCall_6_1_0() { return cMenuMenuParserRuleCall_6_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class EStringElements extends AbstractParserRuleElementFinder {
@@ -2577,7 +2533,7 @@ public class AphroditGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getBtn_dangerBtn_dangerKeyword_6_0() { return cBtn_dangerBtn_dangerKeyword_6_0; }
 	}
 	
-	private final ModelElements pModel;
+	private final PageElements pPage;
 	private final SectionElementElements pSectionElement;
 	private final MenuElementElements pMenuElement;
 	private final RowElementElements pRowElement;
@@ -2586,7 +2542,6 @@ public class AphroditGrammarAccess extends AbstractGrammarElementFinder {
 	private final DivisionElementElements pDivisionElement;
 	private final CarouselPageElementElements pCarouselPageElement;
 	private final CardPageElementElements pCardPageElement;
-	private final PageElements pPage;
 	private final EStringElements pEString;
 	private final SectionElements pSection;
 	private final MenuElements pMenu;
@@ -2615,7 +2570,7 @@ public class AphroditGrammarAccess extends AbstractGrammarElementFinder {
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pModel = new ModelElements();
+		this.pPage = new PageElements();
 		this.pSectionElement = new SectionElementElements();
 		this.pMenuElement = new MenuElementElements();
 		this.pRowElement = new RowElementElements();
@@ -2624,7 +2579,6 @@ public class AphroditGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDivisionElement = new DivisionElementElements();
 		this.pCarouselPageElement = new CarouselPageElementElements();
 		this.pCardPageElement = new CardPageElementElements();
-		this.pPage = new PageElements();
 		this.pEString = new EStringElements();
 		this.pSection = new SectionElements();
 		this.pMenu = new MenuElements();
@@ -2672,14 +2626,15 @@ public class AphroditGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model:
-	//	{Model} "Model" "{" ("page" page=Page)? "}";
-	public ModelElements getModelAccess() {
-		return pModel;
+	//Page:
+	//	{Page} "Page" "{" ("title" title=EString)? ("introSection" introSection=[Section|EString])? ("sections" "{"
+	//	sections+=Section ("," sections+=Section)* "}")? ("menu" menu=Menu)? "}";
+	public PageElements getPageAccess() {
+		return pPage;
 	}
 	
-	public ParserRule getModelRule() {
-		return getModelAccess().getRule();
+	public ParserRule getPageRule() {
+		return getPageAccess().getRule();
 	}
 
 	//SectionElement:
@@ -2760,17 +2715,6 @@ public class AphroditGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getCardPageElementRule() {
 		return getCardPageElementAccess().getRule();
-	}
-
-	//Page:
-	//	{Page} "Page" "{" ("title" title=EString)? ("introSection" introSection=[Section|EString])? ("sections" "{"
-	//	sections+=Section ("," sections+=Section)* "}")? ("menu" menu=Menu)? "}";
-	public PageElements getPageAccess() {
-		return pPage;
-	}
-	
-	public ParserRule getPageRule() {
-		return getPageAccess().getRule();
 	}
 
 	//EString returns ecore::EString:

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalAphroditParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Model'", "'{'", "'page'", "'}'", "'Page'", "'title'", "'introSection'", "'sections'", "','", "'menu'", "'Section'", "'colSpan'", "'color'", "'backgroundColor'", "'backgroundImage'", "'elements'", "'Menu'", "'items'", "'-'", "'Row'", "'Header'", "'type'", "'content'", "'Paragraf'", "'Carousel'", "'carouselPages'", "'Image'", "'src'", "'borderRadius'", "'Card'", "'pages'", "'Anchor'", "'link'", "'Division'", "'Map'", "'x'", "'y'", "'CarouselPage'", "'CardPage'", "'MenuItem'", "'section'", "'H1'", "'H2'", "'H3'", "'H4'", "'H5'", "'H6'", "'default'", "'btn_default'", "'btn_primary'", "'btn_success'", "'btn_info'", "'btn_warning'", "'btn_danger'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Page'", "'{'", "'title'", "'introSection'", "'sections'", "','", "'}'", "'menu'", "'Section'", "'colSpan'", "'color'", "'backgroundColor'", "'backgroundImage'", "'elements'", "'Menu'", "'items'", "'-'", "'Row'", "'Header'", "'type'", "'content'", "'Paragraf'", "'Carousel'", "'carouselPages'", "'Image'", "'src'", "'borderRadius'", "'Card'", "'pages'", "'Anchor'", "'link'", "'Division'", "'Map'", "'x'", "'y'", "'CarouselPage'", "'CardPage'", "'MenuItem'", "'section'", "'H1'", "'H2'", "'H3'", "'H4'", "'H5'", "'H6'", "'default'", "'btn_default'", "'btn_primary'", "'btn_success'", "'btn_info'", "'btn_warning'", "'btn_danger'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -57,9 +57,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__62=62;
-    public static final int T__63=63;
     public static final int T__20=20;
-    public static final int T__64=64;
     public static final int T__21=21;
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -115,7 +113,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
         
         @Override
         protected String getFirstRuleName() {
-        	return "Model";	
+        	return "Page";	
        	}
        	
        	@Override
@@ -125,26 +123,26 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
 
-    // $ANTLR start "entryRuleModel"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:68:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
-    public final EObject entryRuleModel() throws RecognitionException {
+    // $ANTLR start "entryRulePage"
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:68:1: entryRulePage returns [EObject current=null] : iv_rulePage= rulePage EOF ;
+    public final EObject entryRulePage() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleModel = null;
+        EObject iv_rulePage = null;
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:69:2: (iv_ruleModel= ruleModel EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:70:2: iv_ruleModel= ruleModel EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:69:2: (iv_rulePage= rulePage EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:70:2: iv_rulePage= rulePage EOF
             {
-             newCompositeNode(grammarAccess.getModelRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleModel_in_entryRuleModel75);
-            iv_ruleModel=ruleModel();
+             newCompositeNode(grammarAccess.getPageRule()); 
+            pushFollow(FollowSets000.FOLLOW_rulePage_in_entryRulePage75);
+            iv_rulePage=rulePage();
 
             state._fsp--;
 
-             current =iv_ruleModel; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleModel85); 
+             current =iv_rulePage; 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulePage85); 
 
             }
 
@@ -158,50 +156,62 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleModel"
+    // $ANTLR end "entryRulePage"
 
 
-    // $ANTLR start "ruleModel"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:77:1: ruleModel returns [EObject current=null] : ( () otherlv_1= 'Model' otherlv_2= '{' (otherlv_3= 'page' ( (lv_page_4_0= rulePage ) ) )? otherlv_5= '}' ) ;
-    public final EObject ruleModel() throws RecognitionException {
+    // $ANTLR start "rulePage"
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:77:1: rulePage returns [EObject current=null] : ( () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}' ) ;
+    public final EObject rulePage() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
-        EObject lv_page_4_0 = null;
+        Token otherlv_7=null;
+        Token otherlv_8=null;
+        Token otherlv_10=null;
+        Token otherlv_12=null;
+        Token otherlv_13=null;
+        Token otherlv_15=null;
+        AntlrDatatypeRuleToken lv_title_4_0 = null;
+
+        EObject lv_sections_9_0 = null;
+
+        EObject lv_sections_11_0 = null;
+
+        EObject lv_menu_14_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:80:28: ( ( () otherlv_1= 'Model' otherlv_2= '{' (otherlv_3= 'page' ( (lv_page_4_0= rulePage ) ) )? otherlv_5= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:81:1: ( () otherlv_1= 'Model' otherlv_2= '{' (otherlv_3= 'page' ( (lv_page_4_0= rulePage ) ) )? otherlv_5= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:80:28: ( ( () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:81:1: ( () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:81:1: ( () otherlv_1= 'Model' otherlv_2= '{' (otherlv_3= 'page' ( (lv_page_4_0= rulePage ) ) )? otherlv_5= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:81:2: () otherlv_1= 'Model' otherlv_2= '{' (otherlv_3= 'page' ( (lv_page_4_0= rulePage ) ) )? otherlv_5= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:81:1: ( () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:81:2: () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}'
             {
             // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:81:2: ()
             // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:82:5: 
             {
 
                     current = forceCreateModelElement(
-                        grammarAccess.getModelAccess().getModelAction_0(),
+                        grammarAccess.getPageAccess().getPageAction_0(),
                         current);
                 
 
             }
 
-            otherlv_1=(Token)match(input,11,FollowSets000.FOLLOW_11_in_ruleModel131); 
+            otherlv_1=(Token)match(input,11,FollowSets000.FOLLOW_11_in_rulePage131); 
 
-                	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getModelKeyword_1());
+                	newLeafNode(otherlv_1, grammarAccess.getPageAccess().getPageKeyword_1());
                 
-            otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleModel143); 
+            otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_12_in_rulePage143); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_2());
+                	newLeafNode(otherlv_2, grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:95:1: (otherlv_3= 'page' ( (lv_page_4_0= rulePage ) ) )?
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:95:1: (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -210,35 +220,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:95:3: otherlv_3= 'page' ( (lv_page_4_0= rulePage ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:95:3: otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) )
                     {
-                    otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleModel156); 
+                    otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_13_in_rulePage156); 
 
-                        	newLeafNode(otherlv_3, grammarAccess.getModelAccess().getPageKeyword_3_0());
+                        	newLeafNode(otherlv_3, grammarAccess.getPageAccess().getTitleKeyword_3_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:99:1: ( (lv_page_4_0= rulePage ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:100:1: (lv_page_4_0= rulePage )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:99:1: ( (lv_title_4_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:100:1: (lv_title_4_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:100:1: (lv_page_4_0= rulePage )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:101:3: lv_page_4_0= rulePage
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:100:1: (lv_title_4_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:101:3: lv_title_4_0= ruleEString
                     {
                      
-                    	        newCompositeNode(grammarAccess.getModelAccess().getPagePageParserRuleCall_3_1_0()); 
+                    	        newCompositeNode(grammarAccess.getPageAccess().getTitleEStringParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_rulePage_in_ruleModel177);
-                    lv_page_4_0=rulePage();
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_rulePage177);
+                    lv_title_4_0=ruleEString();
 
                     state._fsp--;
 
 
                     	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getModelRule());
+                    	            current = createModelElementForParent(grammarAccess.getPageRule());
                     	        }
                            		set(
                            			current, 
-                           			"page",
-                            		lv_page_4_0, 
-                            		"Page");
+                           			"title",
+                            		lv_title_4_0, 
+                            		"EString");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -253,9 +263,229 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleModel191); 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:117:4: (otherlv_5= 'introSection' ( ( ruleEString ) ) )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-                	newLeafNode(otherlv_5, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_4());
+            if ( (LA2_0==14) ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:117:6: otherlv_5= 'introSection' ( ( ruleEString ) )
+                    {
+                    otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_14_in_rulePage192); 
+
+                        	newLeafNode(otherlv_5, grammarAccess.getPageAccess().getIntroSectionKeyword_4_0());
+                        
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:121:1: ( ( ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:122:1: ( ruleEString )
+                    {
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:122:1: ( ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:123:3: ruleEString
+                    {
+
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPageRule());
+                    	        }
+                            
+                     
+                    	        newCompositeNode(grammarAccess.getPageAccess().getIntroSectionSectionCrossReference_4_1_0()); 
+                    	    
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_rulePage215);
+                    ruleEString();
+
+                    state._fsp--;
+
+                     
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:136:4: (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==15) ) {
+                alt4=1;
+            }
+            switch (alt4) {
+                case 1 :
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:136:6: otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}'
+                    {
+                    otherlv_7=(Token)match(input,15,FollowSets000.FOLLOW_15_in_rulePage230); 
+
+                        	newLeafNode(otherlv_7, grammarAccess.getPageAccess().getSectionsKeyword_5_0());
+                        
+                    otherlv_8=(Token)match(input,12,FollowSets000.FOLLOW_12_in_rulePage242); 
+
+                        	newLeafNode(otherlv_8, grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_5_1());
+                        
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:144:1: ( (lv_sections_9_0= ruleSection ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:145:1: (lv_sections_9_0= ruleSection )
+                    {
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:145:1: (lv_sections_9_0= ruleSection )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:146:3: lv_sections_9_0= ruleSection
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getPageAccess().getSectionsSectionParserRuleCall_5_2_0()); 
+                    	    
+                    pushFollow(FollowSets000.FOLLOW_ruleSection_in_rulePage263);
+                    lv_sections_9_0=ruleSection();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getPageRule());
+                    	        }
+                           		add(
+                           			current, 
+                           			"sections",
+                            		lv_sections_9_0, 
+                            		"Section");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:162:2: (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )*
+                    loop3:
+                    do {
+                        int alt3=2;
+                        int LA3_0 = input.LA(1);
+
+                        if ( (LA3_0==16) ) {
+                            alt3=1;
+                        }
+
+
+                        switch (alt3) {
+                    	case 1 :
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:162:4: otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) )
+                    	    {
+                    	    otherlv_10=(Token)match(input,16,FollowSets000.FOLLOW_16_in_rulePage276); 
+
+                    	        	newLeafNode(otherlv_10, grammarAccess.getPageAccess().getCommaKeyword_5_3_0());
+                    	        
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:166:1: ( (lv_sections_11_0= ruleSection ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:167:1: (lv_sections_11_0= ruleSection )
+                    	    {
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:167:1: (lv_sections_11_0= ruleSection )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:168:3: lv_sections_11_0= ruleSection
+                    	    {
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getPageAccess().getSectionsSectionParserRuleCall_5_3_1_0()); 
+                    	    	    
+                    	    pushFollow(FollowSets000.FOLLOW_ruleSection_in_rulePage297);
+                    	    lv_sections_11_0=ruleSection();
+
+                    	    state._fsp--;
+
+
+                    	    	        if (current==null) {
+                    	    	            current = createModelElementForParent(grammarAccess.getPageRule());
+                    	    	        }
+                    	           		add(
+                    	           			current, 
+                    	           			"sections",
+                    	            		lv_sections_11_0, 
+                    	            		"Section");
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop3;
+                        }
+                    } while (true);
+
+                    otherlv_12=(Token)match(input,17,FollowSets000.FOLLOW_17_in_rulePage311); 
+
+                        	newLeafNode(otherlv_12, grammarAccess.getPageAccess().getRightCurlyBracketKeyword_5_4());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:188:3: (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==18) ) {
+                alt5=1;
+            }
+            switch (alt5) {
+                case 1 :
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:188:5: otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) )
+                    {
+                    otherlv_13=(Token)match(input,18,FollowSets000.FOLLOW_18_in_rulePage326); 
+
+                        	newLeafNode(otherlv_13, grammarAccess.getPageAccess().getMenuKeyword_6_0());
+                        
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:192:1: ( (lv_menu_14_0= ruleMenu ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:193:1: (lv_menu_14_0= ruleMenu )
+                    {
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:193:1: (lv_menu_14_0= ruleMenu )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:194:3: lv_menu_14_0= ruleMenu
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getPageAccess().getMenuMenuParserRuleCall_6_1_0()); 
+                    	    
+                    pushFollow(FollowSets000.FOLLOW_ruleMenu_in_rulePage347);
+                    lv_menu_14_0=ruleMenu();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getPageRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"menu",
+                            		lv_menu_14_0, 
+                            		"Menu");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_17_in_rulePage361); 
+
+                	newLeafNode(otherlv_15, grammarAccess.getPageAccess().getRightCurlyBracketKeyword_7());
                 
 
             }
@@ -274,11 +504,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleModel"
+    // $ANTLR end "rulePage"
 
 
     // $ANTLR start "entryRuleSectionElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:129:1: entryRuleSectionElement returns [EObject current=null] : iv_ruleSectionElement= ruleSectionElement EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:222:1: entryRuleSectionElement returns [EObject current=null] : iv_ruleSectionElement= ruleSectionElement EOF ;
     public final EObject entryRuleSectionElement() throws RecognitionException {
         EObject current = null;
 
@@ -286,17 +516,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:130:2: (iv_ruleSectionElement= ruleSectionElement EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:131:2: iv_ruleSectionElement= ruleSectionElement EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:223:2: (iv_ruleSectionElement= ruleSectionElement EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:224:2: iv_ruleSectionElement= ruleSectionElement EOF
             {
              newCompositeNode(grammarAccess.getSectionElementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleSectionElement_in_entryRuleSectionElement227);
+            pushFollow(FollowSets000.FOLLOW_ruleSectionElement_in_entryRuleSectionElement397);
             iv_ruleSectionElement=ruleSectionElement();
 
             state._fsp--;
 
              current =iv_ruleSectionElement; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSectionElement237); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSectionElement407); 
 
             }
 
@@ -314,7 +544,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSectionElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:138:1: ruleSectionElement returns [EObject current=null] : (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:231:1: ruleSectionElement returns [EObject current=null] : (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) ;
     public final EObject ruleSectionElement() throws RecognitionException {
         EObject current = null;
 
@@ -340,72 +570,72 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:141:28: ( (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:142:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:234:28: ( (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:235:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:142:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
-            int alt2=9;
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:235:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
+            int alt6=9;
             switch ( input.LA(1) ) {
-            case 30:
+            case 28:
                 {
-                alt2=1;
+                alt6=1;
                 }
                 break;
-            case 31:
+            case 29:
                 {
-                alt2=2;
+                alt6=2;
                 }
                 break;
-            case 34:
+            case 32:
                 {
-                alt2=3;
+                alt6=3;
+                }
+                break;
+            case 33:
+                {
+                alt6=4;
                 }
                 break;
             case 35:
                 {
-                alt2=4;
+                alt6=5;
                 }
                 break;
-            case 37:
+            case 38:
                 {
-                alt2=5;
+                alt6=6;
                 }
                 break;
             case 40:
                 {
-                alt2=6;
+                alt6=7;
                 }
                 break;
             case 42:
                 {
-                alt2=7;
+                alt6=8;
                 }
                 break;
-            case 44:
+            case 43:
                 {
-                alt2=8;
-                }
-                break;
-            case 45:
-                {
-                alt2=9;
+                alt6=9;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt2) {
+            switch (alt6) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:143:5: this_Row_0= ruleRow
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:236:5: this_Row_0= ruleRow
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getRowParserRuleCall_0()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleRow_in_ruleSectionElement284);
+                    pushFollow(FollowSets000.FOLLOW_ruleRow_in_ruleSectionElement454);
                     this_Row_0=ruleRow();
 
                     state._fsp--;
@@ -418,12 +648,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:153:5: this_Header_1= ruleHeader
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:246:5: this_Header_1= ruleHeader
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getHeaderParserRuleCall_1()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleSectionElement311);
+                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleSectionElement481);
                     this_Header_1=ruleHeader();
 
                     state._fsp--;
@@ -436,12 +666,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:163:5: this_Paragraf_2= ruleParagraf
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:256:5: this_Paragraf_2= ruleParagraf
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getParagrafParserRuleCall_2()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleSectionElement338);
+                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleSectionElement508);
                     this_Paragraf_2=ruleParagraf();
 
                     state._fsp--;
@@ -454,12 +684,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:173:5: this_Carousel_3= ruleCarousel
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:266:5: this_Carousel_3= ruleCarousel
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getCarouselParserRuleCall_3()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleCarousel_in_ruleSectionElement365);
+                    pushFollow(FollowSets000.FOLLOW_ruleCarousel_in_ruleSectionElement535);
                     this_Carousel_3=ruleCarousel();
 
                     state._fsp--;
@@ -472,12 +702,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:183:5: this_Image_4= ruleImage
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:276:5: this_Image_4= ruleImage
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getImageParserRuleCall_4()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleSectionElement392);
+                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleSectionElement562);
                     this_Image_4=ruleImage();
 
                     state._fsp--;
@@ -490,12 +720,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:193:5: this_Card_5= ruleCard
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:286:5: this_Card_5= ruleCard
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getCardParserRuleCall_5()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleCard_in_ruleSectionElement419);
+                    pushFollow(FollowSets000.FOLLOW_ruleCard_in_ruleSectionElement589);
                     this_Card_5=ruleCard();
 
                     state._fsp--;
@@ -508,12 +738,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:203:5: this_Anchor_6= ruleAnchor
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:296:5: this_Anchor_6= ruleAnchor
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getAnchorParserRuleCall_6()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleSectionElement446);
+                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleSectionElement616);
                     this_Anchor_6=ruleAnchor();
 
                     state._fsp--;
@@ -526,12 +756,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:213:5: this_Division_7= ruleDivision
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:306:5: this_Division_7= ruleDivision
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getDivisionParserRuleCall_7()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleSectionElement473);
+                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleSectionElement643);
                     this_Division_7=ruleDivision();
 
                     state._fsp--;
@@ -544,12 +774,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:223:5: this_Map_8= ruleMap
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:316:5: this_Map_8= ruleMap
                     {
                      
                             newCompositeNode(grammarAccess.getSectionElementAccess().getMapParserRuleCall_8()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleMap_in_ruleSectionElement500);
+                    pushFollow(FollowSets000.FOLLOW_ruleMap_in_ruleSectionElement670);
                     this_Map_8=ruleMap();
 
                     state._fsp--;
@@ -582,7 +812,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMenuElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:239:1: entryRuleMenuElement returns [EObject current=null] : iv_ruleMenuElement= ruleMenuElement EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:332:1: entryRuleMenuElement returns [EObject current=null] : iv_ruleMenuElement= ruleMenuElement EOF ;
     public final EObject entryRuleMenuElement() throws RecognitionException {
         EObject current = null;
 
@@ -590,17 +820,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:240:2: (iv_ruleMenuElement= ruleMenuElement EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:241:2: iv_ruleMenuElement= ruleMenuElement EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:333:2: (iv_ruleMenuElement= ruleMenuElement EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:334:2: iv_ruleMenuElement= ruleMenuElement EOF
             {
              newCompositeNode(grammarAccess.getMenuElementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMenuElement_in_entryRuleMenuElement535);
+            pushFollow(FollowSets000.FOLLOW_ruleMenuElement_in_entryRuleMenuElement705);
             iv_ruleMenuElement=ruleMenuElement();
 
             state._fsp--;
 
              current =iv_ruleMenuElement; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMenuElement545); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMenuElement715); 
 
             }
 
@@ -618,7 +848,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMenuElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:248:1: ruleMenuElement returns [EObject current=null] : (this_Header_0= ruleHeader | this_Image_1= ruleImage | this_MenuItem_2= ruleMenuItem ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:341:1: ruleMenuElement returns [EObject current=null] : (this_Header_0= ruleHeader | this_Image_1= ruleImage | this_MenuItem_2= ruleMenuItem ) ;
     public final EObject ruleMenuElement() throws RecognitionException {
         EObject current = null;
 
@@ -632,42 +862,42 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:251:28: ( (this_Header_0= ruleHeader | this_Image_1= ruleImage | this_MenuItem_2= ruleMenuItem ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:252:1: (this_Header_0= ruleHeader | this_Image_1= ruleImage | this_MenuItem_2= ruleMenuItem )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:344:28: ( (this_Header_0= ruleHeader | this_Image_1= ruleImage | this_MenuItem_2= ruleMenuItem ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:345:1: (this_Header_0= ruleHeader | this_Image_1= ruleImage | this_MenuItem_2= ruleMenuItem )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:252:1: (this_Header_0= ruleHeader | this_Image_1= ruleImage | this_MenuItem_2= ruleMenuItem )
-            int alt3=3;
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:345:1: (this_Header_0= ruleHeader | this_Image_1= ruleImage | this_MenuItem_2= ruleMenuItem )
+            int alt7=3;
             switch ( input.LA(1) ) {
-            case 31:
+            case 29:
                 {
-                alt3=1;
+                alt7=1;
                 }
                 break;
-            case 37:
+            case 35:
                 {
-                alt3=2;
+                alt7=2;
                 }
                 break;
-            case 50:
+            case 48:
                 {
-                alt3=3;
+                alt7=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt3) {
+            switch (alt7) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:253:5: this_Header_0= ruleHeader
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:346:5: this_Header_0= ruleHeader
                     {
                      
                             newCompositeNode(grammarAccess.getMenuElementAccess().getHeaderParserRuleCall_0()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleMenuElement592);
+                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleMenuElement762);
                     this_Header_0=ruleHeader();
 
                     state._fsp--;
@@ -680,12 +910,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:263:5: this_Image_1= ruleImage
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:356:5: this_Image_1= ruleImage
                     {
                      
                             newCompositeNode(grammarAccess.getMenuElementAccess().getImageParserRuleCall_1()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleMenuElement619);
+                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleMenuElement789);
                     this_Image_1=ruleImage();
 
                     state._fsp--;
@@ -698,12 +928,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:273:5: this_MenuItem_2= ruleMenuItem
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:366:5: this_MenuItem_2= ruleMenuItem
                     {
                      
                             newCompositeNode(grammarAccess.getMenuElementAccess().getMenuItemParserRuleCall_2()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleMenuItem_in_ruleMenuElement646);
+                    pushFollow(FollowSets000.FOLLOW_ruleMenuItem_in_ruleMenuElement816);
                     this_MenuItem_2=ruleMenuItem();
 
                     state._fsp--;
@@ -736,7 +966,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRowElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:289:1: entryRuleRowElement returns [EObject current=null] : iv_ruleRowElement= ruleRowElement EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:382:1: entryRuleRowElement returns [EObject current=null] : iv_ruleRowElement= ruleRowElement EOF ;
     public final EObject entryRuleRowElement() throws RecognitionException {
         EObject current = null;
 
@@ -744,17 +974,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:290:2: (iv_ruleRowElement= ruleRowElement EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:291:2: iv_ruleRowElement= ruleRowElement EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:383:2: (iv_ruleRowElement= ruleRowElement EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:384:2: iv_ruleRowElement= ruleRowElement EOF
             {
              newCompositeNode(grammarAccess.getRowElementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleRowElement_in_entryRuleRowElement681);
+            pushFollow(FollowSets000.FOLLOW_ruleRowElement_in_entryRuleRowElement851);
             iv_ruleRowElement=ruleRowElement();
 
             state._fsp--;
 
              current =iv_ruleRowElement; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleRowElement691); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleRowElement861); 
 
             }
 
@@ -772,7 +1002,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRowElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:298:1: ruleRowElement returns [EObject current=null] : (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:391:1: ruleRowElement returns [EObject current=null] : (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) ;
     public final EObject ruleRowElement() throws RecognitionException {
         EObject current = null;
 
@@ -798,72 +1028,72 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:301:28: ( (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:302:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:394:28: ( (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:395:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:302:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
-            int alt4=9;
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:395:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
+            int alt8=9;
             switch ( input.LA(1) ) {
-            case 30:
+            case 28:
                 {
-                alt4=1;
+                alt8=1;
                 }
                 break;
-            case 31:
+            case 29:
                 {
-                alt4=2;
+                alt8=2;
                 }
                 break;
-            case 34:
+            case 32:
                 {
-                alt4=3;
+                alt8=3;
+                }
+                break;
+            case 33:
+                {
+                alt8=4;
                 }
                 break;
             case 35:
                 {
-                alt4=4;
+                alt8=5;
                 }
                 break;
-            case 37:
+            case 38:
                 {
-                alt4=5;
+                alt8=6;
                 }
                 break;
             case 40:
                 {
-                alt4=6;
+                alt8=7;
                 }
                 break;
             case 42:
                 {
-                alt4=7;
+                alt8=8;
                 }
                 break;
-            case 44:
+            case 43:
                 {
-                alt4=8;
-                }
-                break;
-            case 45:
-                {
-                alt4=9;
+                alt8=9;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt4) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:303:5: this_Row_0= ruleRow
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:396:5: this_Row_0= ruleRow
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getRowParserRuleCall_0()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleRow_in_ruleRowElement738);
+                    pushFollow(FollowSets000.FOLLOW_ruleRow_in_ruleRowElement908);
                     this_Row_0=ruleRow();
 
                     state._fsp--;
@@ -876,12 +1106,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:313:5: this_Header_1= ruleHeader
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:406:5: this_Header_1= ruleHeader
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getHeaderParserRuleCall_1()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleRowElement765);
+                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleRowElement935);
                     this_Header_1=ruleHeader();
 
                     state._fsp--;
@@ -894,12 +1124,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:323:5: this_Paragraf_2= ruleParagraf
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:416:5: this_Paragraf_2= ruleParagraf
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getParagrafParserRuleCall_2()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleRowElement792);
+                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleRowElement962);
                     this_Paragraf_2=ruleParagraf();
 
                     state._fsp--;
@@ -912,12 +1142,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:333:5: this_Carousel_3= ruleCarousel
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:426:5: this_Carousel_3= ruleCarousel
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getCarouselParserRuleCall_3()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleCarousel_in_ruleRowElement819);
+                    pushFollow(FollowSets000.FOLLOW_ruleCarousel_in_ruleRowElement989);
                     this_Carousel_3=ruleCarousel();
 
                     state._fsp--;
@@ -930,12 +1160,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:343:5: this_Image_4= ruleImage
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:436:5: this_Image_4= ruleImage
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getImageParserRuleCall_4()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleRowElement846);
+                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleRowElement1016);
                     this_Image_4=ruleImage();
 
                     state._fsp--;
@@ -948,12 +1178,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:353:5: this_Card_5= ruleCard
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:446:5: this_Card_5= ruleCard
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getCardParserRuleCall_5()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleCard_in_ruleRowElement873);
+                    pushFollow(FollowSets000.FOLLOW_ruleCard_in_ruleRowElement1043);
                     this_Card_5=ruleCard();
 
                     state._fsp--;
@@ -966,12 +1196,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:363:5: this_Anchor_6= ruleAnchor
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:456:5: this_Anchor_6= ruleAnchor
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getAnchorParserRuleCall_6()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleRowElement900);
+                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleRowElement1070);
                     this_Anchor_6=ruleAnchor();
 
                     state._fsp--;
@@ -984,12 +1214,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:373:5: this_Division_7= ruleDivision
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:466:5: this_Division_7= ruleDivision
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getDivisionParserRuleCall_7()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleRowElement927);
+                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleRowElement1097);
                     this_Division_7=ruleDivision();
 
                     state._fsp--;
@@ -1002,12 +1232,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:383:5: this_Map_8= ruleMap
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:476:5: this_Map_8= ruleMap
                     {
                      
                             newCompositeNode(grammarAccess.getRowElementAccess().getMapParserRuleCall_8()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleMap_in_ruleRowElement954);
+                    pushFollow(FollowSets000.FOLLOW_ruleMap_in_ruleRowElement1124);
                     this_Map_8=ruleMap();
 
                     state._fsp--;
@@ -1040,7 +1270,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCarouselElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:399:1: entryRuleCarouselElement returns [EObject current=null] : iv_ruleCarouselElement= ruleCarouselElement EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:492:1: entryRuleCarouselElement returns [EObject current=null] : iv_ruleCarouselElement= ruleCarouselElement EOF ;
     public final EObject entryRuleCarouselElement() throws RecognitionException {
         EObject current = null;
 
@@ -1048,17 +1278,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:400:2: (iv_ruleCarouselElement= ruleCarouselElement EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:401:2: iv_ruleCarouselElement= ruleCarouselElement EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:493:2: (iv_ruleCarouselElement= ruleCarouselElement EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:494:2: iv_ruleCarouselElement= ruleCarouselElement EOF
             {
              newCompositeNode(grammarAccess.getCarouselElementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleCarouselElement_in_entryRuleCarouselElement989);
+            pushFollow(FollowSets000.FOLLOW_ruleCarouselElement_in_entryRuleCarouselElement1159);
             iv_ruleCarouselElement=ruleCarouselElement();
 
             state._fsp--;
 
              current =iv_ruleCarouselElement; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCarouselElement999); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCarouselElement1169); 
 
             }
 
@@ -1076,7 +1306,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCarouselElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:408:1: ruleCarouselElement returns [EObject current=null] : this_CarouselPage_0= ruleCarouselPage ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:501:1: ruleCarouselElement returns [EObject current=null] : this_CarouselPage_0= ruleCarouselPage ;
     public final EObject ruleCarouselElement() throws RecognitionException {
         EObject current = null;
 
@@ -1086,13 +1316,13 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:411:28: (this_CarouselPage_0= ruleCarouselPage )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:413:5: this_CarouselPage_0= ruleCarouselPage
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:504:28: (this_CarouselPage_0= ruleCarouselPage )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:506:5: this_CarouselPage_0= ruleCarouselPage
             {
              
                     newCompositeNode(grammarAccess.getCarouselElementAccess().getCarouselPageParserRuleCall()); 
                 
-            pushFollow(FollowSets000.FOLLOW_ruleCarouselPage_in_ruleCarouselElement1045);
+            pushFollow(FollowSets000.FOLLOW_ruleCarouselPage_in_ruleCarouselElement1215);
             this_CarouselPage_0=ruleCarouselPage();
 
             state._fsp--;
@@ -1119,7 +1349,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCardElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:429:1: entryRuleCardElement returns [EObject current=null] : iv_ruleCardElement= ruleCardElement EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:522:1: entryRuleCardElement returns [EObject current=null] : iv_ruleCardElement= ruleCardElement EOF ;
     public final EObject entryRuleCardElement() throws RecognitionException {
         EObject current = null;
 
@@ -1127,17 +1357,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:430:2: (iv_ruleCardElement= ruleCardElement EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:431:2: iv_ruleCardElement= ruleCardElement EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:523:2: (iv_ruleCardElement= ruleCardElement EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:524:2: iv_ruleCardElement= ruleCardElement EOF
             {
              newCompositeNode(grammarAccess.getCardElementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleCardElement_in_entryRuleCardElement1079);
+            pushFollow(FollowSets000.FOLLOW_ruleCardElement_in_entryRuleCardElement1249);
             iv_ruleCardElement=ruleCardElement();
 
             state._fsp--;
 
              current =iv_ruleCardElement; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCardElement1089); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCardElement1259); 
 
             }
 
@@ -1155,7 +1385,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCardElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:438:1: ruleCardElement returns [EObject current=null] : this_CardPage_0= ruleCardPage ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:531:1: ruleCardElement returns [EObject current=null] : this_CardPage_0= ruleCardPage ;
     public final EObject ruleCardElement() throws RecognitionException {
         EObject current = null;
 
@@ -1165,13 +1395,13 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:441:28: (this_CardPage_0= ruleCardPage )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:443:5: this_CardPage_0= ruleCardPage
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:534:28: (this_CardPage_0= ruleCardPage )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:536:5: this_CardPage_0= ruleCardPage
             {
              
                     newCompositeNode(grammarAccess.getCardElementAccess().getCardPageParserRuleCall()); 
                 
-            pushFollow(FollowSets000.FOLLOW_ruleCardPage_in_ruleCardElement1135);
+            pushFollow(FollowSets000.FOLLOW_ruleCardPage_in_ruleCardElement1305);
             this_CardPage_0=ruleCardPage();
 
             state._fsp--;
@@ -1198,7 +1428,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDivisionElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:459:1: entryRuleDivisionElement returns [EObject current=null] : iv_ruleDivisionElement= ruleDivisionElement EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:552:1: entryRuleDivisionElement returns [EObject current=null] : iv_ruleDivisionElement= ruleDivisionElement EOF ;
     public final EObject entryRuleDivisionElement() throws RecognitionException {
         EObject current = null;
 
@@ -1206,17 +1436,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:460:2: (iv_ruleDivisionElement= ruleDivisionElement EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:461:2: iv_ruleDivisionElement= ruleDivisionElement EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:553:2: (iv_ruleDivisionElement= ruleDivisionElement EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:554:2: iv_ruleDivisionElement= ruleDivisionElement EOF
             {
              newCompositeNode(grammarAccess.getDivisionElementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDivisionElement_in_entryRuleDivisionElement1169);
+            pushFollow(FollowSets000.FOLLOW_ruleDivisionElement_in_entryRuleDivisionElement1339);
             iv_ruleDivisionElement=ruleDivisionElement();
 
             state._fsp--;
 
              current =iv_ruleDivisionElement; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDivisionElement1179); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDivisionElement1349); 
 
             }
 
@@ -1234,7 +1464,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDivisionElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:468:1: ruleDivisionElement returns [EObject current=null] : (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:561:1: ruleDivisionElement returns [EObject current=null] : (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) ;
     public final EObject ruleDivisionElement() throws RecognitionException {
         EObject current = null;
 
@@ -1260,72 +1490,72 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:471:28: ( (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:472:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:564:28: ( (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:565:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:472:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
-            int alt5=9;
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:565:1: (this_Row_0= ruleRow | this_Header_1= ruleHeader | this_Paragraf_2= ruleParagraf | this_Carousel_3= ruleCarousel | this_Image_4= ruleImage | this_Card_5= ruleCard | this_Anchor_6= ruleAnchor | this_Division_7= ruleDivision | this_Map_8= ruleMap )
+            int alt9=9;
             switch ( input.LA(1) ) {
-            case 30:
+            case 28:
                 {
-                alt5=1;
+                alt9=1;
                 }
                 break;
-            case 31:
+            case 29:
                 {
-                alt5=2;
+                alt9=2;
                 }
                 break;
-            case 34:
+            case 32:
                 {
-                alt5=3;
+                alt9=3;
+                }
+                break;
+            case 33:
+                {
+                alt9=4;
                 }
                 break;
             case 35:
                 {
-                alt5=4;
+                alt9=5;
                 }
                 break;
-            case 37:
+            case 38:
                 {
-                alt5=5;
+                alt9=6;
                 }
                 break;
             case 40:
                 {
-                alt5=6;
+                alt9=7;
                 }
                 break;
             case 42:
                 {
-                alt5=7;
+                alt9=8;
                 }
                 break;
-            case 44:
+            case 43:
                 {
-                alt5=8;
-                }
-                break;
-            case 45:
-                {
-                alt5=9;
+                alt9=9;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt5) {
+            switch (alt9) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:473:5: this_Row_0= ruleRow
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:566:5: this_Row_0= ruleRow
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getRowParserRuleCall_0()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleRow_in_ruleDivisionElement1226);
+                    pushFollow(FollowSets000.FOLLOW_ruleRow_in_ruleDivisionElement1396);
                     this_Row_0=ruleRow();
 
                     state._fsp--;
@@ -1338,12 +1568,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:483:5: this_Header_1= ruleHeader
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:576:5: this_Header_1= ruleHeader
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getHeaderParserRuleCall_1()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleDivisionElement1253);
+                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleDivisionElement1423);
                     this_Header_1=ruleHeader();
 
                     state._fsp--;
@@ -1356,12 +1586,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:493:5: this_Paragraf_2= ruleParagraf
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:586:5: this_Paragraf_2= ruleParagraf
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getParagrafParserRuleCall_2()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleDivisionElement1280);
+                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleDivisionElement1450);
                     this_Paragraf_2=ruleParagraf();
 
                     state._fsp--;
@@ -1374,12 +1604,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:503:5: this_Carousel_3= ruleCarousel
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:596:5: this_Carousel_3= ruleCarousel
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getCarouselParserRuleCall_3()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleCarousel_in_ruleDivisionElement1307);
+                    pushFollow(FollowSets000.FOLLOW_ruleCarousel_in_ruleDivisionElement1477);
                     this_Carousel_3=ruleCarousel();
 
                     state._fsp--;
@@ -1392,12 +1622,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:513:5: this_Image_4= ruleImage
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:606:5: this_Image_4= ruleImage
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getImageParserRuleCall_4()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleDivisionElement1334);
+                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleDivisionElement1504);
                     this_Image_4=ruleImage();
 
                     state._fsp--;
@@ -1410,12 +1640,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:523:5: this_Card_5= ruleCard
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:616:5: this_Card_5= ruleCard
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getCardParserRuleCall_5()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleCard_in_ruleDivisionElement1361);
+                    pushFollow(FollowSets000.FOLLOW_ruleCard_in_ruleDivisionElement1531);
                     this_Card_5=ruleCard();
 
                     state._fsp--;
@@ -1428,12 +1658,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:533:5: this_Anchor_6= ruleAnchor
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:626:5: this_Anchor_6= ruleAnchor
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getAnchorParserRuleCall_6()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleDivisionElement1388);
+                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleDivisionElement1558);
                     this_Anchor_6=ruleAnchor();
 
                     state._fsp--;
@@ -1446,12 +1676,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:543:5: this_Division_7= ruleDivision
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:636:5: this_Division_7= ruleDivision
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getDivisionParserRuleCall_7()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleDivisionElement1415);
+                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleDivisionElement1585);
                     this_Division_7=ruleDivision();
 
                     state._fsp--;
@@ -1464,12 +1694,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:553:5: this_Map_8= ruleMap
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:646:5: this_Map_8= ruleMap
                     {
                      
                             newCompositeNode(grammarAccess.getDivisionElementAccess().getMapParserRuleCall_8()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleMap_in_ruleDivisionElement1442);
+                    pushFollow(FollowSets000.FOLLOW_ruleMap_in_ruleDivisionElement1612);
                     this_Map_8=ruleMap();
 
                     state._fsp--;
@@ -1502,7 +1732,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCarouselPageElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:569:1: entryRuleCarouselPageElement returns [EObject current=null] : iv_ruleCarouselPageElement= ruleCarouselPageElement EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:662:1: entryRuleCarouselPageElement returns [EObject current=null] : iv_ruleCarouselPageElement= ruleCarouselPageElement EOF ;
     public final EObject entryRuleCarouselPageElement() throws RecognitionException {
         EObject current = null;
 
@@ -1510,17 +1740,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:570:2: (iv_ruleCarouselPageElement= ruleCarouselPageElement EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:571:2: iv_ruleCarouselPageElement= ruleCarouselPageElement EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:663:2: (iv_ruleCarouselPageElement= ruleCarouselPageElement EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:664:2: iv_ruleCarouselPageElement= ruleCarouselPageElement EOF
             {
              newCompositeNode(grammarAccess.getCarouselPageElementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleCarouselPageElement_in_entryRuleCarouselPageElement1477);
+            pushFollow(FollowSets000.FOLLOW_ruleCarouselPageElement_in_entryRuleCarouselPageElement1647);
             iv_ruleCarouselPageElement=ruleCarouselPageElement();
 
             state._fsp--;
 
              current =iv_ruleCarouselPageElement; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCarouselPageElement1487); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCarouselPageElement1657); 
 
             }
 
@@ -1538,7 +1768,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCarouselPageElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:578:1: ruleCarouselPageElement returns [EObject current=null] : (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:671:1: ruleCarouselPageElement returns [EObject current=null] : (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision ) ;
     public final EObject ruleCarouselPageElement() throws RecognitionException {
         EObject current = null;
 
@@ -1556,52 +1786,52 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:581:28: ( (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:582:1: (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:674:28: ( (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:675:1: (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:582:1: (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision )
-            int alt6=5;
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:675:1: (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision )
+            int alt10=5;
             switch ( input.LA(1) ) {
-            case 31:
+            case 29:
                 {
-                alt6=1;
+                alt10=1;
                 }
                 break;
-            case 34:
+            case 32:
                 {
-                alt6=2;
+                alt10=2;
                 }
                 break;
-            case 37:
+            case 35:
                 {
-                alt6=3;
+                alt10=3;
+                }
+                break;
+            case 40:
+                {
+                alt10=4;
                 }
                 break;
             case 42:
                 {
-                alt6=4;
-                }
-                break;
-            case 44:
-                {
-                alt6=5;
+                alt10=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt10) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:583:5: this_Header_0= ruleHeader
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:676:5: this_Header_0= ruleHeader
                     {
                      
                             newCompositeNode(grammarAccess.getCarouselPageElementAccess().getHeaderParserRuleCall_0()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleCarouselPageElement1534);
+                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleCarouselPageElement1704);
                     this_Header_0=ruleHeader();
 
                     state._fsp--;
@@ -1614,12 +1844,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:593:5: this_Paragraf_1= ruleParagraf
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:686:5: this_Paragraf_1= ruleParagraf
                     {
                      
                             newCompositeNode(grammarAccess.getCarouselPageElementAccess().getParagrafParserRuleCall_1()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleCarouselPageElement1561);
+                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleCarouselPageElement1731);
                     this_Paragraf_1=ruleParagraf();
 
                     state._fsp--;
@@ -1632,12 +1862,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:603:5: this_Image_2= ruleImage
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:696:5: this_Image_2= ruleImage
                     {
                      
                             newCompositeNode(grammarAccess.getCarouselPageElementAccess().getImageParserRuleCall_2()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleCarouselPageElement1588);
+                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleCarouselPageElement1758);
                     this_Image_2=ruleImage();
 
                     state._fsp--;
@@ -1650,12 +1880,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:613:5: this_Anchor_3= ruleAnchor
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:706:5: this_Anchor_3= ruleAnchor
                     {
                      
                             newCompositeNode(grammarAccess.getCarouselPageElementAccess().getAnchorParserRuleCall_3()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleCarouselPageElement1615);
+                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleCarouselPageElement1785);
                     this_Anchor_3=ruleAnchor();
 
                     state._fsp--;
@@ -1668,12 +1898,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:623:5: this_Division_4= ruleDivision
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:716:5: this_Division_4= ruleDivision
                     {
                      
                             newCompositeNode(grammarAccess.getCarouselPageElementAccess().getDivisionParserRuleCall_4()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleCarouselPageElement1642);
+                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleCarouselPageElement1812);
                     this_Division_4=ruleDivision();
 
                     state._fsp--;
@@ -1706,7 +1936,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCardPageElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:639:1: entryRuleCardPageElement returns [EObject current=null] : iv_ruleCardPageElement= ruleCardPageElement EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:732:1: entryRuleCardPageElement returns [EObject current=null] : iv_ruleCardPageElement= ruleCardPageElement EOF ;
     public final EObject entryRuleCardPageElement() throws RecognitionException {
         EObject current = null;
 
@@ -1714,17 +1944,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:640:2: (iv_ruleCardPageElement= ruleCardPageElement EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:641:2: iv_ruleCardPageElement= ruleCardPageElement EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:733:2: (iv_ruleCardPageElement= ruleCardPageElement EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:734:2: iv_ruleCardPageElement= ruleCardPageElement EOF
             {
              newCompositeNode(grammarAccess.getCardPageElementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleCardPageElement_in_entryRuleCardPageElement1677);
+            pushFollow(FollowSets000.FOLLOW_ruleCardPageElement_in_entryRuleCardPageElement1847);
             iv_ruleCardPageElement=ruleCardPageElement();
 
             state._fsp--;
 
              current =iv_ruleCardPageElement; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCardPageElement1687); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCardPageElement1857); 
 
             }
 
@@ -1742,7 +1972,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCardPageElement"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:648:1: ruleCardPageElement returns [EObject current=null] : (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:741:1: ruleCardPageElement returns [EObject current=null] : (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision ) ;
     public final EObject ruleCardPageElement() throws RecognitionException {
         EObject current = null;
 
@@ -1760,52 +1990,52 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:651:28: ( (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:652:1: (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:744:28: ( (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:745:1: (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:652:1: (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision )
-            int alt7=5;
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:745:1: (this_Header_0= ruleHeader | this_Paragraf_1= ruleParagraf | this_Image_2= ruleImage | this_Anchor_3= ruleAnchor | this_Division_4= ruleDivision )
+            int alt11=5;
             switch ( input.LA(1) ) {
-            case 31:
+            case 29:
                 {
-                alt7=1;
+                alt11=1;
                 }
                 break;
-            case 34:
+            case 32:
                 {
-                alt7=2;
+                alt11=2;
                 }
                 break;
-            case 37:
+            case 35:
                 {
-                alt7=3;
+                alt11=3;
+                }
+                break;
+            case 40:
+                {
+                alt11=4;
                 }
                 break;
             case 42:
                 {
-                alt7=4;
-                }
-                break;
-            case 44:
-                {
-                alt7=5;
+                alt11=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt7) {
+            switch (alt11) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:653:5: this_Header_0= ruleHeader
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:746:5: this_Header_0= ruleHeader
                     {
                      
                             newCompositeNode(grammarAccess.getCardPageElementAccess().getHeaderParserRuleCall_0()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleCardPageElement1734);
+                    pushFollow(FollowSets000.FOLLOW_ruleHeader_in_ruleCardPageElement1904);
                     this_Header_0=ruleHeader();
 
                     state._fsp--;
@@ -1818,12 +2048,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:663:5: this_Paragraf_1= ruleParagraf
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:756:5: this_Paragraf_1= ruleParagraf
                     {
                      
                             newCompositeNode(grammarAccess.getCardPageElementAccess().getParagrafParserRuleCall_1()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleCardPageElement1761);
+                    pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_ruleCardPageElement1931);
                     this_Paragraf_1=ruleParagraf();
 
                     state._fsp--;
@@ -1836,12 +2066,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:673:5: this_Image_2= ruleImage
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:766:5: this_Image_2= ruleImage
                     {
                      
                             newCompositeNode(grammarAccess.getCardPageElementAccess().getImageParserRuleCall_2()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleCardPageElement1788);
+                    pushFollow(FollowSets000.FOLLOW_ruleImage_in_ruleCardPageElement1958);
                     this_Image_2=ruleImage();
 
                     state._fsp--;
@@ -1854,12 +2084,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:683:5: this_Anchor_3= ruleAnchor
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:776:5: this_Anchor_3= ruleAnchor
                     {
                      
                             newCompositeNode(grammarAccess.getCardPageElementAccess().getAnchorParserRuleCall_3()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleCardPageElement1815);
+                    pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_ruleCardPageElement1985);
                     this_Anchor_3=ruleAnchor();
 
                     state._fsp--;
@@ -1872,12 +2102,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:693:5: this_Division_4= ruleDivision
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:786:5: this_Division_4= ruleDivision
                     {
                      
                             newCompositeNode(grammarAccess.getCardPageElementAccess().getDivisionParserRuleCall_4()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleCardPageElement1842);
+                    pushFollow(FollowSets000.FOLLOW_ruleDivision_in_ruleCardPageElement2012);
                     this_Division_4=ruleDivision();
 
                     state._fsp--;
@@ -1909,392 +2139,8 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleCardPageElement"
 
 
-    // $ANTLR start "entryRulePage"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:709:1: entryRulePage returns [EObject current=null] : iv_rulePage= rulePage EOF ;
-    public final EObject entryRulePage() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_rulePage = null;
-
-
-        try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:710:2: (iv_rulePage= rulePage EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:711:2: iv_rulePage= rulePage EOF
-            {
-             newCompositeNode(grammarAccess.getPageRule()); 
-            pushFollow(FollowSets000.FOLLOW_rulePage_in_entryRulePage1877);
-            iv_rulePage=rulePage();
-
-            state._fsp--;
-
-             current =iv_rulePage; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulePage1887); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRulePage"
-
-
-    // $ANTLR start "rulePage"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:718:1: rulePage returns [EObject current=null] : ( () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}' ) ;
-    public final EObject rulePage() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_1=null;
-        Token otherlv_2=null;
-        Token otherlv_3=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
-        Token otherlv_8=null;
-        Token otherlv_10=null;
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        AntlrDatatypeRuleToken lv_title_4_0 = null;
-
-        EObject lv_sections_9_0 = null;
-
-        EObject lv_sections_11_0 = null;
-
-        EObject lv_menu_14_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:721:28: ( ( () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:722:1: ( () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}' )
-            {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:722:1: ( () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:722:2: () otherlv_1= 'Page' otherlv_2= '{' (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )? (otherlv_5= 'introSection' ( ( ruleEString ) ) )? (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )? (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )? otherlv_15= '}'
-            {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:722:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:723:5: 
-            {
-
-                    current = forceCreateModelElement(
-                        grammarAccess.getPageAccess().getPageAction_0(),
-                        current);
-                
-
-            }
-
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_15_in_rulePage1933); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getPageAccess().getPageKeyword_1());
-                
-            otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_12_in_rulePage1945); 
-
-                	newLeafNode(otherlv_2, grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_2());
-                
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:736:1: (otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) ) )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==16) ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:736:3: otherlv_3= 'title' ( (lv_title_4_0= ruleEString ) )
-                    {
-                    otherlv_3=(Token)match(input,16,FollowSets000.FOLLOW_16_in_rulePage1958); 
-
-                        	newLeafNode(otherlv_3, grammarAccess.getPageAccess().getTitleKeyword_3_0());
-                        
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:740:1: ( (lv_title_4_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:741:1: (lv_title_4_0= ruleEString )
-                    {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:741:1: (lv_title_4_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:742:3: lv_title_4_0= ruleEString
-                    {
-                     
-                    	        newCompositeNode(grammarAccess.getPageAccess().getTitleEStringParserRuleCall_3_1_0()); 
-                    	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_rulePage1979);
-                    lv_title_4_0=ruleEString();
-
-                    state._fsp--;
-
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getPageRule());
-                    	        }
-                           		set(
-                           			current, 
-                           			"title",
-                            		lv_title_4_0, 
-                            		"EString");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:758:4: (otherlv_5= 'introSection' ( ( ruleEString ) ) )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==17) ) {
-                alt9=1;
-            }
-            switch (alt9) {
-                case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:758:6: otherlv_5= 'introSection' ( ( ruleEString ) )
-                    {
-                    otherlv_5=(Token)match(input,17,FollowSets000.FOLLOW_17_in_rulePage1994); 
-
-                        	newLeafNode(otherlv_5, grammarAccess.getPageAccess().getIntroSectionKeyword_4_0());
-                        
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:762:1: ( ( ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:763:1: ( ruleEString )
-                    {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:763:1: ( ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:764:3: ruleEString
-                    {
-
-                    			if (current==null) {
-                    	            current = createModelElement(grammarAccess.getPageRule());
-                    	        }
-                            
-                     
-                    	        newCompositeNode(grammarAccess.getPageAccess().getIntroSectionSectionCrossReference_4_1_0()); 
-                    	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_rulePage2017);
-                    ruleEString();
-
-                    state._fsp--;
-
-                     
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:777:4: (otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}' )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
-
-            if ( (LA11_0==18) ) {
-                alt11=1;
-            }
-            switch (alt11) {
-                case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:777:6: otherlv_7= 'sections' otherlv_8= '{' ( (lv_sections_9_0= ruleSection ) ) (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )* otherlv_12= '}'
-                    {
-                    otherlv_7=(Token)match(input,18,FollowSets000.FOLLOW_18_in_rulePage2032); 
-
-                        	newLeafNode(otherlv_7, grammarAccess.getPageAccess().getSectionsKeyword_5_0());
-                        
-                    otherlv_8=(Token)match(input,12,FollowSets000.FOLLOW_12_in_rulePage2044); 
-
-                        	newLeafNode(otherlv_8, grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_5_1());
-                        
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:785:1: ( (lv_sections_9_0= ruleSection ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:786:1: (lv_sections_9_0= ruleSection )
-                    {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:786:1: (lv_sections_9_0= ruleSection )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:787:3: lv_sections_9_0= ruleSection
-                    {
-                     
-                    	        newCompositeNode(grammarAccess.getPageAccess().getSectionsSectionParserRuleCall_5_2_0()); 
-                    	    
-                    pushFollow(FollowSets000.FOLLOW_ruleSection_in_rulePage2065);
-                    lv_sections_9_0=ruleSection();
-
-                    state._fsp--;
-
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getPageRule());
-                    	        }
-                           		add(
-                           			current, 
-                           			"sections",
-                            		lv_sections_9_0, 
-                            		"Section");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:803:2: (otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) ) )*
-                    loop10:
-                    do {
-                        int alt10=2;
-                        int LA10_0 = input.LA(1);
-
-                        if ( (LA10_0==19) ) {
-                            alt10=1;
-                        }
-
-
-                        switch (alt10) {
-                    	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:803:4: otherlv_10= ',' ( (lv_sections_11_0= ruleSection ) )
-                    	    {
-                    	    otherlv_10=(Token)match(input,19,FollowSets000.FOLLOW_19_in_rulePage2078); 
-
-                    	        	newLeafNode(otherlv_10, grammarAccess.getPageAccess().getCommaKeyword_5_3_0());
-                    	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:807:1: ( (lv_sections_11_0= ruleSection ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:808:1: (lv_sections_11_0= ruleSection )
-                    	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:808:1: (lv_sections_11_0= ruleSection )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:809:3: lv_sections_11_0= ruleSection
-                    	    {
-                    	     
-                    	    	        newCompositeNode(grammarAccess.getPageAccess().getSectionsSectionParserRuleCall_5_3_1_0()); 
-                    	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleSection_in_rulePage2099);
-                    	    lv_sections_11_0=ruleSection();
-
-                    	    state._fsp--;
-
-
-                    	    	        if (current==null) {
-                    	    	            current = createModelElementForParent(grammarAccess.getPageRule());
-                    	    	        }
-                    	           		add(
-                    	           			current, 
-                    	           			"sections",
-                    	            		lv_sections_11_0, 
-                    	            		"Section");
-                    	    	        afterParserOrEnumRuleCall();
-                    	    	    
-
-                    	    }
-
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop10;
-                        }
-                    } while (true);
-
-                    otherlv_12=(Token)match(input,14,FollowSets000.FOLLOW_14_in_rulePage2113); 
-
-                        	newLeafNode(otherlv_12, grammarAccess.getPageAccess().getRightCurlyBracketKeyword_5_4());
-                        
-
-                    }
-                    break;
-
-            }
-
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:829:3: (otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) ) )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
-
-            if ( (LA12_0==20) ) {
-                alt12=1;
-            }
-            switch (alt12) {
-                case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:829:5: otherlv_13= 'menu' ( (lv_menu_14_0= ruleMenu ) )
-                    {
-                    otherlv_13=(Token)match(input,20,FollowSets000.FOLLOW_20_in_rulePage2128); 
-
-                        	newLeafNode(otherlv_13, grammarAccess.getPageAccess().getMenuKeyword_6_0());
-                        
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:833:1: ( (lv_menu_14_0= ruleMenu ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:834:1: (lv_menu_14_0= ruleMenu )
-                    {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:834:1: (lv_menu_14_0= ruleMenu )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:835:3: lv_menu_14_0= ruleMenu
-                    {
-                     
-                    	        newCompositeNode(grammarAccess.getPageAccess().getMenuMenuParserRuleCall_6_1_0()); 
-                    	    
-                    pushFollow(FollowSets000.FOLLOW_ruleMenu_in_rulePage2149);
-                    lv_menu_14_0=ruleMenu();
-
-                    state._fsp--;
-
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getPageRule());
-                    	        }
-                           		set(
-                           			current, 
-                           			"menu",
-                            		lv_menu_14_0, 
-                            		"Menu");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_14_in_rulePage2163); 
-
-                	newLeafNode(otherlv_15, grammarAccess.getPageAccess().getRightCurlyBracketKeyword_7());
-                
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "rulePage"
-
-
     // $ANTLR start "entryRuleEString"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:863:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:802:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -2302,17 +2148,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:864:2: (iv_ruleEString= ruleEString EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:865:2: iv_ruleEString= ruleEString EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:803:2: (iv_ruleEString= ruleEString EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:804:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_entryRuleEString2200);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_entryRuleEString2048);
             iv_ruleEString=ruleEString();
 
             state._fsp--;
 
              current =iv_ruleEString.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEString2211); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEString2059); 
 
             }
 
@@ -2330,7 +2176,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:872:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:811:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2340,30 +2186,30 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:875:28: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:876:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:814:28: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:815:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:876:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:815:1: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_STRING) ) {
-                alt13=1;
+            if ( (LA12_0==RULE_STRING) ) {
+                alt12=1;
             }
-            else if ( (LA13_0==RULE_ID) ) {
-                alt13=2;
+            else if ( (LA12_0==RULE_ID) ) {
+                alt12=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:876:6: this_STRING_0= RULE_STRING
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:815:6: this_STRING_0= RULE_STRING
                     {
-                    this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEString2251); 
+                    this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEString2099); 
 
                     		current.merge(this_STRING_0);
                         
@@ -2374,9 +2220,9 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:884:10: this_ID_1= RULE_ID
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:823:10: this_ID_1= RULE_ID
                     {
-                    this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleEString2277); 
+                    this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleEString2125); 
 
                     		current.merge(this_ID_1);
                         
@@ -2407,7 +2253,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSection"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:899:1: entryRuleSection returns [EObject current=null] : iv_ruleSection= ruleSection EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:838:1: entryRuleSection returns [EObject current=null] : iv_ruleSection= ruleSection EOF ;
     public final EObject entryRuleSection() throws RecognitionException {
         EObject current = null;
 
@@ -2415,17 +2261,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:900:2: (iv_ruleSection= ruleSection EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:901:2: iv_ruleSection= ruleSection EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:839:2: (iv_ruleSection= ruleSection EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:840:2: iv_ruleSection= ruleSection EOF
             {
              newCompositeNode(grammarAccess.getSectionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleSection_in_entryRuleSection2322);
+            pushFollow(FollowSets000.FOLLOW_ruleSection_in_entryRuleSection2170);
             iv_ruleSection=ruleSection();
 
             state._fsp--;
 
              current =iv_ruleSection; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSection2332); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSection2180); 
 
             }
 
@@ -2443,7 +2289,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSection"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:908:1: ruleSection returns [EObject current=null] : ( () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:847:1: ruleSection returns [EObject current=null] : ( () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
     public final EObject ruleSection() throws RecognitionException {
         EObject current = null;
 
@@ -2476,14 +2322,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:911:28: ( ( () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:912:1: ( () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:850:28: ( ( () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:851:1: ( () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:912:1: ( () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:912:2: () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:851:1: ( () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:851:2: () otherlv_1= 'Section' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:912:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:913:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:851:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:852:5: 
             {
 
                     current = forceCreateModelElement(
@@ -2493,20 +2339,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleSection2378); 
+            otherlv_1=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleSection2226); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSectionAccess().getSectionKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:922:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:923:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:861:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:862:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:923:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:924:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:862:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:863:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getSectionAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSection2399);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSection2247);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -2528,35 +2374,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleSection2411); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleSection2259); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getSectionAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:944:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:883:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA14_0==22) ) {
-                alt14=1;
+            if ( (LA13_0==20) ) {
+                alt13=1;
             }
-            switch (alt14) {
+            switch (alt13) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:944:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:883:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleSection2424); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleSection2272); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getSectionAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:948:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:949:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:887:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:888:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:949:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:950:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:888:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:889:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getSectionAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleSection2445);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleSection2293);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -2584,31 +2430,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:966:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:905:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA15_0==23) ) {
-                alt15=1;
+            if ( (LA14_0==21) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:966:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:905:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleSection2460); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleSection2308); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getSectionAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:970:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:971:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:909:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:910:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:971:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:972:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:910:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:911:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getSectionAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSection2481);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSection2329);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -2636,31 +2482,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:988:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:927:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA16_0==24) ) {
-                alt16=1;
+            if ( (LA15_0==22) ) {
+                alt15=1;
             }
-            switch (alt16) {
+            switch (alt15) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:988:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:927:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleSection2496); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleSection2344); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getSectionAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:992:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:993:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:931:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:932:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:993:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:994:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:932:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:933:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getSectionAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSection2517);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSection2365);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -2688,31 +2534,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1010:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:949:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA17_0==25) ) {
-                alt17=1;
+            if ( (LA16_0==23) ) {
+                alt16=1;
             }
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1010:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:949:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleSection2532); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleSection2380); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getSectionAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1014:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1015:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:953:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:954:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1015:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1016:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:954:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:955:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getSectionAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSection2553);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleSection2401);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -2740,35 +2586,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1032:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:971:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}' )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA19_0==26) ) {
-                alt19=1;
+            if ( (LA18_0==24) ) {
+                alt18=1;
             }
-            switch (alt19) {
+            switch (alt18) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1032:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:971:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleSectionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )* otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleSection2568); 
+                    otherlv_12=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleSection2416); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getSectionAccess().getElementsKeyword_8_0());
                         
-                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleSection2580); 
+                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleSection2428); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getSectionAccess().getLeftCurlyBracketKeyword_8_1());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1040:1: ( (lv_elements_14_0= ruleSectionElement ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1041:1: (lv_elements_14_0= ruleSectionElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:979:1: ( (lv_elements_14_0= ruleSectionElement ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:980:1: (lv_elements_14_0= ruleSectionElement )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1041:1: (lv_elements_14_0= ruleSectionElement )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1042:3: lv_elements_14_0= ruleSectionElement
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:980:1: (lv_elements_14_0= ruleSectionElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:981:3: lv_elements_14_0= ruleSectionElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getSectionAccess().getElementsSectionElementParserRuleCall_8_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleSectionElement_in_ruleSection2601);
+                    pushFollow(FollowSets000.FOLLOW_ruleSectionElement_in_ruleSection2449);
                     lv_elements_14_0=ruleSectionElement();
 
                     state._fsp--;
@@ -2790,35 +2636,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1058:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )*
-                    loop18:
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:997:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) ) )*
+                    loop17:
                     do {
-                        int alt18=2;
-                        int LA18_0 = input.LA(1);
+                        int alt17=2;
+                        int LA17_0 = input.LA(1);
 
-                        if ( (LA18_0==19) ) {
-                            alt18=1;
+                        if ( (LA17_0==16) ) {
+                            alt17=1;
                         }
 
 
-                        switch (alt18) {
+                        switch (alt17) {
                     	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1058:4: otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:997:4: otherlv_15= ',' ( (lv_elements_16_0= ruleSectionElement ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleSection2614); 
+                    	    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleSection2462); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getSectionAccess().getCommaKeyword_8_3_0());
                     	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1062:1: ( (lv_elements_16_0= ruleSectionElement ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1063:1: (lv_elements_16_0= ruleSectionElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1001:1: ( (lv_elements_16_0= ruleSectionElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1002:1: (lv_elements_16_0= ruleSectionElement )
                     	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1063:1: (lv_elements_16_0= ruleSectionElement )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1064:3: lv_elements_16_0= ruleSectionElement
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1002:1: (lv_elements_16_0= ruleSectionElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1003:3: lv_elements_16_0= ruleSectionElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getSectionAccess().getElementsSectionElementParserRuleCall_8_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleSectionElement_in_ruleSection2635);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleSectionElement_in_ruleSection2483);
                     	    lv_elements_16_0=ruleSectionElement();
 
                     	    state._fsp--;
@@ -2845,11 +2691,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop18;
+                    	    break loop17;
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleSection2649); 
+                    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleSection2497); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getSectionAccess().getRightCurlyBracketKeyword_8_4());
                         
@@ -2859,7 +2705,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleSection2663); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleSection2511); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getSectionAccess().getRightCurlyBracketKeyword_9());
                 
@@ -2884,7 +2730,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMenu"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1096:1: entryRuleMenu returns [EObject current=null] : iv_ruleMenu= ruleMenu EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1035:1: entryRuleMenu returns [EObject current=null] : iv_ruleMenu= ruleMenu EOF ;
     public final EObject entryRuleMenu() throws RecognitionException {
         EObject current = null;
 
@@ -2892,17 +2738,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1097:2: (iv_ruleMenu= ruleMenu EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1098:2: iv_ruleMenu= ruleMenu EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1036:2: (iv_ruleMenu= ruleMenu EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1037:2: iv_ruleMenu= ruleMenu EOF
             {
              newCompositeNode(grammarAccess.getMenuRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMenu_in_entryRuleMenu2699);
+            pushFollow(FollowSets000.FOLLOW_ruleMenu_in_entryRuleMenu2547);
             iv_ruleMenu=ruleMenu();
 
             state._fsp--;
 
              current =iv_ruleMenu; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMenu2709); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMenu2557); 
 
             }
 
@@ -2920,7 +2766,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMenu"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1105:1: ruleMenu returns [EObject current=null] : ( () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1044:1: ruleMenu returns [EObject current=null] : ( () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
     public final EObject ruleMenu() throws RecognitionException {
         EObject current = null;
 
@@ -2953,14 +2799,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1108:28: ( ( () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1109:1: ( () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1047:28: ( ( () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1048:1: ( () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1109:1: ( () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1109:2: () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1048:1: ( () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1048:2: () otherlv_1= 'Menu' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1109:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1110:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1048:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1049:5: 
             {
 
                     current = forceCreateModelElement(
@@ -2970,20 +2816,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleMenu2755); 
+            otherlv_1=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleMenu2603); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMenuAccess().getMenuKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1119:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1120:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1058:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1059:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1120:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1121:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1059:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1060:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getMenuAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenu2776);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenu2624);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -3005,35 +2851,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMenu2788); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMenu2636); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getMenuAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1141:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1080:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA20_0==22) ) {
-                alt20=1;
+            if ( (LA19_0==20) ) {
+                alt19=1;
             }
-            switch (alt20) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1141:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1080:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleMenu2801); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleMenu2649); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getMenuAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1145:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1146:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1084:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1085:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1146:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1147:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1085:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1086:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleMenu2822);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleMenu2670);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -3061,31 +2907,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1163:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1102:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA21_0==23) ) {
-                alt21=1;
+            if ( (LA20_0==21) ) {
+                alt20=1;
             }
-            switch (alt21) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1163:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1102:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleMenu2837); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleMenu2685); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getMenuAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1167:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1168:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1106:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1107:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1168:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1169:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1107:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1108:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenu2858);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenu2706);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -3113,31 +2959,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1185:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1124:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA22_0==24) ) {
-                alt22=1;
+            if ( (LA21_0==22) ) {
+                alt21=1;
             }
-            switch (alt22) {
+            switch (alt21) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1185:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1124:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleMenu2873); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleMenu2721); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getMenuAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1189:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1190:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1128:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1129:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1190:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1191:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1129:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1130:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenu2894);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenu2742);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -3165,31 +3011,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1207:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1146:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA23_0==25) ) {
-                alt23=1;
+            if ( (LA22_0==23) ) {
+                alt22=1;
             }
-            switch (alt23) {
+            switch (alt22) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1207:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1146:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleMenu2909); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleMenu2757); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getMenuAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1211:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1212:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1150:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1151:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1212:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1213:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1151:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1152:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenu2930);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenu2778);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -3217,35 +3063,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1229:4: (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1168:4: (otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}' )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA25_0==28) ) {
-                alt25=1;
+            if ( (LA24_0==26) ) {
+                alt24=1;
             }
-            switch (alt25) {
+            switch (alt24) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1229:6: otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1168:6: otherlv_12= 'items' otherlv_13= '{' ( (lv_items_14_0= ruleMenuElement ) ) (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )* otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleMenu2945); 
+                    otherlv_12=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleMenu2793); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getMenuAccess().getItemsKeyword_8_0());
                         
-                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMenu2957); 
+                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMenu2805); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getMenuAccess().getLeftCurlyBracketKeyword_8_1());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1237:1: ( (lv_items_14_0= ruleMenuElement ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1238:1: (lv_items_14_0= ruleMenuElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1176:1: ( (lv_items_14_0= ruleMenuElement ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1177:1: (lv_items_14_0= ruleMenuElement )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1238:1: (lv_items_14_0= ruleMenuElement )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1239:3: lv_items_14_0= ruleMenuElement
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1177:1: (lv_items_14_0= ruleMenuElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1178:3: lv_items_14_0= ruleMenuElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuAccess().getItemsMenuElementParserRuleCall_8_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleMenuElement_in_ruleMenu2978);
+                    pushFollow(FollowSets000.FOLLOW_ruleMenuElement_in_ruleMenu2826);
                     lv_items_14_0=ruleMenuElement();
 
                     state._fsp--;
@@ -3267,35 +3113,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1255:2: (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )*
-                    loop24:
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1194:2: (otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) ) )*
+                    loop23:
                     do {
-                        int alt24=2;
-                        int LA24_0 = input.LA(1);
+                        int alt23=2;
+                        int LA23_0 = input.LA(1);
 
-                        if ( (LA24_0==19) ) {
-                            alt24=1;
+                        if ( (LA23_0==16) ) {
+                            alt23=1;
                         }
 
 
-                        switch (alt24) {
+                        switch (alt23) {
                     	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1255:4: otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1194:4: otherlv_15= ',' ( (lv_items_16_0= ruleMenuElement ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleMenu2991); 
+                    	    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleMenu2839); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getMenuAccess().getCommaKeyword_8_3_0());
                     	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1259:1: ( (lv_items_16_0= ruleMenuElement ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1260:1: (lv_items_16_0= ruleMenuElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1198:1: ( (lv_items_16_0= ruleMenuElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1199:1: (lv_items_16_0= ruleMenuElement )
                     	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1260:1: (lv_items_16_0= ruleMenuElement )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1261:3: lv_items_16_0= ruleMenuElement
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1199:1: (lv_items_16_0= ruleMenuElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1200:3: lv_items_16_0= ruleMenuElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getMenuAccess().getItemsMenuElementParserRuleCall_8_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleMenuElement_in_ruleMenu3012);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleMenuElement_in_ruleMenu2860);
                     	    lv_items_16_0=ruleMenuElement();
 
                     	    state._fsp--;
@@ -3322,11 +3168,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop24;
+                    	    break loop23;
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleMenu3026); 
+                    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleMenu2874); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getMenuAccess().getRightCurlyBracketKeyword_8_4());
                         
@@ -3336,7 +3182,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleMenu3040); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleMenu2888); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getMenuAccess().getRightCurlyBracketKeyword_9());
                 
@@ -3361,7 +3207,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEInt"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1293:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1232:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
     public final String entryRuleEInt() throws RecognitionException {
         String current = null;
 
@@ -3369,17 +3215,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1294:2: (iv_ruleEInt= ruleEInt EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1295:2: iv_ruleEInt= ruleEInt EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1233:2: (iv_ruleEInt= ruleEInt EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1234:2: iv_ruleEInt= ruleEInt EOF
             {
              newCompositeNode(grammarAccess.getEIntRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_entryRuleEInt3077);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_entryRuleEInt2925);
             iv_ruleEInt=ruleEInt();
 
             state._fsp--;
 
              current =iv_ruleEInt.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEInt3088); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEInt2936); 
 
             }
 
@@ -3397,7 +3243,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEInt"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1302:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1241:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleEInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3407,24 +3253,24 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1305:28: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1306:1: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1244:28: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1245:1: ( (kw= '-' )? this_INT_1= RULE_INT )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1306:1: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1306:2: (kw= '-' )? this_INT_1= RULE_INT
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1245:1: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1245:2: (kw= '-' )? this_INT_1= RULE_INT
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1306:2: (kw= '-' )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1245:2: (kw= '-' )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA26_0==29) ) {
-                alt26=1;
+            if ( (LA25_0==27) ) {
+                alt25=1;
             }
-            switch (alt26) {
+            switch (alt25) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1307:2: kw= '-'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1246:2: kw= '-'
                     {
-                    kw=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleEInt3127); 
+                    kw=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleEInt2975); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0()); 
@@ -3435,7 +3281,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEInt3144); 
+            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleEInt2992); 
 
             		current.merge(this_INT_1);
                 
@@ -3463,7 +3309,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRow"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1327:1: entryRuleRow returns [EObject current=null] : iv_ruleRow= ruleRow EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1266:1: entryRuleRow returns [EObject current=null] : iv_ruleRow= ruleRow EOF ;
     public final EObject entryRuleRow() throws RecognitionException {
         EObject current = null;
 
@@ -3471,17 +3317,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1328:2: (iv_ruleRow= ruleRow EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1329:2: iv_ruleRow= ruleRow EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1267:2: (iv_ruleRow= ruleRow EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1268:2: iv_ruleRow= ruleRow EOF
             {
              newCompositeNode(grammarAccess.getRowRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleRow_in_entryRuleRow3189);
+            pushFollow(FollowSets000.FOLLOW_ruleRow_in_entryRuleRow3037);
             iv_ruleRow=ruleRow();
 
             state._fsp--;
 
              current =iv_ruleRow; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleRow3199); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleRow3047); 
 
             }
 
@@ -3499,7 +3345,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRow"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1336:1: ruleRow returns [EObject current=null] : ( () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1275:1: ruleRow returns [EObject current=null] : ( () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
     public final EObject ruleRow() throws RecognitionException {
         EObject current = null;
 
@@ -3532,14 +3378,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1339:28: ( ( () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1340:1: ( () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1278:28: ( ( () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1279:1: ( () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1340:1: ( () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1340:2: () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1279:1: ( () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1279:2: () otherlv_1= 'Row' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1340:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1341:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1279:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1280:5: 
             {
 
                     current = forceCreateModelElement(
@@ -3549,20 +3395,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleRow3245); 
+            otherlv_1=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleRow3093); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getRowAccess().getRowKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1350:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1351:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1289:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1290:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1351:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1352:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1290:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1291:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getRowAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleRow3266);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleRow3114);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -3584,35 +3430,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleRow3278); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleRow3126); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getRowAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1372:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1311:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA27_0==22) ) {
-                alt27=1;
+            if ( (LA26_0==20) ) {
+                alt26=1;
             }
-            switch (alt27) {
+            switch (alt26) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1372:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1311:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleRow3291); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleRow3139); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getRowAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1376:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1377:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1315:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1316:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1377:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1378:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1316:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1317:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getRowAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleRow3312);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleRow3160);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -3640,31 +3486,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1394:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1333:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA28_0==23) ) {
-                alt28=1;
+            if ( (LA27_0==21) ) {
+                alt27=1;
             }
-            switch (alt28) {
+            switch (alt27) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1394:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1333:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleRow3327); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleRow3175); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getRowAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1398:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1399:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1337:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1338:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1399:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1400:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1338:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1339:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getRowAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleRow3348);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleRow3196);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -3692,31 +3538,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1416:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1355:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA29_0==24) ) {
-                alt29=1;
+            if ( (LA28_0==22) ) {
+                alt28=1;
             }
-            switch (alt29) {
+            switch (alt28) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1416:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1355:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleRow3363); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleRow3211); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getRowAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1420:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1421:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1359:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1360:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1421:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1422:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1360:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1361:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getRowAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleRow3384);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleRow3232);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -3744,31 +3590,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1438:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1377:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA30_0==25) ) {
-                alt30=1;
+            if ( (LA29_0==23) ) {
+                alt29=1;
             }
-            switch (alt30) {
+            switch (alt29) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1438:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1377:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleRow3399); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleRow3247); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getRowAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1442:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1443:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1381:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1382:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1443:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1444:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1382:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1383:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getRowAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleRow3420);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleRow3268);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -3796,35 +3642,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1460:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1399:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}' )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA32_0==26) ) {
-                alt32=1;
+            if ( (LA31_0==24) ) {
+                alt31=1;
             }
-            switch (alt32) {
+            switch (alt31) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1460:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1399:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleRowElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )* otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleRow3435); 
+                    otherlv_12=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleRow3283); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getRowAccess().getElementsKeyword_8_0());
                         
-                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleRow3447); 
+                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleRow3295); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getRowAccess().getLeftCurlyBracketKeyword_8_1());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1468:1: ( (lv_elements_14_0= ruleRowElement ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1469:1: (lv_elements_14_0= ruleRowElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1407:1: ( (lv_elements_14_0= ruleRowElement ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1408:1: (lv_elements_14_0= ruleRowElement )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1469:1: (lv_elements_14_0= ruleRowElement )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1470:3: lv_elements_14_0= ruleRowElement
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1408:1: (lv_elements_14_0= ruleRowElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1409:3: lv_elements_14_0= ruleRowElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getRowAccess().getElementsRowElementParserRuleCall_8_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleRowElement_in_ruleRow3468);
+                    pushFollow(FollowSets000.FOLLOW_ruleRowElement_in_ruleRow3316);
                     lv_elements_14_0=ruleRowElement();
 
                     state._fsp--;
@@ -3846,35 +3692,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1486:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )*
-                    loop31:
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1425:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) ) )*
+                    loop30:
                     do {
-                        int alt31=2;
-                        int LA31_0 = input.LA(1);
+                        int alt30=2;
+                        int LA30_0 = input.LA(1);
 
-                        if ( (LA31_0==19) ) {
-                            alt31=1;
+                        if ( (LA30_0==16) ) {
+                            alt30=1;
                         }
 
 
-                        switch (alt31) {
+                        switch (alt30) {
                     	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1486:4: otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1425:4: otherlv_15= ',' ( (lv_elements_16_0= ruleRowElement ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleRow3481); 
+                    	    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleRow3329); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getRowAccess().getCommaKeyword_8_3_0());
                     	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1490:1: ( (lv_elements_16_0= ruleRowElement ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1491:1: (lv_elements_16_0= ruleRowElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1429:1: ( (lv_elements_16_0= ruleRowElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1430:1: (lv_elements_16_0= ruleRowElement )
                     	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1491:1: (lv_elements_16_0= ruleRowElement )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1492:3: lv_elements_16_0= ruleRowElement
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1430:1: (lv_elements_16_0= ruleRowElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1431:3: lv_elements_16_0= ruleRowElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getRowAccess().getElementsRowElementParserRuleCall_8_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleRowElement_in_ruleRow3502);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleRowElement_in_ruleRow3350);
                     	    lv_elements_16_0=ruleRowElement();
 
                     	    state._fsp--;
@@ -3901,11 +3747,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop31;
+                    	    break loop30;
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleRow3516); 
+                    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleRow3364); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getRowAccess().getRightCurlyBracketKeyword_8_4());
                         
@@ -3915,7 +3761,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleRow3530); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleRow3378); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getRowAccess().getRightCurlyBracketKeyword_9());
                 
@@ -3940,7 +3786,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHeader"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1524:1: entryRuleHeader returns [EObject current=null] : iv_ruleHeader= ruleHeader EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1463:1: entryRuleHeader returns [EObject current=null] : iv_ruleHeader= ruleHeader EOF ;
     public final EObject entryRuleHeader() throws RecognitionException {
         EObject current = null;
 
@@ -3948,17 +3794,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1525:2: (iv_ruleHeader= ruleHeader EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1526:2: iv_ruleHeader= ruleHeader EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1464:2: (iv_ruleHeader= ruleHeader EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1465:2: iv_ruleHeader= ruleHeader EOF
             {
              newCompositeNode(grammarAccess.getHeaderRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleHeader_in_entryRuleHeader3566);
+            pushFollow(FollowSets000.FOLLOW_ruleHeader_in_entryRuleHeader3414);
             iv_ruleHeader=ruleHeader();
 
             state._fsp--;
 
              current =iv_ruleHeader; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleHeader3576); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleHeader3424); 
 
             }
 
@@ -3976,7 +3822,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHeader"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1533:1: ruleHeader returns [EObject current=null] : ( () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1472:1: ruleHeader returns [EObject current=null] : ( () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}' ) ;
     public final EObject ruleHeader() throws RecognitionException {
         EObject current = null;
 
@@ -4007,14 +3853,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1536:28: ( ( () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1537:1: ( () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1475:28: ( ( () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1476:1: ( () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1537:1: ( () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1537:2: () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1476:1: ( () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1476:2: () otherlv_1= 'Header' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )? (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )? otherlv_16= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1537:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1538:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1476:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1477:5: 
             {
 
                     current = forceCreateModelElement(
@@ -4024,20 +3870,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleHeader3622); 
+            otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleHeader3470); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getHeaderAccess().getHeaderKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1547:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1548:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1486:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1487:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1548:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1549:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1487:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1488:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getHeaderAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3643);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3491);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -4059,35 +3905,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleHeader3655); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleHeader3503); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getHeaderAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1569:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1508:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA33_0==22) ) {
-                alt33=1;
+            if ( (LA32_0==20) ) {
+                alt32=1;
             }
-            switch (alt33) {
+            switch (alt32) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1569:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1508:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleHeader3668); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleHeader3516); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getHeaderAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1573:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1574:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1512:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1513:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1574:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1575:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1513:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1514:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getHeaderAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleHeader3689);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleHeader3537);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -4115,31 +3961,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1591:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1530:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA34_0==23) ) {
-                alt34=1;
+            if ( (LA33_0==21) ) {
+                alt33=1;
             }
-            switch (alt34) {
+            switch (alt33) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1591:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1530:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleHeader3704); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleHeader3552); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getHeaderAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1595:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1596:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1534:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1535:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1596:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1597:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1535:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1536:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getHeaderAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3725);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3573);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -4167,31 +4013,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1613:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1552:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA35_0==24) ) {
-                alt35=1;
+            if ( (LA34_0==22) ) {
+                alt34=1;
             }
-            switch (alt35) {
+            switch (alt34) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1613:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1552:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleHeader3740); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleHeader3588); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getHeaderAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1617:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1618:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1556:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1557:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1618:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1619:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1557:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1558:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getHeaderAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3761);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3609);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -4219,31 +4065,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1635:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1574:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA36_0==25) ) {
-                alt36=1;
+            if ( (LA35_0==23) ) {
+                alt35=1;
             }
-            switch (alt36) {
+            switch (alt35) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1635:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1574:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleHeader3776); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleHeader3624); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getHeaderAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1639:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1640:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1578:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1579:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1640:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1641:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1579:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1580:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getHeaderAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3797);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3645);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -4271,31 +4117,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1657:4: (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1596:4: (otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) ) )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA37_0==32) ) {
-                alt37=1;
+            if ( (LA36_0==30) ) {
+                alt36=1;
             }
-            switch (alt37) {
+            switch (alt36) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1657:6: otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1596:6: otherlv_12= 'type' ( (lv_type_13_0= ruleHeaderType ) )
                     {
-                    otherlv_12=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleHeader3812); 
+                    otherlv_12=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleHeader3660); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getHeaderAccess().getTypeKeyword_8_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1661:1: ( (lv_type_13_0= ruleHeaderType ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1662:1: (lv_type_13_0= ruleHeaderType )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1600:1: ( (lv_type_13_0= ruleHeaderType ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1601:1: (lv_type_13_0= ruleHeaderType )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1662:1: (lv_type_13_0= ruleHeaderType )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1663:3: lv_type_13_0= ruleHeaderType
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1601:1: (lv_type_13_0= ruleHeaderType )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1602:3: lv_type_13_0= ruleHeaderType
                     {
                      
                     	        newCompositeNode(grammarAccess.getHeaderAccess().getTypeHeaderTypeEnumRuleCall_8_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleHeaderType_in_ruleHeader3833);
+                    pushFollow(FollowSets000.FOLLOW_ruleHeaderType_in_ruleHeader3681);
                     lv_type_13_0=ruleHeaderType();
 
                     state._fsp--;
@@ -4323,31 +4169,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1679:4: (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1618:4: (otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) ) )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA38_0==33) ) {
-                alt38=1;
+            if ( (LA37_0==31) ) {
+                alt37=1;
             }
-            switch (alt38) {
+            switch (alt37) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1679:6: otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1618:6: otherlv_14= 'content' ( (lv_content_15_0= ruleEString ) )
                     {
-                    otherlv_14=(Token)match(input,33,FollowSets000.FOLLOW_33_in_ruleHeader3848); 
+                    otherlv_14=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleHeader3696); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getHeaderAccess().getContentKeyword_9_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1683:1: ( (lv_content_15_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1684:1: (lv_content_15_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1622:1: ( (lv_content_15_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1623:1: (lv_content_15_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1684:1: (lv_content_15_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1685:3: lv_content_15_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1623:1: (lv_content_15_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1624:3: lv_content_15_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getHeaderAccess().getContentEStringParserRuleCall_9_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3869);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleHeader3717);
                     lv_content_15_0=ruleEString();
 
                     state._fsp--;
@@ -4375,7 +4221,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_16=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleHeader3883); 
+            otherlv_16=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleHeader3731); 
 
                 	newLeafNode(otherlv_16, grammarAccess.getHeaderAccess().getRightCurlyBracketKeyword_10());
                 
@@ -4400,7 +4246,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParagraf"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1713:1: entryRuleParagraf returns [EObject current=null] : iv_ruleParagraf= ruleParagraf EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1652:1: entryRuleParagraf returns [EObject current=null] : iv_ruleParagraf= ruleParagraf EOF ;
     public final EObject entryRuleParagraf() throws RecognitionException {
         EObject current = null;
 
@@ -4408,17 +4254,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1714:2: (iv_ruleParagraf= ruleParagraf EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1715:2: iv_ruleParagraf= ruleParagraf EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1653:2: (iv_ruleParagraf= ruleParagraf EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1654:2: iv_ruleParagraf= ruleParagraf EOF
             {
              newCompositeNode(grammarAccess.getParagrafRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_entryRuleParagraf3919);
+            pushFollow(FollowSets000.FOLLOW_ruleParagraf_in_entryRuleParagraf3767);
             iv_ruleParagraf=ruleParagraf();
 
             state._fsp--;
 
              current =iv_ruleParagraf; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleParagraf3929); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleParagraf3777); 
 
             }
 
@@ -4436,7 +4282,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParagraf"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1722:1: ruleParagraf returns [EObject current=null] : ( () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1661:1: ruleParagraf returns [EObject current=null] : ( () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}' ) ;
     public final EObject ruleParagraf() throws RecognitionException {
         EObject current = null;
 
@@ -4464,14 +4310,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1725:28: ( ( () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1726:1: ( () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1664:28: ( ( () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1665:1: ( () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1726:1: ( () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1726:2: () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1665:1: ( () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1665:2: () otherlv_1= 'Paragraf' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )? otherlv_14= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1726:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1727:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1665:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1666:5: 
             {
 
                     current = forceCreateModelElement(
@@ -4481,20 +4327,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,34,FollowSets000.FOLLOW_34_in_ruleParagraf3975); 
+            otherlv_1=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleParagraf3823); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getParagrafAccess().getParagrafKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1736:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1737:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1675:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1676:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1737:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1738:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1676:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1677:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getParagrafAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf3996);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf3844);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -4516,35 +4362,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleParagraf4008); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleParagraf3856); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getParagrafAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1758:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1697:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA39_0==22) ) {
-                alt39=1;
+            if ( (LA38_0==20) ) {
+                alt38=1;
             }
-            switch (alt39) {
+            switch (alt38) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1758:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1697:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleParagraf4021); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleParagraf3869); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getParagrafAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1762:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1763:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1701:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1702:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1763:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1764:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1702:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1703:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getParagrafAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleParagraf4042);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleParagraf3890);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -4572,31 +4418,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1780:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1719:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA40_0==23) ) {
-                alt40=1;
+            if ( (LA39_0==21) ) {
+                alt39=1;
             }
-            switch (alt40) {
+            switch (alt39) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1780:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1719:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleParagraf4057); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleParagraf3905); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getParagrafAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1784:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1785:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1723:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1724:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1785:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1786:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1724:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1725:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getParagrafAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf4078);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf3926);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -4624,31 +4470,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1802:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1741:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA41_0==24) ) {
-                alt41=1;
+            if ( (LA40_0==22) ) {
+                alt40=1;
             }
-            switch (alt41) {
+            switch (alt40) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1802:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1741:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleParagraf4093); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleParagraf3941); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getParagrafAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1806:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1807:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1745:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1746:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1807:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1808:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1746:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1747:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getParagrafAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf4114);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf3962);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -4676,31 +4522,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1824:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1763:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA42_0==25) ) {
-                alt42=1;
+            if ( (LA41_0==23) ) {
+                alt41=1;
             }
-            switch (alt42) {
+            switch (alt41) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1824:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1763:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleParagraf4129); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleParagraf3977); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getParagrafAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1828:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1829:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1767:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1768:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1829:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1830:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1768:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1769:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getParagrafAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf4150);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf3998);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -4728,31 +4574,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1846:4: (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1785:4: (otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) ) )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA43_0==33) ) {
-                alt43=1;
+            if ( (LA42_0==31) ) {
+                alt42=1;
             }
-            switch (alt43) {
+            switch (alt42) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1846:6: otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1785:6: otherlv_12= 'content' ( (lv_content_13_0= ruleEString ) )
                     {
-                    otherlv_12=(Token)match(input,33,FollowSets000.FOLLOW_33_in_ruleParagraf4165); 
+                    otherlv_12=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleParagraf4013); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getParagrafAccess().getContentKeyword_8_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1850:1: ( (lv_content_13_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1851:1: (lv_content_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1789:1: ( (lv_content_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1790:1: (lv_content_13_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1851:1: (lv_content_13_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1852:3: lv_content_13_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1790:1: (lv_content_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1791:3: lv_content_13_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getParagrafAccess().getContentEStringParserRuleCall_8_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf4186);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleParagraf4034);
                     lv_content_13_0=ruleEString();
 
                     state._fsp--;
@@ -4780,7 +4626,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_14=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleParagraf4200); 
+            otherlv_14=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleParagraf4048); 
 
                 	newLeafNode(otherlv_14, grammarAccess.getParagrafAccess().getRightCurlyBracketKeyword_9());
                 
@@ -4805,7 +4651,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCarousel"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1880:1: entryRuleCarousel returns [EObject current=null] : iv_ruleCarousel= ruleCarousel EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1819:1: entryRuleCarousel returns [EObject current=null] : iv_ruleCarousel= ruleCarousel EOF ;
     public final EObject entryRuleCarousel() throws RecognitionException {
         EObject current = null;
 
@@ -4813,17 +4659,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1881:2: (iv_ruleCarousel= ruleCarousel EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1882:2: iv_ruleCarousel= ruleCarousel EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1820:2: (iv_ruleCarousel= ruleCarousel EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1821:2: iv_ruleCarousel= ruleCarousel EOF
             {
              newCompositeNode(grammarAccess.getCarouselRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleCarousel_in_entryRuleCarousel4236);
+            pushFollow(FollowSets000.FOLLOW_ruleCarousel_in_entryRuleCarousel4084);
             iv_ruleCarousel=ruleCarousel();
 
             state._fsp--;
 
              current =iv_ruleCarousel; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCarousel4246); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCarousel4094); 
 
             }
 
@@ -4841,7 +4687,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCarousel"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1889:1: ruleCarousel returns [EObject current=null] : ( () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1828:1: ruleCarousel returns [EObject current=null] : ( () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
     public final EObject ruleCarousel() throws RecognitionException {
         EObject current = null;
 
@@ -4874,14 +4720,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1892:28: ( ( () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1893:1: ( () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1831:28: ( ( () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1832:1: ( () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1893:1: ( () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1893:2: () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1832:1: ( () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1832:2: () otherlv_1= 'Carousel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1893:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1894:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1832:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1833:5: 
             {
 
                     current = forceCreateModelElement(
@@ -4891,20 +4737,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,35,FollowSets000.FOLLOW_35_in_ruleCarousel4292); 
+            otherlv_1=(Token)match(input,33,FollowSets000.FOLLOW_33_in_ruleCarousel4140); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getCarouselAccess().getCarouselKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1903:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1904:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1842:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1843:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1904:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1905:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1843:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1844:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getCarouselAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarousel4313);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarousel4161);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -4926,35 +4772,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCarousel4325); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCarousel4173); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getCarouselAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1925:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1864:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA44_0==22) ) {
-                alt44=1;
+            if ( (LA43_0==20) ) {
+                alt43=1;
             }
-            switch (alt44) {
+            switch (alt43) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1925:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1864:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleCarousel4338); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleCarousel4186); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getCarouselAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1929:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1930:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1868:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1869:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1930:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1931:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1869:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1870:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleCarousel4359);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleCarousel4207);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -4982,31 +4828,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1947:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1886:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA45_0==23) ) {
-                alt45=1;
+            if ( (LA44_0==21) ) {
+                alt44=1;
             }
-            switch (alt45) {
+            switch (alt44) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1947:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1886:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleCarousel4374); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleCarousel4222); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getCarouselAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1951:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1952:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1890:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1891:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1952:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1953:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1891:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1892:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarousel4395);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarousel4243);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -5034,31 +4880,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1969:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1908:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA46_0==24) ) {
-                alt46=1;
+            if ( (LA45_0==22) ) {
+                alt45=1;
             }
-            switch (alt46) {
+            switch (alt45) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1969:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1908:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleCarousel4410); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleCarousel4258); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getCarouselAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1973:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1974:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1912:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1913:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1974:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1975:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1913:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1914:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarousel4431);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarousel4279);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -5086,31 +4932,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1991:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1930:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA47_0==25) ) {
-                alt47=1;
+            if ( (LA46_0==23) ) {
+                alt46=1;
             }
-            switch (alt47) {
+            switch (alt46) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1991:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1930:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleCarousel4446); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleCarousel4294); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getCarouselAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1995:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1996:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1934:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1935:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1996:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1997:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1935:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1936:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarousel4467);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarousel4315);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -5138,35 +4984,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2013:4: (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1952:4: (otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}' )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA49_0==36) ) {
-                alt49=1;
+            if ( (LA48_0==34) ) {
+                alt48=1;
             }
-            switch (alt49) {
+            switch (alt48) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2013:6: otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1952:6: otherlv_12= 'carouselPages' otherlv_13= '{' ( (lv_carouselPages_14_0= ruleCarouselElement ) ) (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )* otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,36,FollowSets000.FOLLOW_36_in_ruleCarousel4482); 
+                    otherlv_12=(Token)match(input,34,FollowSets000.FOLLOW_34_in_ruleCarousel4330); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getCarouselAccess().getCarouselPagesKeyword_8_0());
                         
-                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCarousel4494); 
+                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCarousel4342); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getCarouselAccess().getLeftCurlyBracketKeyword_8_1());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2021:1: ( (lv_carouselPages_14_0= ruleCarouselElement ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2022:1: (lv_carouselPages_14_0= ruleCarouselElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1960:1: ( (lv_carouselPages_14_0= ruleCarouselElement ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1961:1: (lv_carouselPages_14_0= ruleCarouselElement )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2022:1: (lv_carouselPages_14_0= ruleCarouselElement )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2023:3: lv_carouselPages_14_0= ruleCarouselElement
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1961:1: (lv_carouselPages_14_0= ruleCarouselElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1962:3: lv_carouselPages_14_0= ruleCarouselElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselAccess().getCarouselPagesCarouselElementParserRuleCall_8_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleCarouselElement_in_ruleCarousel4515);
+                    pushFollow(FollowSets000.FOLLOW_ruleCarouselElement_in_ruleCarousel4363);
                     lv_carouselPages_14_0=ruleCarouselElement();
 
                     state._fsp--;
@@ -5188,35 +5034,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2039:2: (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )*
-                    loop48:
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1978:2: (otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) ) )*
+                    loop47:
                     do {
-                        int alt48=2;
-                        int LA48_0 = input.LA(1);
+                        int alt47=2;
+                        int LA47_0 = input.LA(1);
 
-                        if ( (LA48_0==19) ) {
-                            alt48=1;
+                        if ( (LA47_0==16) ) {
+                            alt47=1;
                         }
 
 
-                        switch (alt48) {
+                        switch (alt47) {
                     	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2039:4: otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1978:4: otherlv_15= ',' ( (lv_carouselPages_16_0= ruleCarouselElement ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleCarousel4528); 
+                    	    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleCarousel4376); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getCarouselAccess().getCommaKeyword_8_3_0());
                     	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2043:1: ( (lv_carouselPages_16_0= ruleCarouselElement ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2044:1: (lv_carouselPages_16_0= ruleCarouselElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1982:1: ( (lv_carouselPages_16_0= ruleCarouselElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1983:1: (lv_carouselPages_16_0= ruleCarouselElement )
                     	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2044:1: (lv_carouselPages_16_0= ruleCarouselElement )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2045:3: lv_carouselPages_16_0= ruleCarouselElement
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1983:1: (lv_carouselPages_16_0= ruleCarouselElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:1984:3: lv_carouselPages_16_0= ruleCarouselElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getCarouselAccess().getCarouselPagesCarouselElementParserRuleCall_8_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleCarouselElement_in_ruleCarousel4549);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleCarouselElement_in_ruleCarousel4397);
                     	    lv_carouselPages_16_0=ruleCarouselElement();
 
                     	    state._fsp--;
@@ -5243,11 +5089,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop48;
+                    	    break loop47;
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleCarousel4563); 
+                    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleCarousel4411); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getCarouselAccess().getRightCurlyBracketKeyword_8_4());
                         
@@ -5257,7 +5103,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleCarousel4577); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleCarousel4425); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getCarouselAccess().getRightCurlyBracketKeyword_9());
                 
@@ -5282,7 +5128,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImage"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2077:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2016:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
     public final EObject entryRuleImage() throws RecognitionException {
         EObject current = null;
 
@@ -5290,17 +5136,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2078:2: (iv_ruleImage= ruleImage EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2079:2: iv_ruleImage= ruleImage EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2017:2: (iv_ruleImage= ruleImage EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2018:2: iv_ruleImage= ruleImage EOF
             {
              newCompositeNode(grammarAccess.getImageRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleImage_in_entryRuleImage4613);
+            pushFollow(FollowSets000.FOLLOW_ruleImage_in_entryRuleImage4461);
             iv_ruleImage=ruleImage();
 
             state._fsp--;
 
              current =iv_ruleImage; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleImage4623); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleImage4471); 
 
             }
 
@@ -5318,7 +5164,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImage"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2086:1: ruleImage returns [EObject current=null] : ( () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2025:1: ruleImage returns [EObject current=null] : ( () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}' ) ;
     public final EObject ruleImage() throws RecognitionException {
         EObject current = null;
 
@@ -5349,14 +5195,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2089:28: ( ( () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2090:1: ( () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2028:28: ( ( () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2029:1: ( () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2090:1: ( () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2090:2: () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2029:1: ( () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2029:2: () otherlv_1= 'Image' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )? (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )? otherlv_16= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2090:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2091:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2029:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2030:5: 
             {
 
                     current = forceCreateModelElement(
@@ -5366,20 +5212,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,37,FollowSets000.FOLLOW_37_in_ruleImage4669); 
+            otherlv_1=(Token)match(input,35,FollowSets000.FOLLOW_35_in_ruleImage4517); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getImageAccess().getImageKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2100:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2101:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2039:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2040:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2101:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2102:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2040:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2041:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getImageAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4690);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4538);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -5401,35 +5247,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleImage4702); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleImage4550); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getImageAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2122:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2061:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( (LA50_0==22) ) {
-                alt50=1;
+            if ( (LA49_0==20) ) {
+                alt49=1;
             }
-            switch (alt50) {
+            switch (alt49) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2122:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2061:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleImage4715); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleImage4563); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getImageAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2126:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2127:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2065:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2066:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2127:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2128:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2066:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2067:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getImageAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleImage4736);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleImage4584);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -5457,31 +5303,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2144:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt51=2;
-            int LA51_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2083:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA51_0==23) ) {
-                alt51=1;
+            if ( (LA50_0==21) ) {
+                alt50=1;
             }
-            switch (alt51) {
+            switch (alt50) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2144:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2083:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleImage4751); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleImage4599); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getImageAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2148:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2149:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2087:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2088:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2149:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2150:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2088:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2089:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getImageAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4772);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4620);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -5509,31 +5355,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2166:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2105:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA52_0==24) ) {
-                alt52=1;
+            if ( (LA51_0==22) ) {
+                alt51=1;
             }
-            switch (alt52) {
+            switch (alt51) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2166:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2105:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleImage4787); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleImage4635); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getImageAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2170:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2171:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2109:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2110:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2171:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2172:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2110:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2111:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getImageAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4808);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4656);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -5561,31 +5407,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2188:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2127:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( (LA53_0==25) ) {
-                alt53=1;
+            if ( (LA52_0==23) ) {
+                alt52=1;
             }
-            switch (alt53) {
+            switch (alt52) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2188:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2127:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleImage4823); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleImage4671); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getImageAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2192:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2193:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2131:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2132:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2193:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2194:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2132:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2133:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getImageAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4844);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4692);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -5613,31 +5459,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2210:4: (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )?
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2149:4: (otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) ) )?
+            int alt53=2;
+            int LA53_0 = input.LA(1);
 
-            if ( (LA54_0==38) ) {
-                alt54=1;
+            if ( (LA53_0==36) ) {
+                alt53=1;
             }
-            switch (alt54) {
+            switch (alt53) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2210:6: otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2149:6: otherlv_12= 'src' ( (lv_src_13_0= ruleEString ) )
                     {
-                    otherlv_12=(Token)match(input,38,FollowSets000.FOLLOW_38_in_ruleImage4859); 
+                    otherlv_12=(Token)match(input,36,FollowSets000.FOLLOW_36_in_ruleImage4707); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getImageAccess().getSrcKeyword_8_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2214:1: ( (lv_src_13_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2215:1: (lv_src_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2153:1: ( (lv_src_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2154:1: (lv_src_13_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2215:1: (lv_src_13_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2216:3: lv_src_13_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2154:1: (lv_src_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2155:3: lv_src_13_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getImageAccess().getSrcEStringParserRuleCall_8_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4880);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4728);
                     lv_src_13_0=ruleEString();
 
                     state._fsp--;
@@ -5665,31 +5511,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2232:4: (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )?
-            int alt55=2;
-            int LA55_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2171:4: (otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) ) )?
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( (LA55_0==39) ) {
-                alt55=1;
+            if ( (LA54_0==37) ) {
+                alt54=1;
             }
-            switch (alt55) {
+            switch (alt54) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2232:6: otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2171:6: otherlv_14= 'borderRadius' ( (lv_borderRadius_15_0= ruleEString ) )
                     {
-                    otherlv_14=(Token)match(input,39,FollowSets000.FOLLOW_39_in_ruleImage4895); 
+                    otherlv_14=(Token)match(input,37,FollowSets000.FOLLOW_37_in_ruleImage4743); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getImageAccess().getBorderRadiusKeyword_9_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2236:1: ( (lv_borderRadius_15_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2237:1: (lv_borderRadius_15_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2175:1: ( (lv_borderRadius_15_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2176:1: (lv_borderRadius_15_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2237:1: (lv_borderRadius_15_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2238:3: lv_borderRadius_15_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2176:1: (lv_borderRadius_15_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2177:3: lv_borderRadius_15_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getImageAccess().getBorderRadiusEStringParserRuleCall_9_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4916);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleImage4764);
                     lv_borderRadius_15_0=ruleEString();
 
                     state._fsp--;
@@ -5717,7 +5563,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_16=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleImage4930); 
+            otherlv_16=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleImage4778); 
 
                 	newLeafNode(otherlv_16, grammarAccess.getImageAccess().getRightCurlyBracketKeyword_10());
                 
@@ -5742,7 +5588,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCard"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2266:1: entryRuleCard returns [EObject current=null] : iv_ruleCard= ruleCard EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2205:1: entryRuleCard returns [EObject current=null] : iv_ruleCard= ruleCard EOF ;
     public final EObject entryRuleCard() throws RecognitionException {
         EObject current = null;
 
@@ -5750,17 +5596,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2267:2: (iv_ruleCard= ruleCard EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2268:2: iv_ruleCard= ruleCard EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2206:2: (iv_ruleCard= ruleCard EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2207:2: iv_ruleCard= ruleCard EOF
             {
              newCompositeNode(grammarAccess.getCardRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleCard_in_entryRuleCard4966);
+            pushFollow(FollowSets000.FOLLOW_ruleCard_in_entryRuleCard4814);
             iv_ruleCard=ruleCard();
 
             state._fsp--;
 
              current =iv_ruleCard; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCard4976); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCard4824); 
 
             }
 
@@ -5778,7 +5624,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCard"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2275:1: ruleCard returns [EObject current=null] : ( () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2214:1: ruleCard returns [EObject current=null] : ( () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
     public final EObject ruleCard() throws RecognitionException {
         EObject current = null;
 
@@ -5811,14 +5657,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2278:28: ( ( () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2279:1: ( () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2217:28: ( ( () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2218:1: ( () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2279:1: ( () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2279:2: () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2218:1: ( () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2218:2: () otherlv_1= 'Card' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2279:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2280:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2218:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2219:5: 
             {
 
                     current = forceCreateModelElement(
@@ -5828,20 +5674,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,40,FollowSets000.FOLLOW_40_in_ruleCard5022); 
+            otherlv_1=(Token)match(input,38,FollowSets000.FOLLOW_38_in_ruleCard4870); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getCardAccess().getCardKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2289:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2290:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2228:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2229:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2290:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2291:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2229:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2230:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getCardAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCard5043);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCard4891);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -5863,35 +5709,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCard5055); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCard4903); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getCardAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2311:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2250:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( (LA56_0==22) ) {
-                alt56=1;
+            if ( (LA55_0==20) ) {
+                alt55=1;
             }
-            switch (alt56) {
+            switch (alt55) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2311:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2250:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleCard5068); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleCard4916); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getCardAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2315:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2316:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2254:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2255:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2316:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2317:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2255:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2256:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleCard5089);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleCard4937);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -5919,31 +5765,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2333:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2272:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA57_0==23) ) {
-                alt57=1;
+            if ( (LA56_0==21) ) {
+                alt56=1;
             }
-            switch (alt57) {
+            switch (alt56) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2333:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2272:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleCard5104); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleCard4952); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getCardAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2337:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2338:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2276:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2277:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2338:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2339:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2277:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2278:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCard5125);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCard4973);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -5971,31 +5817,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2355:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2294:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( (LA58_0==24) ) {
-                alt58=1;
+            if ( (LA57_0==22) ) {
+                alt57=1;
             }
-            switch (alt58) {
+            switch (alt57) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2355:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2294:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleCard5140); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleCard4988); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getCardAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2359:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2360:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2298:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2299:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2360:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2361:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2299:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2300:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCard5161);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCard5009);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -6023,31 +5869,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2377:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2316:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( (LA59_0==25) ) {
-                alt59=1;
+            if ( (LA58_0==23) ) {
+                alt58=1;
             }
-            switch (alt59) {
+            switch (alt58) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2377:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2316:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleCard5176); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleCard5024); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getCardAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2381:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2382:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2320:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2321:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2382:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2383:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2321:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2322:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCard5197);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCard5045);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -6075,35 +5921,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2399:4: (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2338:4: (otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}' )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA61_0==41) ) {
-                alt61=1;
+            if ( (LA60_0==39) ) {
+                alt60=1;
             }
-            switch (alt61) {
+            switch (alt60) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2399:6: otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2338:6: otherlv_12= 'pages' otherlv_13= '{' ( (lv_pages_14_0= ruleCardElement ) ) (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )* otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,41,FollowSets000.FOLLOW_41_in_ruleCard5212); 
+                    otherlv_12=(Token)match(input,39,FollowSets000.FOLLOW_39_in_ruleCard5060); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getCardAccess().getPagesKeyword_8_0());
                         
-                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCard5224); 
+                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCard5072); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getCardAccess().getLeftCurlyBracketKeyword_8_1());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2407:1: ( (lv_pages_14_0= ruleCardElement ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2408:1: (lv_pages_14_0= ruleCardElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2346:1: ( (lv_pages_14_0= ruleCardElement ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2347:1: (lv_pages_14_0= ruleCardElement )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2408:1: (lv_pages_14_0= ruleCardElement )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2409:3: lv_pages_14_0= ruleCardElement
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2347:1: (lv_pages_14_0= ruleCardElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2348:3: lv_pages_14_0= ruleCardElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardAccess().getPagesCardElementParserRuleCall_8_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleCardElement_in_ruleCard5245);
+                    pushFollow(FollowSets000.FOLLOW_ruleCardElement_in_ruleCard5093);
                     lv_pages_14_0=ruleCardElement();
 
                     state._fsp--;
@@ -6125,35 +5971,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2425:2: (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )*
-                    loop60:
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2364:2: (otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) ) )*
+                    loop59:
                     do {
-                        int alt60=2;
-                        int LA60_0 = input.LA(1);
+                        int alt59=2;
+                        int LA59_0 = input.LA(1);
 
-                        if ( (LA60_0==19) ) {
-                            alt60=1;
+                        if ( (LA59_0==16) ) {
+                            alt59=1;
                         }
 
 
-                        switch (alt60) {
+                        switch (alt59) {
                     	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2425:4: otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2364:4: otherlv_15= ',' ( (lv_pages_16_0= ruleCardElement ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleCard5258); 
+                    	    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleCard5106); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getCardAccess().getCommaKeyword_8_3_0());
                     	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2429:1: ( (lv_pages_16_0= ruleCardElement ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2430:1: (lv_pages_16_0= ruleCardElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2368:1: ( (lv_pages_16_0= ruleCardElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2369:1: (lv_pages_16_0= ruleCardElement )
                     	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2430:1: (lv_pages_16_0= ruleCardElement )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2431:3: lv_pages_16_0= ruleCardElement
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2369:1: (lv_pages_16_0= ruleCardElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2370:3: lv_pages_16_0= ruleCardElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getCardAccess().getPagesCardElementParserRuleCall_8_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleCardElement_in_ruleCard5279);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleCardElement_in_ruleCard5127);
                     	    lv_pages_16_0=ruleCardElement();
 
                     	    state._fsp--;
@@ -6180,11 +6026,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop60;
+                    	    break loop59;
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleCard5293); 
+                    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleCard5141); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getCardAccess().getRightCurlyBracketKeyword_8_4());
                         
@@ -6194,7 +6040,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleCard5307); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleCard5155); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getCardAccess().getRightCurlyBracketKeyword_9());
                 
@@ -6219,7 +6065,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnchor"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2463:1: entryRuleAnchor returns [EObject current=null] : iv_ruleAnchor= ruleAnchor EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2402:1: entryRuleAnchor returns [EObject current=null] : iv_ruleAnchor= ruleAnchor EOF ;
     public final EObject entryRuleAnchor() throws RecognitionException {
         EObject current = null;
 
@@ -6227,17 +6073,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2464:2: (iv_ruleAnchor= ruleAnchor EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2465:2: iv_ruleAnchor= ruleAnchor EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2403:2: (iv_ruleAnchor= ruleAnchor EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2404:2: iv_ruleAnchor= ruleAnchor EOF
             {
              newCompositeNode(grammarAccess.getAnchorRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_entryRuleAnchor5343);
+            pushFollow(FollowSets000.FOLLOW_ruleAnchor_in_entryRuleAnchor5191);
             iv_ruleAnchor=ruleAnchor();
 
             state._fsp--;
 
              current =iv_ruleAnchor; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAnchor5353); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAnchor5201); 
 
             }
 
@@ -6255,7 +6101,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnchor"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2472:1: ruleAnchor returns [EObject current=null] : ( () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2411:1: ruleAnchor returns [EObject current=null] : ( () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}' ) ;
     public final EObject ruleAnchor() throws RecognitionException {
         EObject current = null;
 
@@ -6289,14 +6135,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2475:28: ( ( () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2476:1: ( () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2414:28: ( ( () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2415:1: ( () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2476:1: ( () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2476:2: () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2415:1: ( () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2415:2: () otherlv_1= 'Anchor' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )? (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2476:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2477:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2415:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2416:5: 
             {
 
                     current = forceCreateModelElement(
@@ -6306,20 +6152,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleAnchor5399); 
+            otherlv_1=(Token)match(input,40,FollowSets000.FOLLOW_40_in_ruleAnchor5247); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAnchorAccess().getAnchorKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2486:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2487:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2425:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2426:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2487:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2488:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2426:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2427:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getAnchorAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5420);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5268);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -6341,35 +6187,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleAnchor5432); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleAnchor5280); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getAnchorAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2508:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2447:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA62_0==22) ) {
-                alt62=1;
+            if ( (LA61_0==20) ) {
+                alt61=1;
             }
-            switch (alt62) {
+            switch (alt61) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2508:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2447:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleAnchor5445); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleAnchor5293); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getAnchorAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2512:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2513:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2451:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2452:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2513:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2514:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2452:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2453:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnchorAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleAnchor5466);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleAnchor5314);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -6397,31 +6243,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2530:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2469:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA63_0==23) ) {
-                alt63=1;
+            if ( (LA62_0==21) ) {
+                alt62=1;
             }
-            switch (alt63) {
+            switch (alt62) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2530:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2469:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleAnchor5481); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleAnchor5329); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getAnchorAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2534:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2535:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2473:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2474:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2535:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2536:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2474:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2475:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnchorAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5502);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5350);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -6449,31 +6295,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2552:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt64=2;
-            int LA64_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2491:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt63=2;
+            int LA63_0 = input.LA(1);
 
-            if ( (LA64_0==24) ) {
-                alt64=1;
+            if ( (LA63_0==22) ) {
+                alt63=1;
             }
-            switch (alt64) {
+            switch (alt63) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2552:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2491:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleAnchor5517); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleAnchor5365); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getAnchorAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2556:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2557:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2495:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2496:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2557:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2558:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2496:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2497:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnchorAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5538);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5386);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -6501,31 +6347,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2574:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt65=2;
-            int LA65_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2513:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA65_0==25) ) {
-                alt65=1;
+            if ( (LA64_0==23) ) {
+                alt64=1;
             }
-            switch (alt65) {
+            switch (alt64) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2574:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2513:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleAnchor5553); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleAnchor5401); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getAnchorAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2578:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2579:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2517:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2518:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2579:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2580:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2518:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2519:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnchorAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5574);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5422);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -6553,31 +6399,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2596:4: (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )?
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2535:4: (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )?
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( (LA66_0==16) ) {
-                alt66=1;
+            if ( (LA65_0==13) ) {
+                alt65=1;
             }
-            switch (alt66) {
+            switch (alt65) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2596:6: otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2535:6: otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) )
                     {
-                    otherlv_12=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleAnchor5589); 
+                    otherlv_12=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleAnchor5437); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getAnchorAccess().getTitleKeyword_8_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2600:1: ( (lv_title_13_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2601:1: (lv_title_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2539:1: ( (lv_title_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2540:1: (lv_title_13_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2601:1: (lv_title_13_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2602:3: lv_title_13_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2540:1: (lv_title_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2541:3: lv_title_13_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnchorAccess().getTitleEStringParserRuleCall_8_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5610);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5458);
                     lv_title_13_0=ruleEString();
 
                     state._fsp--;
@@ -6605,31 +6451,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2618:4: (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )?
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2557:4: (otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) ) )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA67_0==43) ) {
-                alt67=1;
+            if ( (LA66_0==41) ) {
+                alt66=1;
             }
-            switch (alt67) {
+            switch (alt66) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2618:6: otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2557:6: otherlv_14= 'link' ( (lv_link_15_0= ruleEString ) )
                     {
-                    otherlv_14=(Token)match(input,43,FollowSets000.FOLLOW_43_in_ruleAnchor5625); 
+                    otherlv_14=(Token)match(input,41,FollowSets000.FOLLOW_41_in_ruleAnchor5473); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getAnchorAccess().getLinkKeyword_9_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2622:1: ( (lv_link_15_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2623:1: (lv_link_15_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2561:1: ( (lv_link_15_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2562:1: (lv_link_15_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2623:1: (lv_link_15_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2624:3: lv_link_15_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2562:1: (lv_link_15_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2563:3: lv_link_15_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnchorAccess().getLinkEStringParserRuleCall_9_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5646);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAnchor5494);
                     lv_link_15_0=ruleEString();
 
                     state._fsp--;
@@ -6657,31 +6503,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2640:4: (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )?
-            int alt68=2;
-            int LA68_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2579:4: (otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) ) )?
+            int alt67=2;
+            int LA67_0 = input.LA(1);
 
-            if ( (LA68_0==32) ) {
-                alt68=1;
+            if ( (LA67_0==30) ) {
+                alt67=1;
             }
-            switch (alt68) {
+            switch (alt67) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2640:6: otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2579:6: otherlv_16= 'type' ( (lv_type_17_0= ruleAnchorType ) )
                     {
-                    otherlv_16=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleAnchor5661); 
+                    otherlv_16=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleAnchor5509); 
 
                         	newLeafNode(otherlv_16, grammarAccess.getAnchorAccess().getTypeKeyword_10_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2644:1: ( (lv_type_17_0= ruleAnchorType ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2645:1: (lv_type_17_0= ruleAnchorType )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2583:1: ( (lv_type_17_0= ruleAnchorType ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2584:1: (lv_type_17_0= ruleAnchorType )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2645:1: (lv_type_17_0= ruleAnchorType )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2646:3: lv_type_17_0= ruleAnchorType
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2584:1: (lv_type_17_0= ruleAnchorType )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2585:3: lv_type_17_0= ruleAnchorType
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnchorAccess().getTypeAnchorTypeEnumRuleCall_10_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleAnchorType_in_ruleAnchor5682);
+                    pushFollow(FollowSets000.FOLLOW_ruleAnchorType_in_ruleAnchor5530);
                     lv_type_17_0=ruleAnchorType();
 
                     state._fsp--;
@@ -6709,7 +6555,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAnchor5696); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAnchor5544); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getAnchorAccess().getRightCurlyBracketKeyword_11());
                 
@@ -6734,7 +6580,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDivision"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2674:1: entryRuleDivision returns [EObject current=null] : iv_ruleDivision= ruleDivision EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2613:1: entryRuleDivision returns [EObject current=null] : iv_ruleDivision= ruleDivision EOF ;
     public final EObject entryRuleDivision() throws RecognitionException {
         EObject current = null;
 
@@ -6742,17 +6588,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2675:2: (iv_ruleDivision= ruleDivision EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2676:2: iv_ruleDivision= ruleDivision EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2614:2: (iv_ruleDivision= ruleDivision EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2615:2: iv_ruleDivision= ruleDivision EOF
             {
              newCompositeNode(grammarAccess.getDivisionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDivision_in_entryRuleDivision5732);
+            pushFollow(FollowSets000.FOLLOW_ruleDivision_in_entryRuleDivision5580);
             iv_ruleDivision=ruleDivision();
 
             state._fsp--;
 
              current =iv_ruleDivision; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDivision5742); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDivision5590); 
 
             }
 
@@ -6770,7 +6616,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDivision"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2683:1: ruleDivision returns [EObject current=null] : ( () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2622:1: ruleDivision returns [EObject current=null] : ( () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
     public final EObject ruleDivision() throws RecognitionException {
         EObject current = null;
 
@@ -6803,14 +6649,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2686:28: ( ( () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2687:1: ( () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2625:28: ( ( () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2626:1: ( () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2687:1: ( () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2687:2: () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2626:1: ( () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2626:2: () otherlv_1= 'Division' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2687:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2688:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2626:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2627:5: 
             {
 
                     current = forceCreateModelElement(
@@ -6820,20 +6666,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,44,FollowSets000.FOLLOW_44_in_ruleDivision5788); 
+            otherlv_1=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleDivision5636); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getDivisionAccess().getDivisionKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2697:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2698:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2636:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2637:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2698:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2699:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2637:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2638:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getDivisionAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleDivision5809);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleDivision5657);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -6855,35 +6701,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleDivision5821); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleDivision5669); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getDivisionAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2719:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2658:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA69_0==22) ) {
-                alt69=1;
+            if ( (LA68_0==20) ) {
+                alt68=1;
             }
-            switch (alt69) {
+            switch (alt68) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2719:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2658:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleDivision5834); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleDivision5682); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getDivisionAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2723:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2724:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2662:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2663:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2724:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2725:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2663:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2664:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getDivisionAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleDivision5855);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleDivision5703);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -6911,31 +6757,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2741:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2680:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt69=2;
+            int LA69_0 = input.LA(1);
 
-            if ( (LA70_0==23) ) {
-                alt70=1;
+            if ( (LA69_0==21) ) {
+                alt69=1;
             }
-            switch (alt70) {
+            switch (alt69) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2741:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2680:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleDivision5870); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleDivision5718); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getDivisionAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2745:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2746:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2684:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2685:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2746:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2747:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2685:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2686:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getDivisionAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleDivision5891);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleDivision5739);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -6963,31 +6809,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2763:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt71=2;
-            int LA71_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2702:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA71_0==24) ) {
-                alt71=1;
+            if ( (LA70_0==22) ) {
+                alt70=1;
             }
-            switch (alt71) {
+            switch (alt70) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2763:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2702:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleDivision5906); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleDivision5754); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getDivisionAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2767:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2768:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2706:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2707:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2768:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2769:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2707:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2708:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getDivisionAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleDivision5927);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleDivision5775);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -7015,31 +6861,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2785:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt72=2;
-            int LA72_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2724:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt71=2;
+            int LA71_0 = input.LA(1);
 
-            if ( (LA72_0==25) ) {
-                alt72=1;
+            if ( (LA71_0==23) ) {
+                alt71=1;
             }
-            switch (alt72) {
+            switch (alt71) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2785:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2724:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleDivision5942); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleDivision5790); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getDivisionAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2789:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2790:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2728:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2729:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2790:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2791:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2729:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2730:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getDivisionAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleDivision5963);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleDivision5811);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -7067,35 +6913,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2807:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )?
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2746:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}' )?
+            int alt73=2;
+            int LA73_0 = input.LA(1);
 
-            if ( (LA74_0==26) ) {
-                alt74=1;
+            if ( (LA73_0==24) ) {
+                alt73=1;
             }
-            switch (alt74) {
+            switch (alt73) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2807:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2746:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleDivisionElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )* otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleDivision5978); 
+                    otherlv_12=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleDivision5826); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getDivisionAccess().getElementsKeyword_8_0());
                         
-                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleDivision5990); 
+                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleDivision5838); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getDivisionAccess().getLeftCurlyBracketKeyword_8_1());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2815:1: ( (lv_elements_14_0= ruleDivisionElement ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2816:1: (lv_elements_14_0= ruleDivisionElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2754:1: ( (lv_elements_14_0= ruleDivisionElement ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2755:1: (lv_elements_14_0= ruleDivisionElement )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2816:1: (lv_elements_14_0= ruleDivisionElement )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2817:3: lv_elements_14_0= ruleDivisionElement
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2755:1: (lv_elements_14_0= ruleDivisionElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2756:3: lv_elements_14_0= ruleDivisionElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getDivisionAccess().getElementsDivisionElementParserRuleCall_8_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleDivisionElement_in_ruleDivision6011);
+                    pushFollow(FollowSets000.FOLLOW_ruleDivisionElement_in_ruleDivision5859);
                     lv_elements_14_0=ruleDivisionElement();
 
                     state._fsp--;
@@ -7117,35 +6963,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2833:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )*
-                    loop73:
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2772:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) ) )*
+                    loop72:
                     do {
-                        int alt73=2;
-                        int LA73_0 = input.LA(1);
+                        int alt72=2;
+                        int LA72_0 = input.LA(1);
 
-                        if ( (LA73_0==19) ) {
-                            alt73=1;
+                        if ( (LA72_0==16) ) {
+                            alt72=1;
                         }
 
 
-                        switch (alt73) {
+                        switch (alt72) {
                     	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2833:4: otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2772:4: otherlv_15= ',' ( (lv_elements_16_0= ruleDivisionElement ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleDivision6024); 
+                    	    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleDivision5872); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getDivisionAccess().getCommaKeyword_8_3_0());
                     	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2837:1: ( (lv_elements_16_0= ruleDivisionElement ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2838:1: (lv_elements_16_0= ruleDivisionElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2776:1: ( (lv_elements_16_0= ruleDivisionElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2777:1: (lv_elements_16_0= ruleDivisionElement )
                     	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2838:1: (lv_elements_16_0= ruleDivisionElement )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2839:3: lv_elements_16_0= ruleDivisionElement
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2777:1: (lv_elements_16_0= ruleDivisionElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2778:3: lv_elements_16_0= ruleDivisionElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getDivisionAccess().getElementsDivisionElementParserRuleCall_8_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleDivisionElement_in_ruleDivision6045);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleDivisionElement_in_ruleDivision5893);
                     	    lv_elements_16_0=ruleDivisionElement();
 
                     	    state._fsp--;
@@ -7172,11 +7018,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop73;
+                    	    break loop72;
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleDivision6059); 
+                    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleDivision5907); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getDivisionAccess().getRightCurlyBracketKeyword_8_4());
                         
@@ -7186,7 +7032,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleDivision6073); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleDivision5921); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getDivisionAccess().getRightCurlyBracketKeyword_9());
                 
@@ -7211,7 +7057,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMap"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2871:1: entryRuleMap returns [EObject current=null] : iv_ruleMap= ruleMap EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2810:1: entryRuleMap returns [EObject current=null] : iv_ruleMap= ruleMap EOF ;
     public final EObject entryRuleMap() throws RecognitionException {
         EObject current = null;
 
@@ -7219,17 +7065,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2872:2: (iv_ruleMap= ruleMap EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2873:2: iv_ruleMap= ruleMap EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2811:2: (iv_ruleMap= ruleMap EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2812:2: iv_ruleMap= ruleMap EOF
             {
              newCompositeNode(grammarAccess.getMapRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMap_in_entryRuleMap6109);
+            pushFollow(FollowSets000.FOLLOW_ruleMap_in_entryRuleMap5957);
             iv_ruleMap=ruleMap();
 
             state._fsp--;
 
              current =iv_ruleMap; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMap6119); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMap5967); 
 
             }
 
@@ -7247,7 +7093,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMap"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2880:1: ruleMap returns [EObject current=null] : ( () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2819:1: ruleMap returns [EObject current=null] : ( () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}' ) ;
     public final EObject ruleMap() throws RecognitionException {
         EObject current = null;
 
@@ -7278,14 +7124,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2883:28: ( ( () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2884:1: ( () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2822:28: ( ( () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2823:1: ( () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2884:1: ( () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2884:2: () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2823:1: ( () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2823:2: () otherlv_1= 'Map' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )? (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )? otherlv_16= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2884:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2885:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2823:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2824:5: 
             {
 
                     current = forceCreateModelElement(
@@ -7295,20 +7141,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,45,FollowSets000.FOLLOW_45_in_ruleMap6165); 
+            otherlv_1=(Token)match(input,43,FollowSets000.FOLLOW_43_in_ruleMap6013); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMapAccess().getMapKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2894:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2895:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2833:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2834:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2895:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2896:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2834:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2835:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getMapAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6186);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6034);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -7330,35 +7176,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMap6198); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMap6046); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getMapAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2916:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt75=2;
-            int LA75_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2855:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt74=2;
+            int LA74_0 = input.LA(1);
 
-            if ( (LA75_0==22) ) {
-                alt75=1;
+            if ( (LA74_0==20) ) {
+                alt74=1;
             }
-            switch (alt75) {
+            switch (alt74) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2916:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2855:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleMap6211); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleMap6059); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getMapAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2920:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2921:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2859:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2860:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2921:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2922:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2860:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2861:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getMapAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleMap6232);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleMap6080);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -7386,31 +7232,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2938:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt76=2;
-            int LA76_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2877:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( (LA76_0==23) ) {
-                alt76=1;
+            if ( (LA75_0==21) ) {
+                alt75=1;
             }
-            switch (alt76) {
+            switch (alt75) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2938:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2877:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleMap6247); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleMap6095); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getMapAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2942:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2943:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2881:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2882:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2943:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2944:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2882:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2883:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMapAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6268);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6116);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -7438,31 +7284,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2960:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2899:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt76=2;
+            int LA76_0 = input.LA(1);
 
-            if ( (LA77_0==24) ) {
-                alt77=1;
+            if ( (LA76_0==22) ) {
+                alt76=1;
             }
-            switch (alt77) {
+            switch (alt76) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2960:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2899:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleMap6283); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleMap6131); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getMapAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2964:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2965:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2903:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2904:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2965:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2966:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2904:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2905:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMapAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6304);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6152);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -7490,31 +7336,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2982:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2921:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-            if ( (LA78_0==25) ) {
-                alt78=1;
+            if ( (LA77_0==23) ) {
+                alt77=1;
             }
-            switch (alt78) {
+            switch (alt77) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2982:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2921:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleMap6319); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleMap6167); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getMapAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2986:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2987:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2925:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2926:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2987:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2988:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2926:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2927:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMapAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6340);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6188);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -7542,31 +7388,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3004:4: (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2943:4: (otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) ) )?
+            int alt78=2;
+            int LA78_0 = input.LA(1);
 
-            if ( (LA79_0==46) ) {
-                alt79=1;
+            if ( (LA78_0==44) ) {
+                alt78=1;
             }
-            switch (alt79) {
+            switch (alt78) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3004:6: otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2943:6: otherlv_12= 'x' ( (lv_x_13_0= ruleEString ) )
                     {
-                    otherlv_12=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleMap6355); 
+                    otherlv_12=(Token)match(input,44,FollowSets000.FOLLOW_44_in_ruleMap6203); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getMapAccess().getXKeyword_8_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3008:1: ( (lv_x_13_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3009:1: (lv_x_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2947:1: ( (lv_x_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2948:1: (lv_x_13_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3009:1: (lv_x_13_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3010:3: lv_x_13_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2948:1: (lv_x_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2949:3: lv_x_13_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMapAccess().getXEStringParserRuleCall_8_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6376);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6224);
                     lv_x_13_0=ruleEString();
 
                     state._fsp--;
@@ -7594,31 +7440,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3026:4: (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )?
-            int alt80=2;
-            int LA80_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2965:4: (otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) ) )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( (LA80_0==47) ) {
-                alt80=1;
+            if ( (LA79_0==45) ) {
+                alt79=1;
             }
-            switch (alt80) {
+            switch (alt79) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3026:6: otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2965:6: otherlv_14= 'y' ( (lv_y_15_0= ruleEString ) )
                     {
-                    otherlv_14=(Token)match(input,47,FollowSets000.FOLLOW_47_in_ruleMap6391); 
+                    otherlv_14=(Token)match(input,45,FollowSets000.FOLLOW_45_in_ruleMap6239); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getMapAccess().getYKeyword_9_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3030:1: ( (lv_y_15_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3031:1: (lv_y_15_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2969:1: ( (lv_y_15_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2970:1: (lv_y_15_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3031:1: (lv_y_15_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3032:3: lv_y_15_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2970:1: (lv_y_15_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2971:3: lv_y_15_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMapAccess().getYEStringParserRuleCall_9_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6412);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMap6260);
                     lv_y_15_0=ruleEString();
 
                     state._fsp--;
@@ -7646,7 +7492,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_16=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleMap6426); 
+            otherlv_16=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleMap6274); 
 
                 	newLeafNode(otherlv_16, grammarAccess.getMapAccess().getRightCurlyBracketKeyword_10());
                 
@@ -7671,7 +7517,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCarouselPage"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3060:1: entryRuleCarouselPage returns [EObject current=null] : iv_ruleCarouselPage= ruleCarouselPage EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:2999:1: entryRuleCarouselPage returns [EObject current=null] : iv_ruleCarouselPage= ruleCarouselPage EOF ;
     public final EObject entryRuleCarouselPage() throws RecognitionException {
         EObject current = null;
 
@@ -7679,17 +7525,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3061:2: (iv_ruleCarouselPage= ruleCarouselPage EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3062:2: iv_ruleCarouselPage= ruleCarouselPage EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3000:2: (iv_ruleCarouselPage= ruleCarouselPage EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3001:2: iv_ruleCarouselPage= ruleCarouselPage EOF
             {
              newCompositeNode(grammarAccess.getCarouselPageRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleCarouselPage_in_entryRuleCarouselPage6462);
+            pushFollow(FollowSets000.FOLLOW_ruleCarouselPage_in_entryRuleCarouselPage6310);
             iv_ruleCarouselPage=ruleCarouselPage();
 
             state._fsp--;
 
              current =iv_ruleCarouselPage; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCarouselPage6472); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCarouselPage6320); 
 
             }
 
@@ -7707,7 +7553,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCarouselPage"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3069:1: ruleCarouselPage returns [EObject current=null] : ( () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3008:1: ruleCarouselPage returns [EObject current=null] : ( () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
     public final EObject ruleCarouselPage() throws RecognitionException {
         EObject current = null;
 
@@ -7740,14 +7586,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3072:28: ( ( () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3073:1: ( () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3011:28: ( ( () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3012:1: ( () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3073:1: ( () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3073:2: () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3012:1: ( () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3012:2: () otherlv_1= 'CarouselPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3073:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3074:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3012:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3013:5: 
             {
 
                     current = forceCreateModelElement(
@@ -7757,20 +7603,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,48,FollowSets000.FOLLOW_48_in_ruleCarouselPage6518); 
+            otherlv_1=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleCarouselPage6366); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getCarouselPageAccess().getCarouselPageKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3083:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3084:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3022:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3023:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3084:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3085:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3023:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3024:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getCarouselPageAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarouselPage6539);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarouselPage6387);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -7792,35 +7638,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCarouselPage6551); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCarouselPage6399); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getCarouselPageAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3105:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3044:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt80=2;
+            int LA80_0 = input.LA(1);
 
-            if ( (LA81_0==22) ) {
-                alt81=1;
+            if ( (LA80_0==20) ) {
+                alt80=1;
             }
-            switch (alt81) {
+            switch (alt80) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3105:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3044:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleCarouselPage6564); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleCarouselPage6412); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getCarouselPageAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3109:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3110:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3048:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3049:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3110:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3111:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3049:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3050:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselPageAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleCarouselPage6585);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleCarouselPage6433);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -7848,31 +7694,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3127:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3066:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt81=2;
+            int LA81_0 = input.LA(1);
 
-            if ( (LA82_0==23) ) {
-                alt82=1;
+            if ( (LA81_0==21) ) {
+                alt81=1;
             }
-            switch (alt82) {
+            switch (alt81) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3127:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3066:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleCarouselPage6600); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleCarouselPage6448); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getCarouselPageAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3131:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3132:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3070:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3071:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3132:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3133:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3071:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3072:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselPageAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarouselPage6621);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarouselPage6469);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -7900,31 +7746,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3149:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3088:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt82=2;
+            int LA82_0 = input.LA(1);
 
-            if ( (LA83_0==24) ) {
-                alt83=1;
+            if ( (LA82_0==22) ) {
+                alt82=1;
             }
-            switch (alt83) {
+            switch (alt82) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3149:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3088:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleCarouselPage6636); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleCarouselPage6484); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getCarouselPageAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3153:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3154:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3092:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3093:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3154:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3155:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3093:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3094:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselPageAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarouselPage6657);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarouselPage6505);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -7952,31 +7798,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3171:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt84=2;
-            int LA84_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3110:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt83=2;
+            int LA83_0 = input.LA(1);
 
-            if ( (LA84_0==25) ) {
-                alt84=1;
+            if ( (LA83_0==23) ) {
+                alt83=1;
             }
-            switch (alt84) {
+            switch (alt83) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3171:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3110:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleCarouselPage6672); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleCarouselPage6520); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getCarouselPageAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3175:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3176:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3114:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3115:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3176:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3177:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3115:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3116:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselPageAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarouselPage6693);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCarouselPage6541);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -8004,35 +7850,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3193:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )?
-            int alt86=2;
-            int LA86_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3132:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}' )?
+            int alt85=2;
+            int LA85_0 = input.LA(1);
 
-            if ( (LA86_0==26) ) {
-                alt86=1;
+            if ( (LA85_0==24) ) {
+                alt85=1;
             }
-            switch (alt86) {
+            switch (alt85) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3193:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3132:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCarouselPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )* otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleCarouselPage6708); 
+                    otherlv_12=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleCarouselPage6556); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getCarouselPageAccess().getElementsKeyword_8_0());
                         
-                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCarouselPage6720); 
+                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCarouselPage6568); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getCarouselPageAccess().getLeftCurlyBracketKeyword_8_1());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3201:1: ( (lv_elements_14_0= ruleCarouselPageElement ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3202:1: (lv_elements_14_0= ruleCarouselPageElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3140:1: ( (lv_elements_14_0= ruleCarouselPageElement ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3141:1: (lv_elements_14_0= ruleCarouselPageElement )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3202:1: (lv_elements_14_0= ruleCarouselPageElement )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3203:3: lv_elements_14_0= ruleCarouselPageElement
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3141:1: (lv_elements_14_0= ruleCarouselPageElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3142:3: lv_elements_14_0= ruleCarouselPageElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getCarouselPageAccess().getElementsCarouselPageElementParserRuleCall_8_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleCarouselPageElement_in_ruleCarouselPage6741);
+                    pushFollow(FollowSets000.FOLLOW_ruleCarouselPageElement_in_ruleCarouselPage6589);
                     lv_elements_14_0=ruleCarouselPageElement();
 
                     state._fsp--;
@@ -8054,35 +7900,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3219:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )*
-                    loop85:
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3158:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) ) )*
+                    loop84:
                     do {
-                        int alt85=2;
-                        int LA85_0 = input.LA(1);
+                        int alt84=2;
+                        int LA84_0 = input.LA(1);
 
-                        if ( (LA85_0==19) ) {
-                            alt85=1;
+                        if ( (LA84_0==16) ) {
+                            alt84=1;
                         }
 
 
-                        switch (alt85) {
+                        switch (alt84) {
                     	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3219:4: otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3158:4: otherlv_15= ',' ( (lv_elements_16_0= ruleCarouselPageElement ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleCarouselPage6754); 
+                    	    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleCarouselPage6602); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getCarouselPageAccess().getCommaKeyword_8_3_0());
                     	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3223:1: ( (lv_elements_16_0= ruleCarouselPageElement ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3224:1: (lv_elements_16_0= ruleCarouselPageElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3162:1: ( (lv_elements_16_0= ruleCarouselPageElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3163:1: (lv_elements_16_0= ruleCarouselPageElement )
                     	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3224:1: (lv_elements_16_0= ruleCarouselPageElement )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3225:3: lv_elements_16_0= ruleCarouselPageElement
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3163:1: (lv_elements_16_0= ruleCarouselPageElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3164:3: lv_elements_16_0= ruleCarouselPageElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getCarouselPageAccess().getElementsCarouselPageElementParserRuleCall_8_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleCarouselPageElement_in_ruleCarouselPage6775);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleCarouselPageElement_in_ruleCarouselPage6623);
                     	    lv_elements_16_0=ruleCarouselPageElement();
 
                     	    state._fsp--;
@@ -8109,11 +7955,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop85;
+                    	    break loop84;
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleCarouselPage6789); 
+                    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleCarouselPage6637); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getCarouselPageAccess().getRightCurlyBracketKeyword_8_4());
                         
@@ -8123,7 +7969,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleCarouselPage6803); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleCarouselPage6651); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getCarouselPageAccess().getRightCurlyBracketKeyword_9());
                 
@@ -8148,7 +7994,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCardPage"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3257:1: entryRuleCardPage returns [EObject current=null] : iv_ruleCardPage= ruleCardPage EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3196:1: entryRuleCardPage returns [EObject current=null] : iv_ruleCardPage= ruleCardPage EOF ;
     public final EObject entryRuleCardPage() throws RecognitionException {
         EObject current = null;
 
@@ -8156,17 +8002,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3258:2: (iv_ruleCardPage= ruleCardPage EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3259:2: iv_ruleCardPage= ruleCardPage EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3197:2: (iv_ruleCardPage= ruleCardPage EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3198:2: iv_ruleCardPage= ruleCardPage EOF
             {
              newCompositeNode(grammarAccess.getCardPageRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleCardPage_in_entryRuleCardPage6839);
+            pushFollow(FollowSets000.FOLLOW_ruleCardPage_in_entryRuleCardPage6687);
             iv_ruleCardPage=ruleCardPage();
 
             state._fsp--;
 
              current =iv_ruleCardPage; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCardPage6849); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCardPage6697); 
 
             }
 
@@ -8184,7 +8030,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCardPage"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3266:1: ruleCardPage returns [EObject current=null] : ( () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3205:1: ruleCardPage returns [EObject current=null] : ( () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) ;
     public final EObject ruleCardPage() throws RecognitionException {
         EObject current = null;
 
@@ -8217,14 +8063,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3269:28: ( ( () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3270:1: ( () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3208:28: ( ( () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3209:1: ( () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3270:1: ( () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3270:2: () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3209:1: ( () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3209:2: () otherlv_1= 'CardPage' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )? otherlv_18= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3270:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3271:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3209:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3210:5: 
             {
 
                     current = forceCreateModelElement(
@@ -8234,20 +8080,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_ruleCardPage6895); 
+            otherlv_1=(Token)match(input,47,FollowSets000.FOLLOW_47_in_ruleCardPage6743); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getCardPageAccess().getCardPageKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3280:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3281:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3219:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3220:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3281:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3282:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3220:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3221:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getCardPageAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCardPage6916);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCardPage6764);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -8269,35 +8115,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCardPage6928); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCardPage6776); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getCardPageAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3302:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt87=2;
-            int LA87_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3241:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt86=2;
+            int LA86_0 = input.LA(1);
 
-            if ( (LA87_0==22) ) {
-                alt87=1;
+            if ( (LA86_0==20) ) {
+                alt86=1;
             }
-            switch (alt87) {
+            switch (alt86) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3302:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3241:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleCardPage6941); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleCardPage6789); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getCardPageAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3306:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3307:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3245:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3246:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3307:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3308:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3246:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3247:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardPageAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleCardPage6962);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleCardPage6810);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -8325,31 +8171,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3324:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt88=2;
-            int LA88_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3263:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt87=2;
+            int LA87_0 = input.LA(1);
 
-            if ( (LA88_0==23) ) {
-                alt88=1;
+            if ( (LA87_0==21) ) {
+                alt87=1;
             }
-            switch (alt88) {
+            switch (alt87) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3324:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3263:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleCardPage6977); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleCardPage6825); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getCardPageAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3328:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3329:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3267:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3268:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3329:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3330:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3268:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3269:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardPageAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCardPage6998);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCardPage6846);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -8377,31 +8223,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3346:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt89=2;
-            int LA89_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3285:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt88=2;
+            int LA88_0 = input.LA(1);
 
-            if ( (LA89_0==24) ) {
-                alt89=1;
+            if ( (LA88_0==22) ) {
+                alt88=1;
             }
-            switch (alt89) {
+            switch (alt88) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3346:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3285:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleCardPage7013); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleCardPage6861); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getCardPageAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3350:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3351:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3289:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3290:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3351:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3352:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3290:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3291:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardPageAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCardPage7034);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCardPage6882);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -8429,31 +8275,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3368:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt90=2;
-            int LA90_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3307:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt89=2;
+            int LA89_0 = input.LA(1);
 
-            if ( (LA90_0==25) ) {
-                alt90=1;
+            if ( (LA89_0==23) ) {
+                alt89=1;
             }
-            switch (alt90) {
+            switch (alt89) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3368:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3307:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleCardPage7049); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleCardPage6897); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getCardPageAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3372:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3373:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3311:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3312:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3373:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3374:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3312:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3313:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardPageAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCardPage7070);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleCardPage6918);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -8481,35 +8327,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3390:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )?
-            int alt92=2;
-            int LA92_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3329:4: (otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}' )?
+            int alt91=2;
+            int LA91_0 = input.LA(1);
 
-            if ( (LA92_0==26) ) {
-                alt92=1;
+            if ( (LA91_0==24) ) {
+                alt91=1;
             }
-            switch (alt92) {
+            switch (alt91) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3390:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3329:6: otherlv_12= 'elements' otherlv_13= '{' ( (lv_elements_14_0= ruleCardPageElement ) ) (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )* otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleCardPage7085); 
+                    otherlv_12=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleCardPage6933); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getCardPageAccess().getElementsKeyword_8_0());
                         
-                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCardPage7097); 
+                    otherlv_13=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleCardPage6945); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getCardPageAccess().getLeftCurlyBracketKeyword_8_1());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3398:1: ( (lv_elements_14_0= ruleCardPageElement ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3399:1: (lv_elements_14_0= ruleCardPageElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3337:1: ( (lv_elements_14_0= ruleCardPageElement ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3338:1: (lv_elements_14_0= ruleCardPageElement )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3399:1: (lv_elements_14_0= ruleCardPageElement )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3400:3: lv_elements_14_0= ruleCardPageElement
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3338:1: (lv_elements_14_0= ruleCardPageElement )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3339:3: lv_elements_14_0= ruleCardPageElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getCardPageAccess().getElementsCardPageElementParserRuleCall_8_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleCardPageElement_in_ruleCardPage7118);
+                    pushFollow(FollowSets000.FOLLOW_ruleCardPageElement_in_ruleCardPage6966);
                     lv_elements_14_0=ruleCardPageElement();
 
                     state._fsp--;
@@ -8531,35 +8377,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3416:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )*
-                    loop91:
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3355:2: (otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) ) )*
+                    loop90:
                     do {
-                        int alt91=2;
-                        int LA91_0 = input.LA(1);
+                        int alt90=2;
+                        int LA90_0 = input.LA(1);
 
-                        if ( (LA91_0==19) ) {
-                            alt91=1;
+                        if ( (LA90_0==16) ) {
+                            alt90=1;
                         }
 
 
-                        switch (alt91) {
+                        switch (alt90) {
                     	case 1 :
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3416:4: otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3355:4: otherlv_15= ',' ( (lv_elements_16_0= ruleCardPageElement ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleCardPage7131); 
+                    	    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleCardPage6979); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getCardPageAccess().getCommaKeyword_8_3_0());
                     	        
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3420:1: ( (lv_elements_16_0= ruleCardPageElement ) )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3421:1: (lv_elements_16_0= ruleCardPageElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3359:1: ( (lv_elements_16_0= ruleCardPageElement ) )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3360:1: (lv_elements_16_0= ruleCardPageElement )
                     	    {
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3421:1: (lv_elements_16_0= ruleCardPageElement )
-                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3422:3: lv_elements_16_0= ruleCardPageElement
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3360:1: (lv_elements_16_0= ruleCardPageElement )
+                    	    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3361:3: lv_elements_16_0= ruleCardPageElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getCardPageAccess().getElementsCardPageElementParserRuleCall_8_3_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleCardPageElement_in_ruleCardPage7152);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleCardPageElement_in_ruleCardPage7000);
                     	    lv_elements_16_0=ruleCardPageElement();
 
                     	    state._fsp--;
@@ -8586,11 +8432,11 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop91;
+                    	    break loop90;
                         }
                     } while (true);
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleCardPage7166); 
+                    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleCardPage7014); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getCardPageAccess().getRightCurlyBracketKeyword_8_4());
                         
@@ -8600,7 +8446,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleCardPage7180); 
+            otherlv_18=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleCardPage7028); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getCardPageAccess().getRightCurlyBracketKeyword_9());
                 
@@ -8625,7 +8471,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMenuItem"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3454:1: entryRuleMenuItem returns [EObject current=null] : iv_ruleMenuItem= ruleMenuItem EOF ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3393:1: entryRuleMenuItem returns [EObject current=null] : iv_ruleMenuItem= ruleMenuItem EOF ;
     public final EObject entryRuleMenuItem() throws RecognitionException {
         EObject current = null;
 
@@ -8633,17 +8479,17 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3455:2: (iv_ruleMenuItem= ruleMenuItem EOF )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3456:2: iv_ruleMenuItem= ruleMenuItem EOF
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3394:2: (iv_ruleMenuItem= ruleMenuItem EOF )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3395:2: iv_ruleMenuItem= ruleMenuItem EOF
             {
              newCompositeNode(grammarAccess.getMenuItemRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMenuItem_in_entryRuleMenuItem7216);
+            pushFollow(FollowSets000.FOLLOW_ruleMenuItem_in_entryRuleMenuItem7064);
             iv_ruleMenuItem=ruleMenuItem();
 
             state._fsp--;
 
              current =iv_ruleMenuItem; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMenuItem7226); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMenuItem7074); 
 
             }
 
@@ -8661,7 +8507,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMenuItem"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3463:1: ruleMenuItem returns [EObject current=null] : ( () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}' ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3402:1: ruleMenuItem returns [EObject current=null] : ( () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}' ) ;
     public final EObject ruleMenuItem() throws RecognitionException {
         EObject current = null;
 
@@ -8690,14 +8536,14 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3466:28: ( ( () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}' ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3467:1: ( () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3405:28: ( ( () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3406:1: ( () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}' )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3467:1: ( () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}' )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3467:2: () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}'
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3406:1: ( () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}' )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3406:2: () otherlv_1= 'MenuItem' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )? (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )? (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )? (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )? (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )? (otherlv_14= 'section' ( ( ruleEString ) ) )? otherlv_16= '}'
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3467:2: ()
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3468:5: 
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3406:2: ()
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3407:5: 
             {
 
                     current = forceCreateModelElement(
@@ -8707,20 +8553,20 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleMenuItem7272); 
+            otherlv_1=(Token)match(input,48,FollowSets000.FOLLOW_48_in_ruleMenuItem7120); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMenuItemAccess().getMenuItemKeyword_1());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3477:1: ( (lv_name_2_0= ruleEString ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3478:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3416:1: ( (lv_name_2_0= ruleEString ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3417:1: (lv_name_2_0= ruleEString )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3478:1: (lv_name_2_0= ruleEString )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3479:3: lv_name_2_0= ruleEString
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3417:1: (lv_name_2_0= ruleEString )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3418:3: lv_name_2_0= ruleEString
             {
              
             	        newCompositeNode(grammarAccess.getMenuItemAccess().getNameEStringParserRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7293);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7141);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -8742,35 +8588,35 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMenuItem7305); 
+            otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleMenuItem7153); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getMenuItemAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3499:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
-            int alt93=2;
-            int LA93_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3438:1: (otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) ) )?
+            int alt92=2;
+            int LA92_0 = input.LA(1);
 
-            if ( (LA93_0==22) ) {
-                alt93=1;
+            if ( (LA92_0==20) ) {
+                alt92=1;
             }
-            switch (alt93) {
+            switch (alt92) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3499:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3438:3: otherlv_4= 'colSpan' ( (lv_colSpan_5_0= ruleEInt ) )
                     {
-                    otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleMenuItem7318); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleMenuItem7166); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getMenuItemAccess().getColSpanKeyword_4_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3503:1: ( (lv_colSpan_5_0= ruleEInt ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3504:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3442:1: ( (lv_colSpan_5_0= ruleEInt ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3443:1: (lv_colSpan_5_0= ruleEInt )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3504:1: (lv_colSpan_5_0= ruleEInt )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3505:3: lv_colSpan_5_0= ruleEInt
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3443:1: (lv_colSpan_5_0= ruleEInt )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3444:3: lv_colSpan_5_0= ruleEInt
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuItemAccess().getColSpanEIntParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleMenuItem7339);
+                    pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleMenuItem7187);
                     lv_colSpan_5_0=ruleEInt();
 
                     state._fsp--;
@@ -8798,31 +8644,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3521:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
-            int alt94=2;
-            int LA94_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3460:4: (otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) ) )?
+            int alt93=2;
+            int LA93_0 = input.LA(1);
 
-            if ( (LA94_0==23) ) {
-                alt94=1;
+            if ( (LA93_0==21) ) {
+                alt93=1;
             }
-            switch (alt94) {
+            switch (alt93) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3521:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3460:6: otherlv_6= 'color' ( (lv_color_7_0= ruleEString ) )
                     {
-                    otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleMenuItem7354); 
+                    otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleMenuItem7202); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getMenuItemAccess().getColorKeyword_5_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3525:1: ( (lv_color_7_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3526:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3464:1: ( (lv_color_7_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3465:1: (lv_color_7_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3526:1: (lv_color_7_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3527:3: lv_color_7_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3465:1: (lv_color_7_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3466:3: lv_color_7_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuItemAccess().getColorEStringParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7375);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7223);
                     lv_color_7_0=ruleEString();
 
                     state._fsp--;
@@ -8850,31 +8696,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3543:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
-            int alt95=2;
-            int LA95_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3482:4: (otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) ) )?
+            int alt94=2;
+            int LA94_0 = input.LA(1);
 
-            if ( (LA95_0==24) ) {
-                alt95=1;
+            if ( (LA94_0==22) ) {
+                alt94=1;
             }
-            switch (alt95) {
+            switch (alt94) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3543:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3482:6: otherlv_8= 'backgroundColor' ( (lv_backgroundColor_9_0= ruleEString ) )
                     {
-                    otherlv_8=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleMenuItem7390); 
+                    otherlv_8=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleMenuItem7238); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getMenuItemAccess().getBackgroundColorKeyword_6_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3547:1: ( (lv_backgroundColor_9_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3548:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3486:1: ( (lv_backgroundColor_9_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3487:1: (lv_backgroundColor_9_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3548:1: (lv_backgroundColor_9_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3549:3: lv_backgroundColor_9_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3487:1: (lv_backgroundColor_9_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3488:3: lv_backgroundColor_9_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuItemAccess().getBackgroundColorEStringParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7411);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7259);
                     lv_backgroundColor_9_0=ruleEString();
 
                     state._fsp--;
@@ -8902,31 +8748,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3565:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
-            int alt96=2;
-            int LA96_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3504:4: (otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) ) )?
+            int alt95=2;
+            int LA95_0 = input.LA(1);
 
-            if ( (LA96_0==25) ) {
-                alt96=1;
+            if ( (LA95_0==23) ) {
+                alt95=1;
             }
-            switch (alt96) {
+            switch (alt95) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3565:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3504:6: otherlv_10= 'backgroundImage' ( (lv_backgroundImage_11_0= ruleEString ) )
                     {
-                    otherlv_10=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleMenuItem7426); 
+                    otherlv_10=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleMenuItem7274); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getMenuItemAccess().getBackgroundImageKeyword_7_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3569:1: ( (lv_backgroundImage_11_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3570:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3508:1: ( (lv_backgroundImage_11_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3509:1: (lv_backgroundImage_11_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3570:1: (lv_backgroundImage_11_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3571:3: lv_backgroundImage_11_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3509:1: (lv_backgroundImage_11_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3510:3: lv_backgroundImage_11_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuItemAccess().getBackgroundImageEStringParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7447);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7295);
                     lv_backgroundImage_11_0=ruleEString();
 
                     state._fsp--;
@@ -8954,31 +8800,31 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3587:4: (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )?
-            int alt97=2;
-            int LA97_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3526:4: (otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) ) )?
+            int alt96=2;
+            int LA96_0 = input.LA(1);
 
-            if ( (LA97_0==16) ) {
-                alt97=1;
+            if ( (LA96_0==13) ) {
+                alt96=1;
             }
-            switch (alt97) {
+            switch (alt96) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3587:6: otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3526:6: otherlv_12= 'title' ( (lv_title_13_0= ruleEString ) )
                     {
-                    otherlv_12=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleMenuItem7462); 
+                    otherlv_12=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleMenuItem7310); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getMenuItemAccess().getTitleKeyword_8_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3591:1: ( (lv_title_13_0= ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3592:1: (lv_title_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3530:1: ( (lv_title_13_0= ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3531:1: (lv_title_13_0= ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3592:1: (lv_title_13_0= ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3593:3: lv_title_13_0= ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3531:1: (lv_title_13_0= ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3532:3: lv_title_13_0= ruleEString
                     {
                      
                     	        newCompositeNode(grammarAccess.getMenuItemAccess().getTitleEStringParserRuleCall_8_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7483);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7331);
                     lv_title_13_0=ruleEString();
 
                     state._fsp--;
@@ -9006,26 +8852,26 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3609:4: (otherlv_14= 'section' ( ( ruleEString ) ) )?
-            int alt98=2;
-            int LA98_0 = input.LA(1);
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3548:4: (otherlv_14= 'section' ( ( ruleEString ) ) )?
+            int alt97=2;
+            int LA97_0 = input.LA(1);
 
-            if ( (LA98_0==51) ) {
-                alt98=1;
+            if ( (LA97_0==49) ) {
+                alt97=1;
             }
-            switch (alt98) {
+            switch (alt97) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3609:6: otherlv_14= 'section' ( ( ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3548:6: otherlv_14= 'section' ( ( ruleEString ) )
                     {
-                    otherlv_14=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleMenuItem7498); 
+                    otherlv_14=(Token)match(input,49,FollowSets000.FOLLOW_49_in_ruleMenuItem7346); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getMenuItemAccess().getSectionKeyword_9_0());
                         
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3613:1: ( ( ruleEString ) )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3614:1: ( ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3552:1: ( ( ruleEString ) )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3553:1: ( ruleEString )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3614:1: ( ruleEString )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3615:3: ruleEString
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3553:1: ( ruleEString )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3554:3: ruleEString
                     {
 
                     			if (current==null) {
@@ -9035,7 +8881,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getMenuItemAccess().getSectionSectionCrossReference_9_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7521);
+                    pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleMenuItem7369);
                     ruleEString();
 
                     state._fsp--;
@@ -9055,7 +8901,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_16=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleMenuItem7535); 
+            otherlv_16=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleMenuItem7383); 
 
                 	newLeafNode(otherlv_16, grammarAccess.getMenuItemAccess().getRightCurlyBracketKeyword_10());
                 
@@ -9080,7 +8926,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHeaderType"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3640:1: ruleHeaderType returns [Enumerator current=null] : ( (enumLiteral_0= 'H1' ) | (enumLiteral_1= 'H2' ) | (enumLiteral_2= 'H3' ) | (enumLiteral_3= 'H4' ) | (enumLiteral_4= 'H5' ) | (enumLiteral_5= 'H6' ) ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3579:1: ruleHeaderType returns [Enumerator current=null] : ( (enumLiteral_0= 'H1' ) | (enumLiteral_1= 'H2' ) | (enumLiteral_2= 'H3' ) | (enumLiteral_3= 'H4' ) | (enumLiteral_4= 'H5' ) | (enumLiteral_5= 'H6' ) ) ;
     public final Enumerator ruleHeaderType() throws RecognitionException {
         Enumerator current = null;
 
@@ -9093,57 +8939,57 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3642:28: ( ( (enumLiteral_0= 'H1' ) | (enumLiteral_1= 'H2' ) | (enumLiteral_2= 'H3' ) | (enumLiteral_3= 'H4' ) | (enumLiteral_4= 'H5' ) | (enumLiteral_5= 'H6' ) ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3643:1: ( (enumLiteral_0= 'H1' ) | (enumLiteral_1= 'H2' ) | (enumLiteral_2= 'H3' ) | (enumLiteral_3= 'H4' ) | (enumLiteral_4= 'H5' ) | (enumLiteral_5= 'H6' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3581:28: ( ( (enumLiteral_0= 'H1' ) | (enumLiteral_1= 'H2' ) | (enumLiteral_2= 'H3' ) | (enumLiteral_3= 'H4' ) | (enumLiteral_4= 'H5' ) | (enumLiteral_5= 'H6' ) ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3582:1: ( (enumLiteral_0= 'H1' ) | (enumLiteral_1= 'H2' ) | (enumLiteral_2= 'H3' ) | (enumLiteral_3= 'H4' ) | (enumLiteral_4= 'H5' ) | (enumLiteral_5= 'H6' ) )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3643:1: ( (enumLiteral_0= 'H1' ) | (enumLiteral_1= 'H2' ) | (enumLiteral_2= 'H3' ) | (enumLiteral_3= 'H4' ) | (enumLiteral_4= 'H5' ) | (enumLiteral_5= 'H6' ) )
-            int alt99=6;
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3582:1: ( (enumLiteral_0= 'H1' ) | (enumLiteral_1= 'H2' ) | (enumLiteral_2= 'H3' ) | (enumLiteral_3= 'H4' ) | (enumLiteral_4= 'H5' ) | (enumLiteral_5= 'H6' ) )
+            int alt98=6;
             switch ( input.LA(1) ) {
+            case 50:
+                {
+                alt98=1;
+                }
+                break;
+            case 51:
+                {
+                alt98=2;
+                }
+                break;
             case 52:
                 {
-                alt99=1;
+                alt98=3;
                 }
                 break;
             case 53:
                 {
-                alt99=2;
+                alt98=4;
                 }
                 break;
             case 54:
                 {
-                alt99=3;
+                alt98=5;
                 }
                 break;
             case 55:
                 {
-                alt99=4;
-                }
-                break;
-            case 56:
-                {
-                alt99=5;
-                }
-                break;
-            case 57:
-                {
-                alt99=6;
+                alt98=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 99, 0, input);
+                    new NoViableAltException("", 98, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt99) {
+            switch (alt98) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3643:2: (enumLiteral_0= 'H1' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3582:2: (enumLiteral_0= 'H1' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3643:2: (enumLiteral_0= 'H1' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3643:4: enumLiteral_0= 'H1'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3582:2: (enumLiteral_0= 'H1' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3582:4: enumLiteral_0= 'H1'
                     {
-                    enumLiteral_0=(Token)match(input,52,FollowSets000.FOLLOW_52_in_ruleHeaderType7585); 
+                    enumLiteral_0=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleHeaderType7433); 
 
                             current = grammarAccess.getHeaderTypeAccess().getH1EnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getHeaderTypeAccess().getH1EnumLiteralDeclaration_0()); 
@@ -9155,12 +9001,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3649:6: (enumLiteral_1= 'H2' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3588:6: (enumLiteral_1= 'H2' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3649:6: (enumLiteral_1= 'H2' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3649:8: enumLiteral_1= 'H2'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3588:6: (enumLiteral_1= 'H2' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3588:8: enumLiteral_1= 'H2'
                     {
-                    enumLiteral_1=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleHeaderType7602); 
+                    enumLiteral_1=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleHeaderType7450); 
 
                             current = grammarAccess.getHeaderTypeAccess().getH2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getHeaderTypeAccess().getH2EnumLiteralDeclaration_1()); 
@@ -9172,12 +9018,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3655:6: (enumLiteral_2= 'H3' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3594:6: (enumLiteral_2= 'H3' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3655:6: (enumLiteral_2= 'H3' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3655:8: enumLiteral_2= 'H3'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3594:6: (enumLiteral_2= 'H3' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3594:8: enumLiteral_2= 'H3'
                     {
-                    enumLiteral_2=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleHeaderType7619); 
+                    enumLiteral_2=(Token)match(input,52,FollowSets000.FOLLOW_52_in_ruleHeaderType7467); 
 
                             current = grammarAccess.getHeaderTypeAccess().getH3EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getHeaderTypeAccess().getH3EnumLiteralDeclaration_2()); 
@@ -9189,12 +9035,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3661:6: (enumLiteral_3= 'H4' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3600:6: (enumLiteral_3= 'H4' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3661:6: (enumLiteral_3= 'H4' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3661:8: enumLiteral_3= 'H4'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3600:6: (enumLiteral_3= 'H4' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3600:8: enumLiteral_3= 'H4'
                     {
-                    enumLiteral_3=(Token)match(input,55,FollowSets000.FOLLOW_55_in_ruleHeaderType7636); 
+                    enumLiteral_3=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleHeaderType7484); 
 
                             current = grammarAccess.getHeaderTypeAccess().getH4EnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getHeaderTypeAccess().getH4EnumLiteralDeclaration_3()); 
@@ -9206,12 +9052,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3667:6: (enumLiteral_4= 'H5' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3606:6: (enumLiteral_4= 'H5' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3667:6: (enumLiteral_4= 'H5' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3667:8: enumLiteral_4= 'H5'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3606:6: (enumLiteral_4= 'H5' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3606:8: enumLiteral_4= 'H5'
                     {
-                    enumLiteral_4=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleHeaderType7653); 
+                    enumLiteral_4=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleHeaderType7501); 
 
                             current = grammarAccess.getHeaderTypeAccess().getH5EnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getHeaderTypeAccess().getH5EnumLiteralDeclaration_4()); 
@@ -9223,12 +9069,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3673:6: (enumLiteral_5= 'H6' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3612:6: (enumLiteral_5= 'H6' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3673:6: (enumLiteral_5= 'H6' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3673:8: enumLiteral_5= 'H6'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3612:6: (enumLiteral_5= 'H6' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3612:8: enumLiteral_5= 'H6'
                     {
-                    enumLiteral_5=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleHeaderType7670); 
+                    enumLiteral_5=(Token)match(input,55,FollowSets000.FOLLOW_55_in_ruleHeaderType7518); 
 
                             current = grammarAccess.getHeaderTypeAccess().getH6EnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getHeaderTypeAccess().getH6EnumLiteralDeclaration_5()); 
@@ -9260,7 +9106,7 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnchorType"
-    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3683:1: ruleAnchorType returns [Enumerator current=null] : ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'btn_default' ) | (enumLiteral_2= 'btn_primary' ) | (enumLiteral_3= 'btn_success' ) | (enumLiteral_4= 'btn_info' ) | (enumLiteral_5= 'btn_warning' ) | (enumLiteral_6= 'btn_danger' ) ) ;
+    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3622:1: ruleAnchorType returns [Enumerator current=null] : ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'btn_default' ) | (enumLiteral_2= 'btn_primary' ) | (enumLiteral_3= 'btn_success' ) | (enumLiteral_4= 'btn_info' ) | (enumLiteral_5= 'btn_warning' ) | (enumLiteral_6= 'btn_danger' ) ) ;
     public final Enumerator ruleAnchorType() throws RecognitionException {
         Enumerator current = null;
 
@@ -9274,62 +9120,62 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3685:28: ( ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'btn_default' ) | (enumLiteral_2= 'btn_primary' ) | (enumLiteral_3= 'btn_success' ) | (enumLiteral_4= 'btn_info' ) | (enumLiteral_5= 'btn_warning' ) | (enumLiteral_6= 'btn_danger' ) ) )
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3686:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'btn_default' ) | (enumLiteral_2= 'btn_primary' ) | (enumLiteral_3= 'btn_success' ) | (enumLiteral_4= 'btn_info' ) | (enumLiteral_5= 'btn_warning' ) | (enumLiteral_6= 'btn_danger' ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3624:28: ( ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'btn_default' ) | (enumLiteral_2= 'btn_primary' ) | (enumLiteral_3= 'btn_success' ) | (enumLiteral_4= 'btn_info' ) | (enumLiteral_5= 'btn_warning' ) | (enumLiteral_6= 'btn_danger' ) ) )
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3625:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'btn_default' ) | (enumLiteral_2= 'btn_primary' ) | (enumLiteral_3= 'btn_success' ) | (enumLiteral_4= 'btn_info' ) | (enumLiteral_5= 'btn_warning' ) | (enumLiteral_6= 'btn_danger' ) )
             {
-            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3686:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'btn_default' ) | (enumLiteral_2= 'btn_primary' ) | (enumLiteral_3= 'btn_success' ) | (enumLiteral_4= 'btn_info' ) | (enumLiteral_5= 'btn_warning' ) | (enumLiteral_6= 'btn_danger' ) )
-            int alt100=7;
+            // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3625:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'btn_default' ) | (enumLiteral_2= 'btn_primary' ) | (enumLiteral_3= 'btn_success' ) | (enumLiteral_4= 'btn_info' ) | (enumLiteral_5= 'btn_warning' ) | (enumLiteral_6= 'btn_danger' ) )
+            int alt99=7;
             switch ( input.LA(1) ) {
+            case 56:
+                {
+                alt99=1;
+                }
+                break;
+            case 57:
+                {
+                alt99=2;
+                }
+                break;
             case 58:
                 {
-                alt100=1;
+                alt99=3;
                 }
                 break;
             case 59:
                 {
-                alt100=2;
+                alt99=4;
                 }
                 break;
             case 60:
                 {
-                alt100=3;
+                alt99=5;
                 }
                 break;
             case 61:
                 {
-                alt100=4;
+                alt99=6;
                 }
                 break;
             case 62:
                 {
-                alt100=5;
-                }
-                break;
-            case 63:
-                {
-                alt100=6;
-                }
-                break;
-            case 64:
-                {
-                alt100=7;
+                alt99=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 100, 0, input);
+                    new NoViableAltException("", 99, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt100) {
+            switch (alt99) {
                 case 1 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3686:2: (enumLiteral_0= 'default' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3625:2: (enumLiteral_0= 'default' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3686:2: (enumLiteral_0= 'default' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3686:4: enumLiteral_0= 'default'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3625:2: (enumLiteral_0= 'default' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3625:4: enumLiteral_0= 'default'
                     {
-                    enumLiteral_0=(Token)match(input,58,FollowSets000.FOLLOW_58_in_ruleAnchorType7715); 
+                    enumLiteral_0=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleAnchorType7563); 
 
                             current = grammarAccess.getAnchorTypeAccess().getDefaultEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getAnchorTypeAccess().getDefaultEnumLiteralDeclaration_0()); 
@@ -9341,12 +9187,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3692:6: (enumLiteral_1= 'btn_default' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3631:6: (enumLiteral_1= 'btn_default' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3692:6: (enumLiteral_1= 'btn_default' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3692:8: enumLiteral_1= 'btn_default'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3631:6: (enumLiteral_1= 'btn_default' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3631:8: enumLiteral_1= 'btn_default'
                     {
-                    enumLiteral_1=(Token)match(input,59,FollowSets000.FOLLOW_59_in_ruleAnchorType7732); 
+                    enumLiteral_1=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleAnchorType7580); 
 
                             current = grammarAccess.getAnchorTypeAccess().getBtn_defaultEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getAnchorTypeAccess().getBtn_defaultEnumLiteralDeclaration_1()); 
@@ -9358,12 +9204,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3698:6: (enumLiteral_2= 'btn_primary' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3637:6: (enumLiteral_2= 'btn_primary' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3698:6: (enumLiteral_2= 'btn_primary' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3698:8: enumLiteral_2= 'btn_primary'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3637:6: (enumLiteral_2= 'btn_primary' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3637:8: enumLiteral_2= 'btn_primary'
                     {
-                    enumLiteral_2=(Token)match(input,60,FollowSets000.FOLLOW_60_in_ruleAnchorType7749); 
+                    enumLiteral_2=(Token)match(input,58,FollowSets000.FOLLOW_58_in_ruleAnchorType7597); 
 
                             current = grammarAccess.getAnchorTypeAccess().getBtn_primaryEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getAnchorTypeAccess().getBtn_primaryEnumLiteralDeclaration_2()); 
@@ -9375,12 +9221,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3704:6: (enumLiteral_3= 'btn_success' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3643:6: (enumLiteral_3= 'btn_success' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3704:6: (enumLiteral_3= 'btn_success' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3704:8: enumLiteral_3= 'btn_success'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3643:6: (enumLiteral_3= 'btn_success' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3643:8: enumLiteral_3= 'btn_success'
                     {
-                    enumLiteral_3=(Token)match(input,61,FollowSets000.FOLLOW_61_in_ruleAnchorType7766); 
+                    enumLiteral_3=(Token)match(input,59,FollowSets000.FOLLOW_59_in_ruleAnchorType7614); 
 
                             current = grammarAccess.getAnchorTypeAccess().getBtn_successEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getAnchorTypeAccess().getBtn_successEnumLiteralDeclaration_3()); 
@@ -9392,12 +9238,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3710:6: (enumLiteral_4= 'btn_info' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3649:6: (enumLiteral_4= 'btn_info' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3710:6: (enumLiteral_4= 'btn_info' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3710:8: enumLiteral_4= 'btn_info'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3649:6: (enumLiteral_4= 'btn_info' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3649:8: enumLiteral_4= 'btn_info'
                     {
-                    enumLiteral_4=(Token)match(input,62,FollowSets000.FOLLOW_62_in_ruleAnchorType7783); 
+                    enumLiteral_4=(Token)match(input,60,FollowSets000.FOLLOW_60_in_ruleAnchorType7631); 
 
                             current = grammarAccess.getAnchorTypeAccess().getBtn_infoEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getAnchorTypeAccess().getBtn_infoEnumLiteralDeclaration_4()); 
@@ -9409,12 +9255,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3716:6: (enumLiteral_5= 'btn_warning' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3655:6: (enumLiteral_5= 'btn_warning' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3716:6: (enumLiteral_5= 'btn_warning' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3716:8: enumLiteral_5= 'btn_warning'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3655:6: (enumLiteral_5= 'btn_warning' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3655:8: enumLiteral_5= 'btn_warning'
                     {
-                    enumLiteral_5=(Token)match(input,63,FollowSets000.FOLLOW_63_in_ruleAnchorType7800); 
+                    enumLiteral_5=(Token)match(input,61,FollowSets000.FOLLOW_61_in_ruleAnchorType7648); 
 
                             current = grammarAccess.getAnchorTypeAccess().getBtn_warningEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getAnchorTypeAccess().getBtn_warningEnumLiteralDeclaration_5()); 
@@ -9426,12 +9272,12 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3722:6: (enumLiteral_6= 'btn_danger' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3661:6: (enumLiteral_6= 'btn_danger' )
                     {
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3722:6: (enumLiteral_6= 'btn_danger' )
-                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3722:8: enumLiteral_6= 'btn_danger'
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3661:6: (enumLiteral_6= 'btn_danger' )
+                    // ../org.yazgel.aphrodit.xtext/src-gen/org/yazgel/aphrodit/xtext/parser/antlr/internal/InternalAphrodit.g:3661:8: enumLiteral_6= 'btn_danger'
                     {
-                    enumLiteral_6=(Token)match(input,64,FollowSets000.FOLLOW_64_in_ruleAnchorType7817); 
+                    enumLiteral_6=(Token)match(input,62,FollowSets000.FOLLOW_62_in_ruleAnchorType7665); 
 
                             current = grammarAccess.getAnchorTypeAccess().getBtn_dangerEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getAnchorTypeAccess().getBtn_dangerEnumLiteralDeclaration_6()); 
@@ -9468,377 +9314,370 @@ public class InternalAphroditParser extends AbstractInternalAntlrParser {
 
     
     private static class FollowSets000 {
-        public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_ruleModel131 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleModel143 = new BitSet(new long[]{0x0000000000006000L});
-        public static final BitSet FOLLOW_13_in_ruleModel156 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_rulePage_in_ruleModel177 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleModel191 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSectionElement_in_entryRuleSectionElement227 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleSectionElement237 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleRow_in_ruleSectionElement284 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHeader_in_ruleSectionElement311 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleParagraf_in_ruleSectionElement338 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCarousel_in_ruleSectionElement365 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleImage_in_ruleSectionElement392 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCard_in_ruleSectionElement419 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAnchor_in_ruleSectionElement446 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDivision_in_ruleSectionElement473 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMap_in_ruleSectionElement500 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMenuElement_in_entryRuleMenuElement535 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleMenuElement545 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHeader_in_ruleMenuElement592 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleImage_in_ruleMenuElement619 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMenuItem_in_ruleMenuElement646 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleRowElement_in_entryRuleRowElement681 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleRowElement691 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleRow_in_ruleRowElement738 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHeader_in_ruleRowElement765 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleParagraf_in_ruleRowElement792 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCarousel_in_ruleRowElement819 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleImage_in_ruleRowElement846 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCard_in_ruleRowElement873 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAnchor_in_ruleRowElement900 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDivision_in_ruleRowElement927 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMap_in_ruleRowElement954 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCarouselElement_in_entryRuleCarouselElement989 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCarouselElement999 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCarouselPage_in_ruleCarouselElement1045 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCardElement_in_entryRuleCardElement1079 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCardElement1089 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCardPage_in_ruleCardElement1135 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDivisionElement_in_entryRuleDivisionElement1169 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleDivisionElement1179 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleRow_in_ruleDivisionElement1226 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHeader_in_ruleDivisionElement1253 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleParagraf_in_ruleDivisionElement1280 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCarousel_in_ruleDivisionElement1307 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleImage_in_ruleDivisionElement1334 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCard_in_ruleDivisionElement1361 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAnchor_in_ruleDivisionElement1388 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDivision_in_ruleDivisionElement1415 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMap_in_ruleDivisionElement1442 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCarouselPageElement_in_entryRuleCarouselPageElement1477 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCarouselPageElement1487 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHeader_in_ruleCarouselPageElement1534 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleParagraf_in_ruleCarouselPageElement1561 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleImage_in_ruleCarouselPageElement1588 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAnchor_in_ruleCarouselPageElement1615 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDivision_in_ruleCarouselPageElement1642 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCardPageElement_in_entryRuleCardPageElement1677 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCardPageElement1687 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHeader_in_ruleCardPageElement1734 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleParagraf_in_ruleCardPageElement1761 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleImage_in_ruleCardPageElement1788 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAnchor_in_ruleCardPageElement1815 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDivision_in_ruleCardPageElement1842 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePage_in_entryRulePage1877 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulePage1887 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rulePage1933 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_rulePage1945 = new BitSet(new long[]{0x0000000000174000L});
-        public static final BitSet FOLLOW_16_in_rulePage1958 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_rulePage1979 = new BitSet(new long[]{0x0000000000164000L});
-        public static final BitSet FOLLOW_17_in_rulePage1994 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_rulePage2017 = new BitSet(new long[]{0x0000000000144000L});
-        public static final BitSet FOLLOW_18_in_rulePage2032 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_rulePage2044 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_ruleSection_in_rulePage2065 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_rulePage2078 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_ruleSection_in_rulePage2099 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_rulePage2113 = new BitSet(new long[]{0x0000000000104000L});
-        public static final BitSet FOLLOW_20_in_rulePage2128 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_ruleMenu_in_rulePage2149 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_rulePage2163 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_entryRuleEString2200 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEString2211 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleEString2251 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleEString2277 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSection_in_entryRuleSection2322 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleSection2332 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_ruleSection2378 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleSection2399 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleSection2411 = new BitSet(new long[]{0x0000000007C04000L});
-        public static final BitSet FOLLOW_22_in_ruleSection2424 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleSection2445 = new BitSet(new long[]{0x0000000007804000L});
-        public static final BitSet FOLLOW_23_in_ruleSection2460 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleSection2481 = new BitSet(new long[]{0x0000000007004000L});
-        public static final BitSet FOLLOW_24_in_ruleSection2496 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleSection2517 = new BitSet(new long[]{0x0000000006004000L});
-        public static final BitSet FOLLOW_25_in_ruleSection2532 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleSection2553 = new BitSet(new long[]{0x0000000004004000L});
-        public static final BitSet FOLLOW_26_in_ruleSection2568 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleSection2580 = new BitSet(new long[]{0x0000352CC0000000L});
-        public static final BitSet FOLLOW_ruleSectionElement_in_ruleSection2601 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_ruleSection2614 = new BitSet(new long[]{0x0000352CC0000000L});
-        public static final BitSet FOLLOW_ruleSectionElement_in_ruleSection2635 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_ruleSection2649 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleSection2663 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMenu_in_entryRuleMenu2699 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleMenu2709 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_ruleMenu2755 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenu2776 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleMenu2788 = new BitSet(new long[]{0x0000000013C04000L});
-        public static final BitSet FOLLOW_22_in_ruleMenu2801 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleMenu2822 = new BitSet(new long[]{0x0000000013804000L});
-        public static final BitSet FOLLOW_23_in_ruleMenu2837 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenu2858 = new BitSet(new long[]{0x0000000013004000L});
-        public static final BitSet FOLLOW_24_in_ruleMenu2873 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenu2894 = new BitSet(new long[]{0x0000000012004000L});
-        public static final BitSet FOLLOW_25_in_ruleMenu2909 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenu2930 = new BitSet(new long[]{0x0000000010004000L});
-        public static final BitSet FOLLOW_28_in_ruleMenu2945 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleMenu2957 = new BitSet(new long[]{0x0004002080000000L});
-        public static final BitSet FOLLOW_ruleMenuElement_in_ruleMenu2978 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_ruleMenu2991 = new BitSet(new long[]{0x0004002080000000L});
-        public static final BitSet FOLLOW_ruleMenuElement_in_ruleMenu3012 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_ruleMenu3026 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleMenu3040 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_entryRuleEInt3077 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEInt3088 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_ruleEInt3127 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleEInt3144 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleRow_in_entryRuleRow3189 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleRow3199 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_ruleRow3245 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleRow3266 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleRow3278 = new BitSet(new long[]{0x0000000007C04000L});
-        public static final BitSet FOLLOW_22_in_ruleRow3291 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleRow3312 = new BitSet(new long[]{0x0000000007804000L});
-        public static final BitSet FOLLOW_23_in_ruleRow3327 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleRow3348 = new BitSet(new long[]{0x0000000007004000L});
-        public static final BitSet FOLLOW_24_in_ruleRow3363 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleRow3384 = new BitSet(new long[]{0x0000000006004000L});
-        public static final BitSet FOLLOW_25_in_ruleRow3399 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleRow3420 = new BitSet(new long[]{0x0000000004004000L});
-        public static final BitSet FOLLOW_26_in_ruleRow3435 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleRow3447 = new BitSet(new long[]{0x0000352CC0000000L});
-        public static final BitSet FOLLOW_ruleRowElement_in_ruleRow3468 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_ruleRow3481 = new BitSet(new long[]{0x0000352CC0000000L});
-        public static final BitSet FOLLOW_ruleRowElement_in_ruleRow3502 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_ruleRow3516 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleRow3530 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleHeader_in_entryRuleHeader3566 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleHeader3576 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_ruleHeader3622 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3643 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleHeader3655 = new BitSet(new long[]{0x0000000303C04000L});
-        public static final BitSet FOLLOW_22_in_ruleHeader3668 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleHeader3689 = new BitSet(new long[]{0x0000000303804000L});
-        public static final BitSet FOLLOW_23_in_ruleHeader3704 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3725 = new BitSet(new long[]{0x0000000303004000L});
-        public static final BitSet FOLLOW_24_in_ruleHeader3740 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3761 = new BitSet(new long[]{0x0000000302004000L});
-        public static final BitSet FOLLOW_25_in_ruleHeader3776 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3797 = new BitSet(new long[]{0x0000000300004000L});
-        public static final BitSet FOLLOW_32_in_ruleHeader3812 = new BitSet(new long[]{0x03F0000000000000L});
-        public static final BitSet FOLLOW_ruleHeaderType_in_ruleHeader3833 = new BitSet(new long[]{0x0000000200004000L});
-        public static final BitSet FOLLOW_33_in_ruleHeader3848 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3869 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleHeader3883 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleParagraf_in_entryRuleParagraf3919 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleParagraf3929 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_34_in_ruleParagraf3975 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf3996 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleParagraf4008 = new BitSet(new long[]{0x0000000203C04000L});
-        public static final BitSet FOLLOW_22_in_ruleParagraf4021 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleParagraf4042 = new BitSet(new long[]{0x0000000203804000L});
-        public static final BitSet FOLLOW_23_in_ruleParagraf4057 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf4078 = new BitSet(new long[]{0x0000000203004000L});
-        public static final BitSet FOLLOW_24_in_ruleParagraf4093 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf4114 = new BitSet(new long[]{0x0000000202004000L});
-        public static final BitSet FOLLOW_25_in_ruleParagraf4129 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf4150 = new BitSet(new long[]{0x0000000200004000L});
-        public static final BitSet FOLLOW_33_in_ruleParagraf4165 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf4186 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleParagraf4200 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCarousel_in_entryRuleCarousel4236 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCarousel4246 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_35_in_ruleCarousel4292 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCarousel4313 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleCarousel4325 = new BitSet(new long[]{0x0000001003C04000L});
-        public static final BitSet FOLLOW_22_in_ruleCarousel4338 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleCarousel4359 = new BitSet(new long[]{0x0000001003804000L});
-        public static final BitSet FOLLOW_23_in_ruleCarousel4374 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCarousel4395 = new BitSet(new long[]{0x0000001003004000L});
-        public static final BitSet FOLLOW_24_in_ruleCarousel4410 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCarousel4431 = new BitSet(new long[]{0x0000001002004000L});
-        public static final BitSet FOLLOW_25_in_ruleCarousel4446 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCarousel4467 = new BitSet(new long[]{0x0000001000004000L});
-        public static final BitSet FOLLOW_36_in_ruleCarousel4482 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleCarousel4494 = new BitSet(new long[]{0x0001000000000000L});
-        public static final BitSet FOLLOW_ruleCarouselElement_in_ruleCarousel4515 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_ruleCarousel4528 = new BitSet(new long[]{0x0001000000000000L});
-        public static final BitSet FOLLOW_ruleCarouselElement_in_ruleCarousel4549 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_ruleCarousel4563 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleCarousel4577 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleImage_in_entryRuleImage4613 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleImage4623 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_37_in_ruleImage4669 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleImage4690 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleImage4702 = new BitSet(new long[]{0x000000C003C04000L});
-        public static final BitSet FOLLOW_22_in_ruleImage4715 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleImage4736 = new BitSet(new long[]{0x000000C003804000L});
-        public static final BitSet FOLLOW_23_in_ruleImage4751 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleImage4772 = new BitSet(new long[]{0x000000C003004000L});
-        public static final BitSet FOLLOW_24_in_ruleImage4787 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleImage4808 = new BitSet(new long[]{0x000000C002004000L});
-        public static final BitSet FOLLOW_25_in_ruleImage4823 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleImage4844 = new BitSet(new long[]{0x000000C000004000L});
-        public static final BitSet FOLLOW_38_in_ruleImage4859 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleImage4880 = new BitSet(new long[]{0x0000008000004000L});
-        public static final BitSet FOLLOW_39_in_ruleImage4895 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleImage4916 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleImage4930 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCard_in_entryRuleCard4966 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCard4976 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_40_in_ruleCard5022 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCard5043 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleCard5055 = new BitSet(new long[]{0x0000020003C04000L});
-        public static final BitSet FOLLOW_22_in_ruleCard5068 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleCard5089 = new BitSet(new long[]{0x0000020003804000L});
-        public static final BitSet FOLLOW_23_in_ruleCard5104 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCard5125 = new BitSet(new long[]{0x0000020003004000L});
-        public static final BitSet FOLLOW_24_in_ruleCard5140 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCard5161 = new BitSet(new long[]{0x0000020002004000L});
-        public static final BitSet FOLLOW_25_in_ruleCard5176 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCard5197 = new BitSet(new long[]{0x0000020000004000L});
-        public static final BitSet FOLLOW_41_in_ruleCard5212 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleCard5224 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_ruleCardElement_in_ruleCard5245 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_ruleCard5258 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_ruleCardElement_in_ruleCard5279 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_ruleCard5293 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleCard5307 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAnchor_in_entryRuleAnchor5343 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAnchor5353 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_42_in_ruleAnchor5399 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5420 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleAnchor5432 = new BitSet(new long[]{0x0000080103C14000L});
-        public static final BitSet FOLLOW_22_in_ruleAnchor5445 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleAnchor5466 = new BitSet(new long[]{0x0000080103814000L});
-        public static final BitSet FOLLOW_23_in_ruleAnchor5481 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5502 = new BitSet(new long[]{0x0000080103014000L});
-        public static final BitSet FOLLOW_24_in_ruleAnchor5517 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5538 = new BitSet(new long[]{0x0000080102014000L});
-        public static final BitSet FOLLOW_25_in_ruleAnchor5553 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5574 = new BitSet(new long[]{0x0000080100014000L});
-        public static final BitSet FOLLOW_16_in_ruleAnchor5589 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5610 = new BitSet(new long[]{0x0000080100004000L});
-        public static final BitSet FOLLOW_43_in_ruleAnchor5625 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5646 = new BitSet(new long[]{0x0000000100004000L});
-        public static final BitSet FOLLOW_32_in_ruleAnchor5661 = new BitSet(new long[]{0xFC00000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_ruleAnchorType_in_ruleAnchor5682 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleAnchor5696 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDivision_in_entryRuleDivision5732 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleDivision5742 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_44_in_ruleDivision5788 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleDivision5809 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleDivision5821 = new BitSet(new long[]{0x0000000007C04000L});
-        public static final BitSet FOLLOW_22_in_ruleDivision5834 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleDivision5855 = new BitSet(new long[]{0x0000000007804000L});
-        public static final BitSet FOLLOW_23_in_ruleDivision5870 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleDivision5891 = new BitSet(new long[]{0x0000000007004000L});
-        public static final BitSet FOLLOW_24_in_ruleDivision5906 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleDivision5927 = new BitSet(new long[]{0x0000000006004000L});
-        public static final BitSet FOLLOW_25_in_ruleDivision5942 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleDivision5963 = new BitSet(new long[]{0x0000000004004000L});
-        public static final BitSet FOLLOW_26_in_ruleDivision5978 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleDivision5990 = new BitSet(new long[]{0x0000352CC0000000L});
-        public static final BitSet FOLLOW_ruleDivisionElement_in_ruleDivision6011 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_ruleDivision6024 = new BitSet(new long[]{0x0000352CC0000000L});
-        public static final BitSet FOLLOW_ruleDivisionElement_in_ruleDivision6045 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_ruleDivision6059 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleDivision6073 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMap_in_entryRuleMap6109 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleMap6119 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_45_in_ruleMap6165 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMap6186 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleMap6198 = new BitSet(new long[]{0x0000C00003C04000L});
-        public static final BitSet FOLLOW_22_in_ruleMap6211 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleMap6232 = new BitSet(new long[]{0x0000C00003804000L});
-        public static final BitSet FOLLOW_23_in_ruleMap6247 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMap6268 = new BitSet(new long[]{0x0000C00003004000L});
-        public static final BitSet FOLLOW_24_in_ruleMap6283 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMap6304 = new BitSet(new long[]{0x0000C00002004000L});
-        public static final BitSet FOLLOW_25_in_ruleMap6319 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMap6340 = new BitSet(new long[]{0x0000C00000004000L});
-        public static final BitSet FOLLOW_46_in_ruleMap6355 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMap6376 = new BitSet(new long[]{0x0000800000004000L});
-        public static final BitSet FOLLOW_47_in_ruleMap6391 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMap6412 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleMap6426 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCarouselPage_in_entryRuleCarouselPage6462 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCarouselPage6472 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_48_in_ruleCarouselPage6518 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCarouselPage6539 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleCarouselPage6551 = new BitSet(new long[]{0x0000000007C04000L});
-        public static final BitSet FOLLOW_22_in_ruleCarouselPage6564 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleCarouselPage6585 = new BitSet(new long[]{0x0000000007804000L});
-        public static final BitSet FOLLOW_23_in_ruleCarouselPage6600 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCarouselPage6621 = new BitSet(new long[]{0x0000000007004000L});
-        public static final BitSet FOLLOW_24_in_ruleCarouselPage6636 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCarouselPage6657 = new BitSet(new long[]{0x0000000006004000L});
-        public static final BitSet FOLLOW_25_in_ruleCarouselPage6672 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCarouselPage6693 = new BitSet(new long[]{0x0000000004004000L});
-        public static final BitSet FOLLOW_26_in_ruleCarouselPage6708 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleCarouselPage6720 = new BitSet(new long[]{0x0000142480000000L});
-        public static final BitSet FOLLOW_ruleCarouselPageElement_in_ruleCarouselPage6741 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_ruleCarouselPage6754 = new BitSet(new long[]{0x0000142480000000L});
-        public static final BitSet FOLLOW_ruleCarouselPageElement_in_ruleCarouselPage6775 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_ruleCarouselPage6789 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleCarouselPage6803 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCardPage_in_entryRuleCardPage6839 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCardPage6849 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_49_in_ruleCardPage6895 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCardPage6916 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleCardPage6928 = new BitSet(new long[]{0x0000000007C04000L});
-        public static final BitSet FOLLOW_22_in_ruleCardPage6941 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleCardPage6962 = new BitSet(new long[]{0x0000000007804000L});
-        public static final BitSet FOLLOW_23_in_ruleCardPage6977 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCardPage6998 = new BitSet(new long[]{0x0000000007004000L});
-        public static final BitSet FOLLOW_24_in_ruleCardPage7013 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCardPage7034 = new BitSet(new long[]{0x0000000006004000L});
-        public static final BitSet FOLLOW_25_in_ruleCardPage7049 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleCardPage7070 = new BitSet(new long[]{0x0000000004004000L});
-        public static final BitSet FOLLOW_26_in_ruleCardPage7085 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleCardPage7097 = new BitSet(new long[]{0x0000142480000000L});
-        public static final BitSet FOLLOW_ruleCardPageElement_in_ruleCardPage7118 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_19_in_ruleCardPage7131 = new BitSet(new long[]{0x0000142480000000L});
-        public static final BitSet FOLLOW_ruleCardPageElement_in_ruleCardPage7152 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_14_in_ruleCardPage7166 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleCardPage7180 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMenuItem_in_entryRuleMenuItem7216 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleMenuItem7226 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_ruleMenuItem7272 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7293 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleMenuItem7305 = new BitSet(new long[]{0x0008000003C14000L});
-        public static final BitSet FOLLOW_22_in_ruleMenuItem7318 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleMenuItem7339 = new BitSet(new long[]{0x0008000003814000L});
-        public static final BitSet FOLLOW_23_in_ruleMenuItem7354 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7375 = new BitSet(new long[]{0x0008000003014000L});
-        public static final BitSet FOLLOW_24_in_ruleMenuItem7390 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7411 = new BitSet(new long[]{0x0008000002014000L});
-        public static final BitSet FOLLOW_25_in_ruleMenuItem7426 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7447 = new BitSet(new long[]{0x0008000000014000L});
-        public static final BitSet FOLLOW_16_in_ruleMenuItem7462 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7483 = new BitSet(new long[]{0x0008000000004000L});
-        public static final BitSet FOLLOW_51_in_ruleMenuItem7498 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7521 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleMenuItem7535 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_ruleHeaderType7585 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_ruleHeaderType7602 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_ruleHeaderType7619 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_ruleHeaderType7636 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_56_in_ruleHeaderType7653 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_57_in_ruleHeaderType7670 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_ruleAnchorType7715 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_59_in_ruleAnchorType7732 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_60_in_ruleAnchorType7749 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_61_in_ruleAnchorType7766 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_62_in_ruleAnchorType7783 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_63_in_ruleAnchorType7800 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_64_in_ruleAnchorType7817 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePage_in_entryRulePage75 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulePage85 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_11_in_rulePage131 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_rulePage143 = new BitSet(new long[]{0x000000000006E000L});
+        public static final BitSet FOLLOW_13_in_rulePage156 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_rulePage177 = new BitSet(new long[]{0x000000000006C000L});
+        public static final BitSet FOLLOW_14_in_rulePage192 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_rulePage215 = new BitSet(new long[]{0x0000000000068000L});
+        public static final BitSet FOLLOW_15_in_rulePage230 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_rulePage242 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_ruleSection_in_rulePage263 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_rulePage276 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_ruleSection_in_rulePage297 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_rulePage311 = new BitSet(new long[]{0x0000000000060000L});
+        public static final BitSet FOLLOW_18_in_rulePage326 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_ruleMenu_in_rulePage347 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_rulePage361 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSectionElement_in_entryRuleSectionElement397 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleSectionElement407 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleRow_in_ruleSectionElement454 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHeader_in_ruleSectionElement481 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleParagraf_in_ruleSectionElement508 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCarousel_in_ruleSectionElement535 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleImage_in_ruleSectionElement562 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCard_in_ruleSectionElement589 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAnchor_in_ruleSectionElement616 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDivision_in_ruleSectionElement643 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMap_in_ruleSectionElement670 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMenuElement_in_entryRuleMenuElement705 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleMenuElement715 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHeader_in_ruleMenuElement762 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleImage_in_ruleMenuElement789 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMenuItem_in_ruleMenuElement816 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleRowElement_in_entryRuleRowElement851 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleRowElement861 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleRow_in_ruleRowElement908 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHeader_in_ruleRowElement935 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleParagraf_in_ruleRowElement962 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCarousel_in_ruleRowElement989 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleImage_in_ruleRowElement1016 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCard_in_ruleRowElement1043 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAnchor_in_ruleRowElement1070 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDivision_in_ruleRowElement1097 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMap_in_ruleRowElement1124 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCarouselElement_in_entryRuleCarouselElement1159 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCarouselElement1169 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCarouselPage_in_ruleCarouselElement1215 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCardElement_in_entryRuleCardElement1249 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCardElement1259 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCardPage_in_ruleCardElement1305 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDivisionElement_in_entryRuleDivisionElement1339 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleDivisionElement1349 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleRow_in_ruleDivisionElement1396 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHeader_in_ruleDivisionElement1423 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleParagraf_in_ruleDivisionElement1450 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCarousel_in_ruleDivisionElement1477 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleImage_in_ruleDivisionElement1504 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCard_in_ruleDivisionElement1531 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAnchor_in_ruleDivisionElement1558 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDivision_in_ruleDivisionElement1585 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMap_in_ruleDivisionElement1612 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCarouselPageElement_in_entryRuleCarouselPageElement1647 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCarouselPageElement1657 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHeader_in_ruleCarouselPageElement1704 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleParagraf_in_ruleCarouselPageElement1731 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleImage_in_ruleCarouselPageElement1758 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAnchor_in_ruleCarouselPageElement1785 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDivision_in_ruleCarouselPageElement1812 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCardPageElement_in_entryRuleCardPageElement1847 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCardPageElement1857 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHeader_in_ruleCardPageElement1904 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleParagraf_in_ruleCardPageElement1931 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleImage_in_ruleCardPageElement1958 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAnchor_in_ruleCardPageElement1985 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDivision_in_ruleCardPageElement2012 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_entryRuleEString2048 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEString2059 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleEString2099 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleEString2125 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSection_in_entryRuleSection2170 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleSection2180 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_ruleSection2226 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleSection2247 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleSection2259 = new BitSet(new long[]{0x0000000001F20000L});
+        public static final BitSet FOLLOW_20_in_ruleSection2272 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleSection2293 = new BitSet(new long[]{0x0000000001E20000L});
+        public static final BitSet FOLLOW_21_in_ruleSection2308 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleSection2329 = new BitSet(new long[]{0x0000000001C20000L});
+        public static final BitSet FOLLOW_22_in_ruleSection2344 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleSection2365 = new BitSet(new long[]{0x0000000001820000L});
+        public static final BitSet FOLLOW_23_in_ruleSection2380 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleSection2401 = new BitSet(new long[]{0x0000000001020000L});
+        public static final BitSet FOLLOW_24_in_ruleSection2416 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleSection2428 = new BitSet(new long[]{0x00000D4B30000000L});
+        public static final BitSet FOLLOW_ruleSectionElement_in_ruleSection2449 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_ruleSection2462 = new BitSet(new long[]{0x00000D4B30000000L});
+        public static final BitSet FOLLOW_ruleSectionElement_in_ruleSection2483 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_ruleSection2497 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleSection2511 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMenu_in_entryRuleMenu2547 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleMenu2557 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_ruleMenu2603 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenu2624 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleMenu2636 = new BitSet(new long[]{0x0000000004F20000L});
+        public static final BitSet FOLLOW_20_in_ruleMenu2649 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleMenu2670 = new BitSet(new long[]{0x0000000004E20000L});
+        public static final BitSet FOLLOW_21_in_ruleMenu2685 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenu2706 = new BitSet(new long[]{0x0000000004C20000L});
+        public static final BitSet FOLLOW_22_in_ruleMenu2721 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenu2742 = new BitSet(new long[]{0x0000000004820000L});
+        public static final BitSet FOLLOW_23_in_ruleMenu2757 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenu2778 = new BitSet(new long[]{0x0000000004020000L});
+        public static final BitSet FOLLOW_26_in_ruleMenu2793 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleMenu2805 = new BitSet(new long[]{0x0001000820000000L});
+        public static final BitSet FOLLOW_ruleMenuElement_in_ruleMenu2826 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_ruleMenu2839 = new BitSet(new long[]{0x0001000820000000L});
+        public static final BitSet FOLLOW_ruleMenuElement_in_ruleMenu2860 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_ruleMenu2874 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleMenu2888 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_entryRuleEInt2925 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEInt2936 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_ruleEInt2975 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleEInt2992 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleRow_in_entryRuleRow3037 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleRow3047 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_ruleRow3093 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleRow3114 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleRow3126 = new BitSet(new long[]{0x0000000001F20000L});
+        public static final BitSet FOLLOW_20_in_ruleRow3139 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleRow3160 = new BitSet(new long[]{0x0000000001E20000L});
+        public static final BitSet FOLLOW_21_in_ruleRow3175 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleRow3196 = new BitSet(new long[]{0x0000000001C20000L});
+        public static final BitSet FOLLOW_22_in_ruleRow3211 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleRow3232 = new BitSet(new long[]{0x0000000001820000L});
+        public static final BitSet FOLLOW_23_in_ruleRow3247 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleRow3268 = new BitSet(new long[]{0x0000000001020000L});
+        public static final BitSet FOLLOW_24_in_ruleRow3283 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleRow3295 = new BitSet(new long[]{0x00000D4B30000000L});
+        public static final BitSet FOLLOW_ruleRowElement_in_ruleRow3316 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_ruleRow3329 = new BitSet(new long[]{0x00000D4B30000000L});
+        public static final BitSet FOLLOW_ruleRowElement_in_ruleRow3350 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_ruleRow3364 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleRow3378 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleHeader_in_entryRuleHeader3414 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleHeader3424 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_29_in_ruleHeader3470 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3491 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleHeader3503 = new BitSet(new long[]{0x00000000C0F20000L});
+        public static final BitSet FOLLOW_20_in_ruleHeader3516 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleHeader3537 = new BitSet(new long[]{0x00000000C0E20000L});
+        public static final BitSet FOLLOW_21_in_ruleHeader3552 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3573 = new BitSet(new long[]{0x00000000C0C20000L});
+        public static final BitSet FOLLOW_22_in_ruleHeader3588 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3609 = new BitSet(new long[]{0x00000000C0820000L});
+        public static final BitSet FOLLOW_23_in_ruleHeader3624 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3645 = new BitSet(new long[]{0x00000000C0020000L});
+        public static final BitSet FOLLOW_30_in_ruleHeader3660 = new BitSet(new long[]{0x00FC000000000000L});
+        public static final BitSet FOLLOW_ruleHeaderType_in_ruleHeader3681 = new BitSet(new long[]{0x0000000080020000L});
+        public static final BitSet FOLLOW_31_in_ruleHeader3696 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleHeader3717 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleHeader3731 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleParagraf_in_entryRuleParagraf3767 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleParagraf3777 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_32_in_ruleParagraf3823 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf3844 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleParagraf3856 = new BitSet(new long[]{0x0000000080F20000L});
+        public static final BitSet FOLLOW_20_in_ruleParagraf3869 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleParagraf3890 = new BitSet(new long[]{0x0000000080E20000L});
+        public static final BitSet FOLLOW_21_in_ruleParagraf3905 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf3926 = new BitSet(new long[]{0x0000000080C20000L});
+        public static final BitSet FOLLOW_22_in_ruleParagraf3941 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf3962 = new BitSet(new long[]{0x0000000080820000L});
+        public static final BitSet FOLLOW_23_in_ruleParagraf3977 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf3998 = new BitSet(new long[]{0x0000000080020000L});
+        public static final BitSet FOLLOW_31_in_ruleParagraf4013 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleParagraf4034 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleParagraf4048 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCarousel_in_entryRuleCarousel4084 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCarousel4094 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_33_in_ruleCarousel4140 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCarousel4161 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleCarousel4173 = new BitSet(new long[]{0x0000000400F20000L});
+        public static final BitSet FOLLOW_20_in_ruleCarousel4186 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleCarousel4207 = new BitSet(new long[]{0x0000000400E20000L});
+        public static final BitSet FOLLOW_21_in_ruleCarousel4222 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCarousel4243 = new BitSet(new long[]{0x0000000400C20000L});
+        public static final BitSet FOLLOW_22_in_ruleCarousel4258 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCarousel4279 = new BitSet(new long[]{0x0000000400820000L});
+        public static final BitSet FOLLOW_23_in_ruleCarousel4294 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCarousel4315 = new BitSet(new long[]{0x0000000400020000L});
+        public static final BitSet FOLLOW_34_in_ruleCarousel4330 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleCarousel4342 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_ruleCarouselElement_in_ruleCarousel4363 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_ruleCarousel4376 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_ruleCarouselElement_in_ruleCarousel4397 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_ruleCarousel4411 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleCarousel4425 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleImage_in_entryRuleImage4461 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleImage4471 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_35_in_ruleImage4517 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleImage4538 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleImage4550 = new BitSet(new long[]{0x0000003000F20000L});
+        public static final BitSet FOLLOW_20_in_ruleImage4563 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleImage4584 = new BitSet(new long[]{0x0000003000E20000L});
+        public static final BitSet FOLLOW_21_in_ruleImage4599 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleImage4620 = new BitSet(new long[]{0x0000003000C20000L});
+        public static final BitSet FOLLOW_22_in_ruleImage4635 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleImage4656 = new BitSet(new long[]{0x0000003000820000L});
+        public static final BitSet FOLLOW_23_in_ruleImage4671 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleImage4692 = new BitSet(new long[]{0x0000003000020000L});
+        public static final BitSet FOLLOW_36_in_ruleImage4707 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleImage4728 = new BitSet(new long[]{0x0000002000020000L});
+        public static final BitSet FOLLOW_37_in_ruleImage4743 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleImage4764 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleImage4778 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCard_in_entryRuleCard4814 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCard4824 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_38_in_ruleCard4870 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCard4891 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleCard4903 = new BitSet(new long[]{0x0000008000F20000L});
+        public static final BitSet FOLLOW_20_in_ruleCard4916 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleCard4937 = new BitSet(new long[]{0x0000008000E20000L});
+        public static final BitSet FOLLOW_21_in_ruleCard4952 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCard4973 = new BitSet(new long[]{0x0000008000C20000L});
+        public static final BitSet FOLLOW_22_in_ruleCard4988 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCard5009 = new BitSet(new long[]{0x0000008000820000L});
+        public static final BitSet FOLLOW_23_in_ruleCard5024 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCard5045 = new BitSet(new long[]{0x0000008000020000L});
+        public static final BitSet FOLLOW_39_in_ruleCard5060 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleCard5072 = new BitSet(new long[]{0x0000800000000000L});
+        public static final BitSet FOLLOW_ruleCardElement_in_ruleCard5093 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_ruleCard5106 = new BitSet(new long[]{0x0000800000000000L});
+        public static final BitSet FOLLOW_ruleCardElement_in_ruleCard5127 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_ruleCard5141 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleCard5155 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAnchor_in_entryRuleAnchor5191 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAnchor5201 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_40_in_ruleAnchor5247 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5268 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleAnchor5280 = new BitSet(new long[]{0x0000020040F22000L});
+        public static final BitSet FOLLOW_20_in_ruleAnchor5293 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleAnchor5314 = new BitSet(new long[]{0x0000020040E22000L});
+        public static final BitSet FOLLOW_21_in_ruleAnchor5329 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5350 = new BitSet(new long[]{0x0000020040C22000L});
+        public static final BitSet FOLLOW_22_in_ruleAnchor5365 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5386 = new BitSet(new long[]{0x0000020040822000L});
+        public static final BitSet FOLLOW_23_in_ruleAnchor5401 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5422 = new BitSet(new long[]{0x0000020040022000L});
+        public static final BitSet FOLLOW_13_in_ruleAnchor5437 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5458 = new BitSet(new long[]{0x0000020040020000L});
+        public static final BitSet FOLLOW_41_in_ruleAnchor5473 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAnchor5494 = new BitSet(new long[]{0x0000000040020000L});
+        public static final BitSet FOLLOW_30_in_ruleAnchor5509 = new BitSet(new long[]{0x7F00000000000000L});
+        public static final BitSet FOLLOW_ruleAnchorType_in_ruleAnchor5530 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleAnchor5544 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDivision_in_entryRuleDivision5580 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleDivision5590 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_42_in_ruleDivision5636 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleDivision5657 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleDivision5669 = new BitSet(new long[]{0x0000000001F20000L});
+        public static final BitSet FOLLOW_20_in_ruleDivision5682 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleDivision5703 = new BitSet(new long[]{0x0000000001E20000L});
+        public static final BitSet FOLLOW_21_in_ruleDivision5718 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleDivision5739 = new BitSet(new long[]{0x0000000001C20000L});
+        public static final BitSet FOLLOW_22_in_ruleDivision5754 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleDivision5775 = new BitSet(new long[]{0x0000000001820000L});
+        public static final BitSet FOLLOW_23_in_ruleDivision5790 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleDivision5811 = new BitSet(new long[]{0x0000000001020000L});
+        public static final BitSet FOLLOW_24_in_ruleDivision5826 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleDivision5838 = new BitSet(new long[]{0x00000D4B30000000L});
+        public static final BitSet FOLLOW_ruleDivisionElement_in_ruleDivision5859 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_ruleDivision5872 = new BitSet(new long[]{0x00000D4B30000000L});
+        public static final BitSet FOLLOW_ruleDivisionElement_in_ruleDivision5893 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_ruleDivision5907 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleDivision5921 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMap_in_entryRuleMap5957 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleMap5967 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_43_in_ruleMap6013 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMap6034 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleMap6046 = new BitSet(new long[]{0x0000300000F20000L});
+        public static final BitSet FOLLOW_20_in_ruleMap6059 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleMap6080 = new BitSet(new long[]{0x0000300000E20000L});
+        public static final BitSet FOLLOW_21_in_ruleMap6095 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMap6116 = new BitSet(new long[]{0x0000300000C20000L});
+        public static final BitSet FOLLOW_22_in_ruleMap6131 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMap6152 = new BitSet(new long[]{0x0000300000820000L});
+        public static final BitSet FOLLOW_23_in_ruleMap6167 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMap6188 = new BitSet(new long[]{0x0000300000020000L});
+        public static final BitSet FOLLOW_44_in_ruleMap6203 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMap6224 = new BitSet(new long[]{0x0000200000020000L});
+        public static final BitSet FOLLOW_45_in_ruleMap6239 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMap6260 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleMap6274 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCarouselPage_in_entryRuleCarouselPage6310 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCarouselPage6320 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_46_in_ruleCarouselPage6366 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCarouselPage6387 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleCarouselPage6399 = new BitSet(new long[]{0x0000000001F20000L});
+        public static final BitSet FOLLOW_20_in_ruleCarouselPage6412 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleCarouselPage6433 = new BitSet(new long[]{0x0000000001E20000L});
+        public static final BitSet FOLLOW_21_in_ruleCarouselPage6448 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCarouselPage6469 = new BitSet(new long[]{0x0000000001C20000L});
+        public static final BitSet FOLLOW_22_in_ruleCarouselPage6484 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCarouselPage6505 = new BitSet(new long[]{0x0000000001820000L});
+        public static final BitSet FOLLOW_23_in_ruleCarouselPage6520 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCarouselPage6541 = new BitSet(new long[]{0x0000000001020000L});
+        public static final BitSet FOLLOW_24_in_ruleCarouselPage6556 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleCarouselPage6568 = new BitSet(new long[]{0x0000050920000000L});
+        public static final BitSet FOLLOW_ruleCarouselPageElement_in_ruleCarouselPage6589 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_ruleCarouselPage6602 = new BitSet(new long[]{0x0000050920000000L});
+        public static final BitSet FOLLOW_ruleCarouselPageElement_in_ruleCarouselPage6623 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_ruleCarouselPage6637 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleCarouselPage6651 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCardPage_in_entryRuleCardPage6687 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCardPage6697 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_47_in_ruleCardPage6743 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCardPage6764 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleCardPage6776 = new BitSet(new long[]{0x0000000001F20000L});
+        public static final BitSet FOLLOW_20_in_ruleCardPage6789 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleCardPage6810 = new BitSet(new long[]{0x0000000001E20000L});
+        public static final BitSet FOLLOW_21_in_ruleCardPage6825 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCardPage6846 = new BitSet(new long[]{0x0000000001C20000L});
+        public static final BitSet FOLLOW_22_in_ruleCardPage6861 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCardPage6882 = new BitSet(new long[]{0x0000000001820000L});
+        public static final BitSet FOLLOW_23_in_ruleCardPage6897 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleCardPage6918 = new BitSet(new long[]{0x0000000001020000L});
+        public static final BitSet FOLLOW_24_in_ruleCardPage6933 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleCardPage6945 = new BitSet(new long[]{0x0000050920000000L});
+        public static final BitSet FOLLOW_ruleCardPageElement_in_ruleCardPage6966 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_16_in_ruleCardPage6979 = new BitSet(new long[]{0x0000050920000000L});
+        public static final BitSet FOLLOW_ruleCardPageElement_in_ruleCardPage7000 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_17_in_ruleCardPage7014 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleCardPage7028 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMenuItem_in_entryRuleMenuItem7064 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleMenuItem7074 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_48_in_ruleMenuItem7120 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7141 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleMenuItem7153 = new BitSet(new long[]{0x0002000000F22000L});
+        public static final BitSet FOLLOW_20_in_ruleMenuItem7166 = new BitSet(new long[]{0x0000000008000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleMenuItem7187 = new BitSet(new long[]{0x0002000000E22000L});
+        public static final BitSet FOLLOW_21_in_ruleMenuItem7202 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7223 = new BitSet(new long[]{0x0002000000C22000L});
+        public static final BitSet FOLLOW_22_in_ruleMenuItem7238 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7259 = new BitSet(new long[]{0x0002000000822000L});
+        public static final BitSet FOLLOW_23_in_ruleMenuItem7274 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7295 = new BitSet(new long[]{0x0002000000022000L});
+        public static final BitSet FOLLOW_13_in_ruleMenuItem7310 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7331 = new BitSet(new long[]{0x0002000000020000L});
+        public static final BitSet FOLLOW_49_in_ruleMenuItem7346 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleMenuItem7369 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleMenuItem7383 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_ruleHeaderType7433 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_ruleHeaderType7450 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_ruleHeaderType7467 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_ruleHeaderType7484 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_54_in_ruleHeaderType7501 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_ruleHeaderType7518 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_56_in_ruleAnchorType7563 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_57_in_ruleAnchorType7580 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_ruleAnchorType7597 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_59_in_ruleAnchorType7614 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_60_in_ruleAnchorType7631 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_61_in_ruleAnchorType7648 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_62_in_ruleAnchorType7665 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

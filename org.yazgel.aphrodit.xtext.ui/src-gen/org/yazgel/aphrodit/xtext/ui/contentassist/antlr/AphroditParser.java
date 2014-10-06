@@ -46,8 +46,6 @@ public class AphroditParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getHeaderTypeAccess().getAlternatives(), "rule__HeaderType__Alternatives");
 					put(grammarAccess.getAnchorTypeAccess().getAlternatives(), "rule__AnchorType__Alternatives");
-					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
-					put(grammarAccess.getModelAccess().getGroup_3(), "rule__Model__Group_3__0");
 					put(grammarAccess.getPageAccess().getGroup(), "rule__Page__Group__0");
 					put(grammarAccess.getPageAccess().getGroup_3(), "rule__Page__Group_3__0");
 					put(grammarAccess.getPageAccess().getGroup_4(), "rule__Page__Group_4__0");
@@ -153,7 +151,6 @@ public class AphroditParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMenuItemAccess().getGroup_7(), "rule__MenuItem__Group_7__0");
 					put(grammarAccess.getMenuItemAccess().getGroup_8(), "rule__MenuItem__Group_8__0");
 					put(grammarAccess.getMenuItemAccess().getGroup_9(), "rule__MenuItem__Group_9__0");
-					put(grammarAccess.getModelAccess().getPageAssignment_3_1(), "rule__Model__PageAssignment_3_1");
 					put(grammarAccess.getPageAccess().getTitleAssignment_3_1(), "rule__Page__TitleAssignment_3_1");
 					put(grammarAccess.getPageAccess().getIntroSectionAssignment_4_1(), "rule__Page__IntroSectionAssignment_4_1");
 					put(grammarAccess.getPageAccess().getSectionsAssignment_5_2(), "rule__Page__SectionsAssignment_5_2");
@@ -267,7 +264,7 @@ public class AphroditParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			org.yazgel.aphrodit.xtext.ui.contentassist.antlr.internal.InternalAphroditParser typedParser = (org.yazgel.aphrodit.xtext.ui.contentassist.antlr.internal.InternalAphroditParser) parser;
-			typedParser.entryRuleModel();
+			typedParser.entryRulePage();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

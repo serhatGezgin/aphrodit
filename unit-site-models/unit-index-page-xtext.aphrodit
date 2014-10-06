@@ -1,0 +1,371 @@
+Page {
+title UNIT introSection Intro sections {
+		Section Intro {
+		},
+		Section About {
+			elements {
+				Row header {
+					elements {
+						Header header {
+							type H3 content "ABOUT US"
+						}
+					}
+				},
+				Row row2 {
+							elements {
+								Division div1 {
+									colSpan 6 elements {
+										Header header {
+											content
+											"Mission"
+										}
+									,
+								Paragraf content1 {
+									content
+									"Our Mission; We take into account the requirements of business world and technological developments, when we aim to continuously improve our services in terms of quality and provide permanent solutions to our customers."
+								}
+							}
+						},
+						Division div2 {
+							colSpan 6 elements {
+								Header header {
+									content Vision
+								},
+								Paragraf
+								"Our Vision; With our professional, high quality and permanent solutions, we strive to be a well known, confidential and expert company not only in Turkey but also in the world."
+								{
+									content content1
+								}
+							}
+						}
+					}
+				},
+				Row row3 {
+					elements {
+						Division div3 {
+							elements {
+								Header header {
+									content History
+								},
+								Paragraf content2 {
+									content
+									"We as UNIT Information Technologies and R&amp;D Ltd. are using high software engineering methods and have an ongoing research and developments on model controlled tools."
+								},
+								Paragraf content3 {
+									content
+									"Between 2009 and 2012, with KoÃ§Sistem Information and Communication Technologies Incorporated Business, we developed some scenarios like Microsoft SharePoint Server, Microsoft Project Server, PerformancePoint Services platforms which are based on some business process driven composite content applications such as project management, work flow, resource managemenet, document management and technical document management at the well known companies like TÜPRAŞ and PETKİM."
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		Section Solution {
+			elements {
+				Row header {
+					elements {
+						Header header {
+							type H3 content Solutions
+						}
+					}
+				},
+				Row cards {
+					elements {
+						Card "Solution Cards" {
+							pages {
+								CardPage "Workflow Management" {
+									colSpan 4 elements {
+										Header header {
+											type H3 content "Workflow Management"
+										},
+										Image image {
+											borderRadius "50"
+										},
+										Paragraf
+										"We are serving services which provide continuing or planning otomation systems of processes, and works for systematize them."
+										{
+											content ^content
+										}
+									}
+								},
+								CardPage "Project Management System" {
+									colSpan 4 elements {
+										Header header {
+											content "Project Management System"
+										},
+										Image image {
+											borderRadius "50"
+										},
+										Paragraf ^content {
+											content
+											"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+										}
+									}
+								},
+								CardPage "Document Management System" {
+									colSpan 4 elements {
+										Header header {
+											content "Document Management System"
+										},
+										Image image {
+											borderRadius "50"
+										},
+										Paragraf ^content {
+											content
+											"We are providing permanent and otomation based solutions for our customers to follow up and manage their documents."
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		Section Product {
+		},
+		Section "R&D" {
+			elements {
+				Row header {
+					elements {
+						Header header {
+							type H4 content "RESEARCH & DEVELOPMEN"
+						}
+					}
+				},
+				Row mdd4cca {
+					elements {
+						Division mdd4cca {
+							elements {
+								Header header {
+									content
+									"MDD4CCA (Model Driven Development of Composite Content Applications)"
+								},
+								Paragraf ^content {
+									content
+									"Endüstride oldukça yaygın olarak kullanılan ve bir Kurumsal içerik Yönetim platformu (Enterprise Content Management&quot;) (ECM) olan Microsoft SharePoint Foundation (MSF) Ã¼zerinde bir BÃ¼tÃ¼nleÅŸik Ä°Ã§erik UygulamasÄ± (&quot;Composite Content Applications&quot;) (CCA) ya da bir yazÄ±lÄ±m Ã¼rÃ¼n hattÄ± (&quot;Software Product Line&quot;) oluÅŸturabilecek CCA ÅŸablonu geliÅŸtirilmesi iÃ§in farklÄ± bakÄ±ÅŸ aÃ§Ä±larÄ± ile modellemenin saÄŸlanabileceÄŸi gÃ¶rsel bir araÃ§ setinin hazÄ±rlanmasÄ± faaliyetleri yÃ¼rÃ¼tÃ¼lmÃ¼ÅŸtÃ¼r. YazÄ±lÄ±m modellerinden kod elde etmek iÃ§in literatÃ¼rde yer alan yÃ¶ntemler ve teknikler uygulanarak Ã¶ncelikle MSF Ã¼stmodeline uyan gÃ¶rsel modellerin oluÅŸturulabileceÄŸi bir alan Ã¶zgÃ¼ modelleme dili (&quot;Domain Specific Modeling Language&quot;); devamÄ±nda da bu modellerden otomatik olarak yazÄ±lÄ±m kodlarÄ±nÄ±n Ã¼retilebileceÄŸi entegre bir yazÄ±lÄ±m geliÅŸtirme ortamÄ± hazÄ±rlanmÄ±ÅŸtÄ±r. GerÃ§ek bir durum Ã§alÄ±ÅŸmasÄ± ile geliÅŸtirilen araÃ§ setinin yetenekleri test edilmiÅŸ ve araÃ§ seti Ã¼zerinde iyileÅŸtirmelerde bulunulmuÅŸtur. SÃ¶z konusu Ã§alÄ±ÅŸmalar 1501-TÃœBÄ°TAK Sanayi Ar-Ge Projeleri Destekleme ProgramÄ± tarafÄ±ndan 3110712 no\'lu proje kapsamÄ±nda desteklenmiÅŸtir."
+								},
+								Anchor anchor {
+									title "Learn More"
+								}
+							}
+						}
+					}
+				},
+				Row mvv4pfd {
+					elements {
+						Header header {
+							content
+							"MVV4PFD (Modeling, Validation and Verification of Process Flow Diagram for Petroleum Refineries)"
+						},
+						Paragraf content1 {
+							content
+							"Rafineri sÃ¼reÃ§lerinde uygulanan operasyonel koÅŸullar, iÅŸlenen ham petrol tÃ¼rÃ¼ne ve Ã¼rÃ¼n arz/talep dengesine gÃ¶re deÄŸiÅŸkenlik gÃ¶stermektedir. Bu deÄŸiÅŸikliklere hÄ±zlÄ± cevap verebilmek ve optimum iÅŸletme koÅŸullarÄ±nÄ± belirleyebilmek iÃ§in rafineri sÃ¼reÃ§ modellerinin bilgisayar ortamÄ±nda oluÅŸturulmasÄ±na ve farklÄ± modeller Ã¼zerinde Ã§eÅŸitli senaryo analizlilerinin yapÄ±lmasÄ±na ihtiyaÃ§ vardÄ±r."
+						},
+						Paragraf content2 {
+							content
+							"Bu proje petrol rafinerilerinde proses mÃ¼hendisleri tarafÄ±ndan yaygÄ±n olarak kullanÄ±lan SÃ¼reÃ§ AkÄ±ÅŸ DiagramlarÄ±nÄ±n (&quot;Process Flow Diagrams&quot;) (PFD) gÃ¶rsel ve metinsel bir modelleme aracÄ± yardÄ±mÄ±yla tasarlanmasÄ±nÄ±; aynÄ± zamanda bu modellerin Ã¼zerinde otomatik doÄŸrulama ve saÄŸlama (&quot;Verification &amp; Validation&quot;) yapÄ±labilmesini olanaklÄ± kÄ±lan bir Ã§atÄ±nÄ±n geliÅŸtirilmesi hedeflenmektedir."
+						},
+						Paragraf content3 {
+							content
+							"Projenin literatÃ¼r araÅŸtÄ±rmasÄ± ve fizibilite Ã§alÄ±ÅŸmasÄ± devam etmekte olup TÃ¼rkiye\'nin Ã¶nde gelen bir sanayi kuruluÅŸu ile ortak bir Ar-Ge projesi olarak geÃ§ekleÅŸtirilmesi ve 1501-TÃœBÄ°TAK Sanayi Ar-Ge Projeleri Destekleme ProgramÄ±na baÅŸvurusu sÃ¶z konusudur."
+						},
+						Anchor anchor {
+							title "Learn More"
+						}
+					}
+				},
+				Row SpecGEN {
+					elements {
+						Header header {
+							content
+							"SpecGEN (Metamodel Specification Generator for Domain Specific Modeling Languages)"
+						},
+						Paragraf content1 {
+							content
+							"Model GÃ¼dÃ¼mlÃ¼ MÃ¼hendislik (&quot;Model Driven Engineering&quot;) amaÃ§larÄ±nÄ± gerÃ§ekleÅŸtirmek iÃ§in farklÄ± yaklaÅŸÄ±mlar kullanÄ±r. Bu yÃ¶ntemlerden birisi, Alana Ã–zgÃ¼ Dil (&quot;Domain Specific Language&quot;) (DSL) geliÅŸtirmedir. DSL\'ler belirli bir uygulama alanÄ±na ait kavram ve terminolojileri (bazÄ± notasyonlar ÅŸeklinde) inceler ve Ã§alÄ±ÅŸma alanÄ±na dair gereksinimleri saÄŸlar. DSL son kullanÄ±cÄ±lar iÃ§in (alan uzmanlarÄ±) alana (&quot;domain&quot;) Ã¶zgÃ¼ bir sorun alanÄ± ile ilgili soyutlamalar sayesinde bir problemin Ã¶zÃ¼nÃ¼ tanÄ±mlamak iÃ§in imkan saÄŸlar. GÃ¼nÃ¼mÃ¼zde, bir alana Ã¶zgÃ¼ dil geliÅŸtirirken, beraberinde dilin Ã¼stmodeline dair dokÃ¼mantasyonu ya da spesifikasyonu proje boyunca gÃ¼ncel tutmak oldukÃ§a zordur."
+						},
+						Paragraf content2 {
+							content
+							"Bu Ã§alÄ±ÅŸma ile herhangi bir Ã¼st-modelin web tabanlÄ± dokÃ¼mantasyonunu otomatik olarak Ã¼retmek iÃ§in bir araÃ§ geliÅŸtirilmiÅŸtir. &quot;Ãœstmodel Spesifikasyonu Ãœretme&quot; aracÄ± Eclipse EMF tabanlÄ± model gÃ¼dÃ¼mlÃ¼ geliÅŸtirme yÃ¶ntemleri kullanÄ±lan tÃ¼m projelerde rahatlÄ±kla kullanÄ±labilecek dÃ¼zeydedir. EMF (&quot;Eclipse Modeling Framework&quot;) projesi, yapÄ±landÄ±rÄ±lmÄ±ÅŸ bir veri modeline dayalÄ± gerekli araÃ§larÄ± ve diÄŸer uygulamalarÄ± oluÅŸturmaya yarayan otomatik araÃ§ Ã¼retim servisi ve modelleme Ã§atÄ±sÄ±dÄ±r. AraÃ§, Ã¼stmodel dokÃ¼mantasyonunun proje boyunca gÃ¼ncel kalmasÄ±nÄ± saÄŸlamaktadÄ±r."
+						},
+						Paragraf content3 {
+							content
+							"AraÃ§ en geliÅŸkin kod Ã¼retme tekniklerinden biri olan Xpand dili kullanÄ±larak gerÃ§ekleÅŸtirilmiÅŸtir. Somut sÃ¶zdizimi olarak ise EMF (&quot;Eclipse Modeling Project&quot;) Ecore editÃ¶rÃ¼nÃ¼n &quot;Properties&quot; gÃ¶rÃ¼nÃ¼mÃ¼ndeki &quot;gen model documentation&quot; ismindeki &quot;extended attribute&quot; metin giriÅŸ alanÄ± kullanÄ±lmÄ±ÅŸtÄ±r."
+						},
+						Paragraf content4 {
+							content
+							"SÃ¶z konusu Ã§alÄ±ÅŸmalar 1501-TÃœBÄ°TAK Sanayi Ar-Ge Projeleri Desktekleme ProgramÄ± tarafÄ±ndan desteklenen 3110712 no\'lu proje kapsamÄ±nda yan Ã¼rÃ¼n olarak geliÅŸtirilmiÅŸtir. Bu araÃ§ yardÄ±mÄ± ile herhangi bir geliÅŸtirme Ã§evrimi sonunda ve proje sonunda tÃ¼m spesifikasyonlar otomatik olarak gÃ¼ncel tutulmuÅŸtur."
+						},
+						Anchor anchor {
+							title "Learn More"
+						}
+					}
+				},
+				Row "FM&lt;>MM" {
+					elements {
+						Division "FM&lt;>MM" {
+							elements {
+								Header header {
+									content
+									"M&lt;>MM (Feature Model and Metamodel Sychronization Tool for Software Product Lines)"
+								},
+								Paragraf content1 {
+									content
+									"YazÄ±lÄ±m Ã¼rÃ¼n hattÄ± (&quot;Software Product Line&quot;) sÃ¼recinde, ilk Ã¶nce alan analizi gerÃ§ekleÅŸtirilmektedir. Bu analiz sonucunda alan iÃ§erisindeki ortaklÄ±klar ve deÄŸiÅŸkenlikler belirlenmekte ve genellikle bir yetenek modeli (&quot;Feature Model&quot;) ile ifade edilmektedir. Yetenek modelleme Ã§alÄ±ÅŸmasÄ±nÄ±n Ã§Ä±ktÄ±sÄ± ise genellikle yeteneklerin kavramsal gruplamasÄ±nÄ±, yetenekler arasÄ±ndaki iliÅŸkileri ve baÄŸÄ±mlÄ±lÄ±klarÄ± tanÄ±mlayan bir Ã§izelgedir. YazÄ±lÄ±m Ã¼rÃ¼n hattÄ± yetenekleri, tanÄ±mlandÄ±ktan ve gerÃ§ekleÅŸtirimi yapÄ±ldÄ±ktan sonra yetenek kÄ±sÄ±tlarÄ± ve baÄŸÄ±mlÄ±lÄ±klarÄ± dikkate alÄ±narak bu yeteneklerin ihtiyaca gÃ¶re bir alt kÃ¼mesi seÃ§ilir ve seÃ§ilen yeteneklere sahip yeni bir yazÄ±lÄ±m elde edilir."
+								},
+								Paragraf content2 {
+									content
+									"Ã–te yandan yazÄ±lÄ±m Ã¼rÃ¼n hatta mÃ¼hendisliÄŸi sÃ¼reÃ§lerinde yeniden kullanÄ±labilir bir platform ve Ã¼rÃ¼n hattÄ± mimarisinin geliÅŸtirildiÄŸi bir alan mÃ¼hendisliÄŸi ile alan mÃ¼hendisliÄŸi sÃ¼reci sonucunda elde edilen varlÄ±klardan Ã¼rÃ¼nlerin geliÅŸtirildiÄŸi bir uygulama mÃ¼hendisliÄŸi sÃ¼reci yer alÄ±r. Alan ve Uygulama MÃ¼hendisliÄŸinde, Model GÃ¼dÃ¼mlÃ¼ MÃ¼hendislik (&quot;Model Driven Engineering&quot;) teknikleri sÄ±klÄ±kla kullanÄ±lmakta ve Ã¶zellikle Alana Ã–zgÃ¼ Diller (&quot;Domain Specific Languages&quot;) geliÅŸtirilmektedir. EndÃ¼stride bu alanda yaygÄ±n olarak kullanÄ±lan ve aÃ§Ä±k kaynak kodlu geliÅŸkin Ã§atÄ±lardan biri Eclipse EMF (&quot;Eclipse Modeling Framework&quot;) teknolojisidir."
+								},
+								Paragraf content3 {
+									content
+									"EndÃ¼stride kullanÄ±lan aÃ§Ä±k kaynak kodlu Ã§oÄŸu Yetenek Modelleme araÃ§larÄ±na ait yetenekler kÄ±sÄ±tlÄ± iken ticari olanlarÄ±nÄ±nÄ±n ise lisans maliyetleri oldukÃ§a yÃ¼ksektir. AralarÄ±nda aÃ§Ä±k kaynak kodlu ve geliÅŸkin bir yetenek modelleme dili olan Clafer Ã¶ne Ã§Ä±kmaktadÄ±r. Ancak Clafer aracÄ±nÄ±n Eclipse EMF teknolojileri ile entegrasyonu yoktur ve Eclipse Modelleme alt yapÄ±sÄ± ile geliÅŸtirilmemiÅŸtir. Bu sebeple bu araÃ§ ile geliÅŸtirilen yeteneklerin alana Ã¶zgÃ¼ dil geliÅŸtirme Ã§alÄ±ÅŸmasÄ±ndan biri olan Ã¼stmodelleme aktivitesine geÃ§iÅŸte izlenebilirliÄŸi kaybolmaktadÄ±r."
+								},
+								Paragraf content4 {
+									content
+									"Bu ihtiyaÃ§tan yola Ã§Ä±karak, Yetenek Modelleri (&quot;Feature Models&quot;) ile Ãœstmodeller (&quot;Metamodels&quot;) arasÄ±nda senkronizasyon saÄŸlayan bir araÃ§ geliÅŸtirilmiÅŸtir. Clafer ile Ã¼retilen modeller ile Ecore Ã¼st-modelleri arasÄ±nda iki yÃ¶nlÃ¼ dÃ¶nÃ¼ÅŸÃ¼mÃ¼ otomatik olarak gerÃ§ekleÅŸtirebilmektedir. AraÃ§, Eclipse EMF tabanlÄ± model gÃ¼dÃ¼mlÃ¼ geliÅŸtirme yÃ¶ntemleri kullanÄ±lan tÃ¼m projelerde rahatlÄ±kla kullanÄ±labilecek dÃ¼zeydedir."
+								},
+								Paragraf content5 {
+									content
+									"SÃ¶z konusu Ã§alÄ±ÅŸmalar 1501-TÃœBÄ°TAK Sanayi Ar-Ge Projeleri Desktekleme ProgramÄ± tarafÄ±ndan desteklenen 3110712 no\'lu proje kapsamÄ±nda yan Ã¼rÃ¼n olarak geliÅŸtirilmiÅŸtir."
+								},
+								Anchor anchor {
+									title "Learn Mor"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		Section Partners {
+			elements {
+				Row header {
+					elements {
+						Header header {
+							type H4 content PARTNERS
+						}
+					}
+				},
+				Row partners1 {
+					elements {
+						Division microsoft {
+							elements {
+								Anchor microsoft {
+								}
+							}
+						},
+						Division "koc sistem" {
+							elements {
+								Anchor "koÃ§ sistem" {
+								}
+							}
+						},
+						Division eclipse {
+							elements {
+								Anchor eclipse {
+								}
+							}
+						}
+					}
+				},
+				Row partners2 {
+					elements {
+						Division omg {
+							elements {
+								Anchor omg {
+								}
+							}
+						},
+						Division yasad {
+							elements {
+								Anchor yasad {
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		Section Sponsors {
+		},
+		Section "Human Resource" {
+		},
+		Section Team {
+		},
+		Section Contact {
+			elements {
+				Row header {
+					elements {
+						Header header {
+							type H3 content "CONTACT US"
+						}
+					}
+				},
+				Row map {
+					elements {
+						Map unit_location {
+						}
+					}
+				},
+				Row contact {
+					elements {
+						Division address {
+							elements {
+								Header header {
+									type H2 content Address
+								},
+								Paragraf ^content {
+									content
+									"Fatih Sultan Mehmet Caddesi 207 Sokak, No:29/3, A Blok, Kat:1, Daire:1â€‹â€‹â€‹"
+								}
+							}
+						},
+						Division email {
+							elements {
+								Header header {
+									type H2 content "E-Mail"
+								},
+								Anchor email {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	menu Menu "UNIT MENU" {
+		items {
+			MenuItem About {
+				colSpan 1 title About section About
+			},
+			MenuItem Solution {
+				colSpan 1 title Solution section Solution
+			},
+			MenuItem Product {
+				colSpan 1 title Product section Product
+			},
+			MenuItem "R&D" {
+				colSpan 1 title "R&D" section "R&D"
+			},
+			MenuItem Partners {
+				colSpan 1 title Partners section Partners
+			},
+			MenuItem Sponsors {
+				colSpan 1 title Sponsors section Sponsors
+			},
+			MenuItem "Human Resource" {
+				colSpan 1 title "Human Resource" section "Human Resource"
+			},
+			MenuItem Team {
+				colSpan 1 title Team section Team
+			},
+			MenuItem Contact {
+				colSpan 1 title Contact section Contact
+			}
+		}
+	}
+}

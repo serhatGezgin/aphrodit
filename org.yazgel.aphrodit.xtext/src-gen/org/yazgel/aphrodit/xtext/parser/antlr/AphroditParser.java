@@ -25,7 +25,7 @@ public class AphroditParser extends org.eclipse.xtext.parser.antlr.AbstractAntlr
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "Page";
 	}
 	
 	public AphroditGrammarAccess getGrammarAccess() {
