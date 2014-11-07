@@ -20,14 +20,13 @@ public class GeneratorHandler extends AbstractHandler {
 
 			@Override
 			protected IStatus runInsideJob(IProgressMonitor monitor) {
-				final IFile iFile = getIFileSelection().get(0);
-				final String modelPath = iFile.getParent().getLocation()
-						.toString();
-				final String targetDir = iFile.getParent().getLocation()
-						.toString();
+				final IFile selectedModelFile = getIFileSelection().get(0);
+				final String targetDir = selectedModelFile.getParent()
+						.getLocation().toString();
 
 				final ThemeGenerator themeGenerator = new ThemeGenerator();
-				themeGenerator.generate(modelPath, targetDir);
+				themeGenerator.generate(selectedModelFile.getLocation()
+						.toString(), targetDir);
 
 				return Status.OK_STATUS;
 			}

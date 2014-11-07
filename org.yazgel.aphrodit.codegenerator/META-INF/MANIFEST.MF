@@ -13,7 +13,8 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.mwe.utils;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
  org.yazgel.aphrodit.util;bundle-version="1.0.0",
- org.yazgel.aphrodit;bundle-version="0.1.0"
+ org.yazgel.aphrodit;bundle-version="0.1.0",
+ org.yazgel.util;bundle-version="1.0.0"
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.yazgel.aphrodit.codegenerator.mwe,

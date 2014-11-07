@@ -2,9 +2,18 @@ package org.yazgel.aphrodit.codegenerator.mwe;
 
 import java.io.File
 import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.EPackage.Registry
+import org.yazgel.aphrodit.AphroditPackage
+import org.yazgel.aphrodit.Model
+import org.yazgel.aphrodit.codegenerator.template.CodeGenerator
 import org.yazgel.aphrodit.util.program.Installer
 import org.yazgel.aphrodit.util.xtend.AbstractGenerator
+import org.yazgel.util.ecore.ModelIO
+import org.yazgel.util.xtend.SimpleFileSystemAccess
 
+/*
+ * FIXME: extends AbstractGenerator kaldir.
+ */
 public class ThemeGenerator extends AbstractGenerator {
 
 	override URI workflowURI() {
@@ -13,8 +22,19 @@ public class ThemeGenerator extends AbstractGenerator {
 		return URI.createURI(resource.toExternalForm)
 	}
 
-	override generate(String modelPath, String targetDir) {
-		super.generate(modelPath, targetDir)
+	override generate(String modelFilePath, String targetDir) {
+
+		/* Read the model. */
+		var model = new ModelIO<Model> {
+
+			override protected registerPackages(Registry packageRegistry) {
+				packageRegistry.put(AphroditPackage.eNS_URI, AphroditPackage.eINSTANCE)
+			}
+
+		}.read(URI.createFileURI(modelFilePath)).get(0)
+
+		var generator = new CodeGenerator
+		generator.doGenerate(model, new SimpleFileSystemAccess(normalizePath(targetDir)))
 
 		installStaticFiles(targetDir)
 	}
